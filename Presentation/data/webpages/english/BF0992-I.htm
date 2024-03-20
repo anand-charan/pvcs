@@ -1,0 +1,1128 @@
+﻿<!-- 
+* Converted to Pathfinder 3.0 on Jan 20, 2004 2:39:13 PM EST
+*
+*********************************************************************************
+*  (C) COPYRIGHT 2001 INSURANCE SOFTWARE SOLUTIONS CORP.  ALL RIGHTS RESERVED  
+*********************************************************************************
+*  Component:   BF0992-I.htm                                                   
+*  Description:                                                                
+*                                                                              
+*********************************************************************************
+*  Chg#    Release  Description                                                
+*                                                                              
+*  014590  6.0      New for release 6.0                                        
+*********************************************************************************
+* Mandat Date      Auth. Description
+* J02547 21OCT2013 CRI	 Bottin unifié - ajouter nouveaux champs	
+* J03329 14jul2014 MTH	 Nouveaux champs pour Notification
+* J04290 15May2015 JFO	 Nouveaux champs pour CLIEDIS
+* J05102 28Jun2017 GAB   Modifs pour IE11 Natif 
+* J05986 28MAR2019 ROK   AJOUT D'UN NOUVEAU TYPE D'ADRESSE
+*                        COURRIEL POUR L'ENVOIE AUTOMATISÉ DE LA 
+*                        PROPOSITION ÉLECTRONIQUE														
+***********************************************************************************************
+ -->
+<html>
+    <head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>BF0992-I</title>
+        <link rel="stylesheet" type="text/css" href="../english/Ingenium.css" charset="UTF-8" />
+    </head>
+<!-- J02547    <body class="bodyws">
+	    <form action="pageserver" method="post" id="inputForm" target="_parent" onsubmit="return(onSubmit());">
+-->    <body class="bodyws" onLoad="onLoadCustom()">
+       <form action="pageserver" method="post" id="inputForm" target="_parent" onsubmit="onSubmitCustom(); return(onSubmit());">
+            <input type="hidden" id="index" name="index" stype="Hidden" />
+            <input type="hidden" id="action" name="action" stype="Hidden" />
+            <table class="tabledisplaykey">
+                <tr>
+                    <td class="celldisplaykeylabel">
+                        <label for="MIR-BR-ID">Branch Number:</label>
+                    </td>
+                    <td class="celldisplaykey">
+                        <span id="MIR-BR-ID" stype="Text" displayonly="yes">MIR-BR-ID</span>
+                    </td>
+                    <td class="celldatakeylabel" />
+                    <td class="celldatakey"></td>
+                </tr>
+            </table>
+            <br />
+ <!-- J02547 BLOC RÉ-ÉCRIT 
+            <table class="tabledataentry">
+                <tr>
+                    <td class="celllabelrightalign">
+                        <label for="MIR-CLI-ID">Client Number:</label>
+                    </td>
+                    <td class="celllabeldataentry">
+                        <input type="text" value=" " id="MIR-CLI-ID" name="MIR-CLI-ID" stype="Text" maxlength="10" mandatory="yes" onfocus="enterField(this)" />
+                    </td>
+                    <td class="celllabelrightalign">
+                        <label for="MIR-CLI-ADDR-TYP-CD">Address Type:</label>
+                    </td>
+                    <td class="celllabeldataentry">
+                        <select id="MIR-CLI-ADDR-TYP-CD" name="MIR-CLI-ADDR-TYP-CD" size="1" stype="Selection" onfocus="enterField(this)"></select>
+                    </td>
+                </tr>
+            </table>
+-->
+<!-- J02547 DÉBUT -->
+             <center>
+             	 <table class="tableanchors">
+                    <tr>
+                        <td class="cellanchors">
+                            <a href="#Branch Phones Numbers">Phones Numbers of agency</a>
+                        </td>
+                        <td class="cellanchors">
+                            <a href="#General Information">General Information</a>
+                        </td>
+                        <td class="cellanchors">
+                            <a href="#Extranet ID">Extranet ID</a>
+                        </td>
+                        <td class="cellanchors">
+                            <a href="#Branch Principal Contact">Branch principal contact</a>
+                        </td>                        
+                        <td class="cellanchors">
+                            <a href="#Operations Contact/Coordinator">Operations contact/Coordinator</a></td>
+                        <td class="cellanchors">
+                            <a href="#Contracting Contact">Contracting contact</a>
+                        </td>
+                    </tr>
+                </table>
+           	</center>
+            <center>
+             	<table class="tableanchors">
+                    <tr>
+                        <td class="cellanchors">
+                            <a href="#Compensation Contact">Compensation contact</a>
+                        </td>
+                        <td class="cellanchors">
+                            <a href="#New Business Contact">New Business contact</a>
+                        </td>
+                        <td class="cellanchors">
+                            <a href="#Inforce Contact">Inforce contact</a>
+                        </td>
+                        <td class="cellanchors">
+                            <a href="#Communication-Marketing Contact">Communication-Marketing contact</a>
+                        </td>
+                        <td class="cellanchors">
+                            <a href="#Miscellaneous (correspondent 2)">Miscellaneous (respondent 2)</a>
+                        </td>
+<!-- J03329   DEBUT -->
+                        <td class="cellanchors">
+                            <a href="#Notification">Notification</a>
+                        </td>
+<!-- J03329   FIN -->  
+<!-- J04290   DEBUT -->
+                        <td class="cellanchors">
+                            <a href="#CLIEDIS">CLIEDIS</a>
+                        </td>
+<!-- J04290   FIN -->      
+                    </tr>                    
+               </table>
+           </center>
+           <br/>
+            <table class="tabledataentry">
+                <tr>
+                    <td class="celldisplayheading" colspan="4">
+                        <a id="Branch Phones Numbers" name="Branch Phones Numbers">Phones numbers of agency</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celllabelrightalign">
+                       <label for="MIR-BRCH-BUS-PHONE">Office:</label>
+                    </td>
+                    <td class="celllabeldataentry">
+                       <span id="MIR-BRCH-BUS-PHONE" stype="Text" displayonly="yes">MIR-BRCH-BUS-PHONE</span>
+                    </td>
+                    <td class="celllabelrightalign">
+                       <label for="MIR-BRCH-OTHER-PHONE">Other:</label>
+                    </td>
+                    <td class="celllabeldataentry">
+                       <span id="MIR-BRCH-OTHER-PHONE" stype="Text" displayonly="yes">MIR-BRCH-OTHER-PHONE</span>
+                    </td>
+                </tr>
+            </table>
+           	<br/>
+            <table class="tabledataentry">
+                <tr>
+                    <td class="celldisplayheading" colspan="4">
+                        <a id="General Information" name="General Information">General Information</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celllabelrightalign">
+                        <label for="MIR-CLI-ID">Client Number/Agent ID:</label>
+                    </td>
+                    <td class="celllabeldataentry">
+                        <input type="text" value=" " id="MIR-CLI-ID" name="MIR-CLI-ID" stype="Text" maxlength="6" mandatory="yes" onfocus="enterField(this)" />
+                    </td>
+<!-- Enlever le champ 'Genre d'adresse' à la demande de Caroline Chicoine 2013-11-27                    
+                    <td class="celllabelrightalign">
+                        <label for="MIR-CLI-ADDR-TYP-CD">Address Type:</label>
+                    </td>
+                    <td class="celllabeldataentry">
+                        <select id="MIR-CLI-ADDR-TYP-CD" name="MIR-CLI-ADDR-TYP-CD" size="1" stype="Selection" onfocus="enterField(this)"></select>
+                    </td>
+--> 
+                    <td class="celllabelrightalign">
+                    </td>
+                    <td class="celllabeldataentry">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celllabelrightalign">
+                        <label for="MIR-DV-CLI-NM">Client Name:</label>
+                    </td>
+                    <td class="celllabeldataentry" colspan="4">
+                        <span id="MIR-DV-CLI-NM" stype="Text" displayonly="yes">MIR-DV-CLI-NM</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celllabelrightalign">
+                        <label for="MIR-HIER-TYP-CD">Hierarchical Type:</label>
+                    </td>
+                    <td class="celllabeldataentry" colspan="4">
+                        <span id="MIR-HIER-TYP-CD" stype="Text" displayonly="yes">MIR-HIER-TYP-CD</span>
+                    </td>
+                </tr>                
+                <tr>
+                    <td class="celllabelrightalign">
+                        <label for="MIR-WEB-SITE">Website:</label>
+                    </td>
+                    <td class="celllabeldataentry" colspan="4">
+                        <input type="text" value=" " id="MIR-WEB-SITE" name="MIR-WEB-SITE" stype="Text" maxlength="50" size="50" onfocus="enterField(this)" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celllabelrightalign">
+                        <label for="MIR-BRCH-TRMN-DT">Termination Date:</label>
+                    </td>
+                    <td class="celllabeldataentry">
+                        <input type="text" value=" " id="MIR-BRCH-TRMN-DT" name="MIR-BRCH-TRMN-DT" stype="Date" onfocus="enterField(this)" onblur="validateField(this)" size="20"/> 
+                   </td>
+                    <td class="celllabelrightalign">
+                        <label for="MIR-BRCH-TRMN-REASN-CD">Reason of termination:</label>
+                    </td>
+                    <td class="celllabeldataentry">
+                        <select id="MIR-BRCH-TRMN-REASN-CD" name="MIR-BRCH-TRMN-REASN-CD" size="1" stype="Selection" onfocus="enterField(this)"></select>
+                    </td>
+                </tr>                
+                <tr>
+                    <td class="celllabelrightalign">
+                        <label for="MIR-MAIN-BR-ID">Main Branch:</label>
+                    </td>
+                    <td class="celllabeldataentry">
+                       <select id="MIR-MAIN-BR-ID" name="MIR-MAIN-BR-ID" size="1" stype="Selection" onfocus="enterField(this)"></select>
+<!--J04290                        <input type="text" value=" " id="MIR-MAIN-BR-ID" name="MIR-MAIN-BR-ID" stype="Text" maxlength="5" onfocus="enterField(this)" /> -->
+                    </td>
+                    <td class="celllabelrightalign">
+                        <label for="MIR-COMUN-TYP-CD">Communication Type:</label>
+                    </td>
+                    <td class="celllabeldataentry">
+                        <select id="MIR-COMUN-TYP-CD" name="MIR-COMUN-TYP-CD" size="1" stype="Selection" onfocus="enterField(this)"></select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celllabelrightalign">
+                        <label for="MIR-RW-LSUITE-AGT">RW LifeSuite Advisor:</label>
+                    </td>
+                    <td class="celllabeldataentry">
+                        <select id="MIR-RW-LSUITE-AGT" name="MIR-RW-LSUITE-AGT" size="1" stype="Selection" onfocus="enterField(this)"></select>
+                    </td>
+                    <td class="celllabelrightalign">
+                        <label for="MIR-TOT-BONS-RT-AGT">Total bonus rate paid to the agency:</label>					
+                    </td>
+                   <td class="celllabeldataentry">
+                        <input type="text" name="MIR-TOT-BON-PCT" stype="Percent" elength="5" decimals="2" value="" onfocus="enterField(this)" onblur="validateField(this)" onkeypress="NumberKeyCheck()" size="20"/>						
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celllabelrightalign">
+                        <label for="MIR-BRCH-NOTE">Note:</label>
+                    </td>
+                    
+					<td class="celllabeldataentry">
+<!--						<textarea id="BranchNote"  rows="3" cols="80" name="MIR-BRCH-NOTE" onkeyup="showcount(300,this,counter1)" onblur="CheckCountCharInBox(300,this)" onmouseover="process(this)" onfocus="enterField(this)" ></textarea>
+-->	<!-- J05102			<textarea id="BranchNote"  rows="5" cols="80" name="MIR-BRCH-NOTE" stype="TextArea" onkeyup="showcount(300,this,counter1)" onblur="CheckCountCharInBox(300,this)" onfocus="enterField(this)" ></textarea>  -->
+						<textarea id="MIR-BRCH-NOTE"  rows="5" cols="80" name="MIR-BRCH-NOTE" stype="TextArea" onkeyup="showcount(300,this,counter1)" onblur="CheckCountCharInBox(300,this)" onfocus="enterField(this)" ></textarea>
+<!--						<textarea name="MIR-BRCH-NOTE" maxlength="300" rows="3" cols="50"></textarea> -->
+                 </td>
+                </tr>
+				<tr>
+                    <td class="celllabelrightalign">
+                    </td>	
+					<td class="celllabelleftalign"> 
+		  				<DL>
+		  					<DT><b><span style="font-size: 10.0pt; font-family: Times New Roman; color: darkblue">
+		                                   The number of characters allowed in the text box is limited to 300 including 2 characters on each carriage-return.</span></b></DT>
+							<DT><b><span style="font-size: 10.0pt; font-family: Times New Roman; color: darkblue">
+		                                   		Characters remaining: <input type="text" stype="Currency" elength="5" id="counter1" name="counter1" size="5"/> (limit: 300) </span></b></DT>
+		  				</DL>
+					</td>
+				</tr>
+            </table>
+           	<br/>
+            <table class="tabledataentry">
+                <tr>
+                    <td class="celldisplayheading" colspan="4">
+                        <a id="Extranet ID" name="Extranet ID">Extranet ID</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celllabelrightalign">
+                        <label for="MIR-NET-ACCS-ID-1">Access ID 1:</label>
+                    </td>
+                    <td class="celllabeldataentry">
+<!--                        <input type="text" value=" " id="MIR-NET-ACCS-ID-1" name="MIR-NET-ACCS-ID-1" stype="Text" maxlength="15" onfocus="enterField(this)" />
+-->                        <input type="text" value=" " id="MIR-NET-ACCS-ID-1" name="MIR-NET-ACCS-ID-1" stype="Text" maxlength="10" onfocus="enterField(this)" />                    </td>
+                    <td class="celllabelrightalign">
+                        <label for="MIR-NET-ACCS-TYP-1">Access TYPE 1:</label>
+                    </td>
+                    <td class="celllabeldataentry">
+                        <select id="MIR-NET-ACCS-TYP-1" name="MIR-NET-ACCS-TYP-1" size="1" stype="Selection" onfocus="enterField(this)"></select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celllabelrightalign">
+                        <label for="MIR-NET-ACCS-ID-2">Access ID 2:</label>
+                    </td>
+                    <td class="celllabeldataentry">
+<!--                        <input type="text" value=" " id="MIR-NET-ACCS-ID-2" name="MIR-NET-ACCS-ID-2" stype="Text" maxlength="15" onfocus="enterField(this)" />
+-->                        <input type="text" value=" " id="MIR-NET-ACCS-ID-2" name="MIR-NET-ACCS-ID-2" stype="Text" maxlength="10" onfocus="enterField(this)" />                    </td>
+                    <td class="celllabelrightalign">
+                        <label for="MIR-NET-ACCS-TYP-2">Access TYPE 2:</label>
+                    </td>
+                    <td class="celllabeldataentry">
+                        <select id="MIR-NET-ACCS-TYP-2" name="MIR-NET-ACCS-TYP-2" size="1" stype="Selection" onfocus="enterField(this)"></select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celllabelrightalign">
+                        <label for="MIR-NET-ACCS-ID-3">Access ID 3:</label>
+                    </td>
+                    <td class="celllabeldataentry">
+<!--                        <input type="text" value=" " id="MIR-NET-ACCS-ID-3" name="MIR-NET-ACCS-ID-3" stype="Text" maxlength="15" onfocus="enterField(this)" />
+-->                        <input type="text" value=" " id="MIR-NET-ACCS-ID-3" name="MIR-NET-ACCS-ID-3" stype="Text" maxlength="10" onfocus="enterField(this)" />                    </td>
+                    <td class="celllabelrightalign">
+                        <label for="MIR-NET-ACCS-TYP-3">Access TYPE 3:</label>
+                    </td>
+                    <td class="celllabeldataentry">
+                        <select id="MIR-NET-ACCS-TYP-3" name="MIR-NET-ACCS-TYP-3" size="1" stype="Selection" onfocus="enterField(this)"></select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celllabelrightalign">
+                        <label for="MIR-NET-ACCS-ID-4">Access ID 4:</label>
+                    </td>
+                    <td class="celllabeldataentry">
+<!--                        <input type="text" value=" " id="MIR-NET-ACCS-ID-4" name="MIR-NET-ACCS-ID-4" stype="Text" maxlength="15" onfocus="enterField(this)" />
+-->                        <input type="text" value=" " id="MIR-NET-ACCS-ID-4" name="MIR-NET-ACCS-ID-4" stype="Text" maxlength="10" onfocus="enterField(this)" />                    </td>
+                    <td class="celllabelrightalign">
+                        <label for="MIR-NET-ACCS-TYP-4">Access TYPE 4:</label>
+                    </td>
+                    <td class="celllabeldataentry">
+                        <select id="MIR-NET-ACCS-TYP-4" name="MIR-NET-ACCS-TYP-4" size="1" stype="Selection" onfocus="enterField(this)"></select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celllabelrightalign">
+                        <label for="MIR-NET-ACCS-ID-5">Access ID 5:</label>
+                    </td>
+                    <td class="celllabeldataentry">
+<!--                        <input type="text" value=" " id="MIR-NET-ACCS-ID-5" name="MIR-NET-ACCS-ID-5" stype="Text" maxlength="15" onfocus="enterField(this)" />
+-->                        <input type="text" value=" " id="MIR-NET-ACCS-ID-5" name="MIR-NET-ACCS-ID-5" stype="Text" maxlength="10" onfocus="enterField(this)" />                    </td>
+                    <td class="celllabelrightalign">
+                        <label for="MIR-NET-ACCS-TYP-5">Access TYPE 5:</label>
+                    </td>
+                    <td class="celllabeldataentry">
+                        <select id="MIR-NET-ACCS-TYP-5" name="MIR-NET-ACCS-TYP-5" size="1" stype="Selection" onfocus="enterField(this)"></select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celllabelrightalign">
+                        <label for="MIR-NET-ACCS-ID-6">Access ID 6:</label>
+                    </td>
+                    <td class="celllabeldataentry">
+<!--                        <input type="text" value=" " id="MIR-NET-ACCS-ID-6" name="MIR-NET-ACCS-ID-6" stype="Text" maxlength="15" onfocus="enterField(this)" />
+-->                        <input type="text" value=" " id="MIR-NET-ACCS-ID-6" name="MIR-NET-ACCS-ID-6" stype="Text" maxlength="10" onfocus="enterField(this)" />                    </td>
+                    <td class="celllabelrightalign">
+                        <label for="MIR-NET-ACCS-TYP-6">Access TYPE 6:</label>
+                    </td>
+                    <td class="celllabeldataentry">
+                        <select id="MIR-NET-ACCS-TYP-6" name="MIR-NET-ACCS-TYP-6" size="1" stype="Selection" onfocus="enterField(this)"></select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celllabelrightalign">
+                        <label for="MIR-NET-ACCS-ID-7">Access ID 7:</label>
+                    </td>
+                    <td class="celllabeldataentry">
+<!--                        <input type="text" value=" " id="MIR-NET-ACCS-ID-7" name="MIR-NET-ACCS-ID-7" stype="Text" maxlength="15" onfocus="enterField(this)" />
+-->                        <input type="text" value=" " id="MIR-NET-ACCS-ID-7" name="MIR-NET-ACCS-ID-7" stype="Text" maxlength="10" onfocus="enterField(this)" />                    </td>
+                    <td class="celllabelrightalign">
+                        <label for="MIR-NET-ACCS-TYP-7">Access TYPE 7:</label>
+                    </td>
+                    <td class="celllabeldataentry">
+                        <select id="MIR-NET-ACCS-TYP-7" name="MIR-NET-ACCS-TYP-7" size="1" stype="Selection" onfocus="enterField(this)"></select>
+                    </td>
+                </tr>
+<!-- J05247   DEBUT -->
+                <tr>
+                    <td class="celllabelrightalign">
+                        <label for="MIR-NET-SECUR-DOM-1">Secure Domain #1:</label>
+                    </td>
+                    <td class="celllabeldataentry">
+                        <input type="text" value=" " name="MIR-NET-SECUR-DOM-1" stype="Text" maxlength="40" size ="50" onfocus="enterField(this)" />
+                    </td>
+                    <td class="celllabelrightalign"/>
+                    <td class="celllabeldataentry"/>
+                </tr>
+                <tr>
+                    <td class="celllabelrightalign">
+                        <label for="MIR-NET-SECUR-DOM-2">Secure Domain #2:</label>
+                    </td>
+                    <td class="celllabeldataentry">
+                        <input type="text" value=" " name="MIR-NET-SECUR-DOM-2" stype="Text" maxlength="40" size ="50" onfocus="enterField(this)" />
+                    </td>
+                    <td class="celllabelrightalign"/>
+                    <td class="celllabeldataentry"/>
+                </tr>
+                <tr>
+                    <td class="celllabelrightalign">
+                        <label for="MIR-NET-SECUR-DOM-3">Secure Domain #3:</label>
+                    </td>
+                    <td class="celllabeldataentry">
+                        <input type="text" value=" " name="MIR-NET-SECUR-DOM-3" stype="Text" maxlength="40" size ="50" onfocus="enterField(this)" />
+                    </td>
+                    <td class="celllabelrightalign"/>
+                    <td class="celllabeldataentry"/>
+                </tr>
+<!-- J05247   FIN   -->
+            </table> 
+           	<br/>
+            <table class="tabledataentry">
+                <tr>
+                    <td class="celldisplayheading" colspan="4">
+                        <a id="Branch Principal Contact" name="Branch Principal Contact">Branch principal contact</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celllabelrightalign">
+                        <label for="MIR-MAIN-CNTCT-GIV-NM">First Name:</label>
+                    </td>
+                    <td class="celllabeldataentry">
+                        <input type="text" value=" " id="MIR-MAIN-CNTCT-GIV-NM" name="MIR-MAIN-CNTCT-GIV-NM" stype="Text" maxlength="25" size="25" onfocus="enterField(this)" />
+                    </td>
+                    <td class="celllabelrightalign">
+                        <label for="MIR-MAIN-CNTCT-SUR-NM">Last Name:</label>
+                    </td>
+                    <td class="celllabeldataentry">
+                        <input type="text" value=" " id="MIR-MAIN-CNTCT-SUR-NM" name="MIR-MAIN-CNTCT-SUR-NM" stype="Text" maxlength="25" size="25" onfocus="enterField(this)" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celllabelrightalign">
+                        <label for="MIR-MAIN-CNTCT-SEX-CD">Sex:</label>
+                    </td>
+                    <td class="celllabeldataentry">
+                        <select id="MIR-MAIN-CNTCT-SEX-CD" name="MIR-MAIN-CNTCT-SEX-CD" size="1" stype="Selection" onfocus="enterField(this)"></select>
+                    </td>
+                    <td class="celllabelrightalign">
+                        <label for="MIR-MAIN-CNTCT-LANG-CD">Language:</label>
+                    </td>
+                    <td class="celllabeldataentry">
+                        <select id="MIR-MAIN-CNTCT-LANG-CD" name="MIR-MAIN-CNTCT-LANG-CD" size="1" stype="Selection" onfocus="enterField(this)"></select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celllabelrightalign">
+                        <label for="MIR-MAIN-CNTCT-EMAIL">Email:</label>
+                    </td>
+                    <td class="celllabeldataentry">
+                        <input type="text" value=" " id="MIR-MAIN-CNTCT-EMAIL" name="MIR-MAIN-CNTCT-EMAIL" stype="Text" maxlength="50" size="50" onfocus="enterField(this)" />
+                    </td>
+                    <td class="celllabelrightalign">
+                        <label for="MIR-MAIN-CNTCT-PHONE">Phone:</label>
+                    </td>
+                    <td class="celllabeldataentry">
+                        <input type="text" value=" " id="MIR-MAIN-CNTCT-PHONE" name="MIR-MAIN-CNTCT-PHONE" stype="Text" maxlength="20" onfocus="enterField(this)" />
+                    </td>
+                </tr>
+            </table>
+           	<br/>
+            <table class="tabledataentry">
+                <tr>
+                    <td class="celldisplayheading" colspan="4">
+                        <a id="Operations Contact" name="Operations Contact">Operations contact/Coordinator</a>/Coordonnateur
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celllabelrightalign">
+                        <label for="MIR-OPER-CNTCT-GIV-NM">First Name:</label>
+                    </td>
+                    <td class="celllabeldataentry">
+                        <input type="text" value=" " id="MIR-OPER-CNTCT-GIV-NM" name="MIR-OPER-CNTCT-GIV-NM" stype="Text" maxlength="25" size="25" onfocus="enterField(this)" />
+                    </td>
+                    <td class="celllabelrightalign">
+                        <label for="MIR-OPER-CNTCT-SUR-NM">Last Name:</label>
+                    </td>
+                    <td class="celllabeldataentry">
+                        <input type="text" value=" " id="MIR-OPER-CNTCT-SUR-NM" name="MIR-OPER-CNTCT-SUR-NM" stype="Text" maxlength="25" size="25" onfocus="enterField(this)" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celllabelrightalign">
+                        <label for="MIR-OPER-CNTCT-SEX-CD">Sex:</label>
+                    </td>
+                    <td class="celllabeldataentry">
+                        <select id="MIR-OPER-CNTCT-SEX-CD" name="MIR-OPER-CNTCT-SEX-CD" size="1" stype="Selection" onfocus="enterField(this)"></select>
+                    </td>
+                    <td class="celllabelrightalign">
+                        <label for="MIR-OPER-CNTCT-LANG-CD">Language:</label>
+                    </td>
+                    <td class="celllabeldataentry">
+                        <select id="MIR-OPER-CNTCT-LANG-CD" name="MIR-OPER-CNTCT-LANG-CD" size="1" stype="Selection" onfocus="enterField(this)"></select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celllabelrightalign">
+                        <label for="MIR-OPER-CNTCT-EMAIL">Email:</label>
+                    </td>
+                    <td class="celllabeldataentry">
+                        <input type="text" value=" " id="MIR-OPER-CNTCT-EMAIL" name="MIR-OPER-CNTCT-EMAIL" stype="Text" maxlength="50" size="50" onfocus="enterField(this)" />
+                    </td>
+                    <td class="celllabelrightalign">
+                        <label for="MIR-OPER-CNTCT-PHONE">Phone:</label>
+                    </td>
+                    <td class="celllabeldataentry">
+                        <input type="text" value=" " id="MIR-OPER-CNTCT-PHONE" name="MIR-OPER-CNTCT-PHONE" stype="Text" maxlength="20" onfocus="enterField(this)" />
+                    </td>
+                </tr>
+            </table>
+            <br/>
+            <table class="tabledataentry">
+                <tr>
+                    <td class="celldisplayheading" colspan="4">
+                        <a id="Contracting Contact" name="Contracting Contact">Contracting contact</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celllabelrightalign">
+                        <label for="MIR-CNTRCT-CNTCT-GIV-NM">First Name:</label>
+                    </td>
+                    <td class="celllabeldataentry">
+                        <input type="text" value=" " id="MIR-CNTRCT-CNTCT-GIV-NM" name="MIR-CNTRCT-CNTCT-GIV-NM" stype="Text" maxlength="25" size="25" onfocus="enterField(this)" />
+                    </td>
+                    <td class="celllabelrightalign">
+                        <label for="MIR-CNTRCT-CNTCT-SUR-NM">Last Name:</label>
+                    </td>
+                    <td class="celllabeldataentry">
+                        <input type="text" value=" " id="MIR-CNTRCT-CNTCT-SUR-NM" name="MIR-CNTRCT-CNTCT-SUR-NM" stype="Text" maxlength="25" size="25" onfocus="enterField(this)" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celllabelrightalign">
+                        <label for="MIR-CNTRCT-CNTCT-SEX-CD">Sex:</label>
+                    </td>
+                    <td class="celllabeldataentry">
+                        <select id="MIR-CNTRCT-CNTCT-SEX-CD" name="MIR-CNTRCT-CNTCT-SEX-CD" size="1" stype="Selection" onfocus="enterField(this)"></select>
+                    </td>
+                    <td class="celllabelrightalign">
+                        <label for="MIR-CNTRCT-CNTCT-LANG-CD">Language:</label>
+                    </td>
+                    <td class="celllabeldataentry">
+                        <select id="MIR-CNTRCT-CNTCT-LANG-CD" name="MIR-CNTRCT-CNTCT-LANG-CD" size="1" stype="Selection" onfocus="enterField(this)"></select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celllabelrightalign">
+                        <label for="MIR-CNTRCT-CNTCT-EMAIL">Email:</label>
+                    </td>
+                    <td class="celllabeldataentry">
+                        <input type="text" value=" " id="MIR-CNTRCT-CNTCT-EMAIL" name="MIR-CNTRCT-CNTCT-EMAIL" stype="Text" maxlength="50" size="50" onfocus="enterField(this)" />
+                    </td>
+                    <td class="celllabelrightalign">
+                        <label for="MIR-CNTRCT-CNTCT-PHONE">Phone:</label>
+                    </td>
+                    <td class="celllabeldataentry">
+                        <input type="text" value=" " id="MIR-CNTRCT-CNTCT-PHONE" name="MIR-CNTRCT-CNTCT-PHONE" stype="Text" maxlength="20" onfocus="enterField(this)" />
+                    </td>
+                </tr>
+            </table>
+            <p align="right">
+                <a href="#top" class="backtotop">
+                    <img src="../images/top.gif" border="0" alt="Haut de page" width="14" height="14"/>Back to top</a>
+            </p>
+            <table class="tabledataentry">
+                <tr>
+                    <td class="celldisplayheading" colspan="4">
+                        <a id="Compensation Contact" name="Compensation Contact">Compensation contact</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celllabelrightalign">
+                        <label for="MIR-CMPNST-CNTCT-GIV-NM">First Name:</label>
+                    </td>
+                    <td class="celllabeldataentry">
+                        <input type="text" value=" " id="MIR-CMPNST-CNTCT-GIV-NM" name="MIR-CMPNST-CNTCT-GIV-NM" stype="Text" maxlength="25" size="25" onfocus="enterField(this)" />
+                    </td>
+                    <td class="celllabelrightalign">
+                        <label for="MIR-CMPNST-CNTCT-SUR-NM">Last Name:</label>
+                    </td>
+                    <td class="celllabeldataentry">
+                        <input type="text" value=" " id="MIR-CMPNST-CNTCT-SUR-NM" name="MIR-CMPNST-CNTCT-SUR-NM" stype="Text" maxlength="25" size="25" onfocus="enterField(this)" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celllabelrightalign">
+                        <label for="MIR-CMPNST-CNTCT-SEX-CD">Sex:</label>
+                    </td>
+                    <td class="celllabeldataentry">
+                        <select id="MIR-CMPNST-CNTCT-SEX-CD" name="MIR-CMPNST-CNTCT-SEX-CD" size="1" stype="Selection" onfocus="enterField(this)"></select>
+                    </td>
+                    <td class="celllabelrightalign">
+                        <label for="MIR-CMPNST-CNTCT-LANG-CD">Language:</label>
+                    </td>
+                    <td class="celllabeldataentry">
+                        <select id="MIR-CMPNST-CNTCT-LANG-CD" name="MIR-CMPNST-CNTCT-LANG-CD" size="1" stype="Selection" onfocus="enterField(this)"></select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celllabelrightalign">
+                        <label for="MIR-CMPNST-CNTCT-EMAIL">Email:</label>
+                    </td>
+                    <td class="celllabeldataentry">
+                        <input type="text" value=" " id="MIR-CMPNST-CNTCT-EMAIL" name="MIR-CMPNST-CNTCT-EMAIL" stype="Text" maxlength="50" size="50" onfocus="enterField(this)" />
+                    </td>
+                    <td class="celllabelrightalign">
+                        <label for="MIR-CMPNST-CNTCT-PHONE">Phone:</label>
+                    </td>
+                    <td class="celllabeldataentry">
+                        <input type="text" value=" " id="MIR-CMPNST-CNTCT-PHONE" name="MIR-CMPNST-CNTCT-PHONE" stype="Text" maxlength="20" onfocus="enterField(this)" />
+                    </td>
+                </tr>
+            </table>
+           	<br/>
+            <table class="tabledataentry">
+                <tr>
+                    <td class="celldisplayheading" colspan="4">
+                        <a id="New Business Contact" name="New Business Contact">New Business contact</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celllabelrightalign">
+                        <label for="MIR-NB-CNTCT-GIV-NM">First Name:</label>
+                    </td>
+                    <td class="celllabeldataentry">
+                        <input type="text" value=" " id="MIR-NB-CNTCT-GIV-NM" name="MIR-NB-CNTCT-GIV-NM" stype="Text" maxlength="25" size="25" onfocus="enterField(this)" />
+                    </td>
+                    <td class="celllabelrightalign">
+                        <label for="MIR-NB-CNTCT-SUR-NM">Last Name:</label>
+                    </td>
+                    <td class="celllabeldataentry">
+                        <input type="text" value=" " id="MIR-NB-CNTCT-SUR-NM" name="MIR-NB-CNTCT-SUR-NM" stype="Text" maxlength="25" size="25" onfocus="enterField(this)" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celllabelrightalign">
+                        <label for="MIR-NB-CNTCT-SEX-CD">Sex:</label>
+                    </td>
+                    <td class="celllabeldataentry">
+                        <select id="MIR-NB-CNTCT-SEX-CD" name="MIR-NB-CNTCT-SEX-CD" size="1" stype="Selection" onfocus="enterField(this)"></select>
+                    </td>
+                    <td class="celllabelrightalign">
+                        <label for="MIR-NB-CNTCT-LANG-CD">Language:</label>
+                    </td>
+                    <td class="celllabeldataentry">
+                        <select id="MIR-NB-CNTCT-LANG-CD" name="MIR-NB-CNTCT-LANG-CD" size="1" stype="Selection" onfocus="enterField(this)"></select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celllabelrightalign">
+                        <label for="MIR-NB-CNTCT-EMAIL">Email:</label>
+                    </td>
+                    <td class="celllabeldataentry">
+                        <input type="text" value=" " id="MIR-NB-CNTCT-EMAIL" name="MIR-NB-CNTCT-EMAIL" stype="Text" maxlength="50" size="50" onfocus="enterField(this)" />
+                    </td>
+                    <td class="celllabelrightalign">
+                        <label for="MIR-NB-CNTCT-PHONE">Phone:</label>
+                    </td>
+                    <td class="celllabeldataentry">
+                        <input type="text" value=" " id="MIR-NB-CNTCT-PHONE" name="MIR-NB-CNTCT-PHONE" stype="Text" maxlength="20" onfocus="enterField(this)" />
+                    </td>
+                </tr>
+            </table>
+            <br/>
+            <table class="tabledataentry">
+                <tr>
+                    <td class="celldisplayheading" colspan="4">
+                        <a id="Inforce Contact" name="Inforce Contact">Inforce contact</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celllabelrightalign">
+                        <label for="MIR-INFORCE-CNTCT-GIV-NM">First Name:</label>
+                    </td>
+                    <td class="celllabeldataentry">
+                        <input type="text" value=" " id="MIR-INFORCE-CNTCT-GIV-NM" name="MIR-INFORCE-CNTCT-GIV-NM" stype="Text" maxlength="25" size="25" onfocus="enterField(this)" />
+                    </td>
+                    <td class="celllabelrightalign">
+                        <label for="MIR-INFORCE-CNTCT-SUR-NM">Last Name:</label>
+                    </td>
+                    <td class="celllabeldataentry">
+                        <input type="text" value=" " id="MIR-INFORCE-CNTCT-SUR-NM" name="MIR-INFORCE-CNTCT-SUR-NM" stype="Text" maxlength="25" size="25" onfocus="enterField(this)" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celllabelrightalign">
+                        <label for="MIR-INFORCE-CNTCT-SEX-CD">Sex:</label>
+                    </td>
+                    <td class="celllabeldataentry">
+                        <select id="MIR-INFORCE-CNTCT-SEX-CD" name="MIR-INFORCE-CNTCT-SEX-CD" size="1" stype="Selection" onfocus="enterField(this)"></select>
+                    </td>
+                    <td class="celllabelrightalign">
+                        <label for="MIR-INFORCE-CNTCT-LANG-CD">Language:</label>
+                    </td>
+                    <td class="celllabeldataentry">
+                        <select id="MIR-INFORCE-CNTCT-LANG-CD" name="MIR-INFORCE-CNTCT-LANG-CD" size="1" stype="Selection" onfocus="enterField(this)"></select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celllabelrightalign">
+                        <label for="MIR-INFORCE-CNTCT-EMAIL">Email:</label>
+                    </td>
+                    <td class="celllabeldataentry">
+                        <input type="text" value=" " id="MIR-INFORCE-CNTCT-EMAIL" name="MIR-INFORCE-CNTCT-EMAIL" stype="Text" maxlength="50" size="50" onfocus="enterField(this)" />
+                    </td>
+                    <td class="celllabelrightalign">
+                        <label for="MIR-INFORCE-CNTCT-PHONE">Phone:</label>
+                    </td>
+                    <td class="celllabeldataentry">
+                        <input type="text" value=" " id="MIR-INFORCE-CNTCT-PHONE" name="MIR-INFORCE-CNTCT-PHONE" stype="Text" maxlength="20" onfocus="enterField(this)" />
+                    </td>
+                </tr>
+            </table>
+           	<br/>
+            <table class="tabledataentry">
+                <tr>
+                    <td class="celldisplayheading" colspan="4">
+                        <a id="Communication-Marketing Contact" name="Communication-Marketing Contact">Communication-Marketing contact</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celllabelrightalign">
+                        <label for="MIR-COMUN-MKT-CNTCT-GIV-NM">First Name:</label>
+                    </td>
+                    <td class="celllabeldataentry">
+                        <input type="text" value=" " id="MIR-COMUN-MKT-CNTCT-GIV-NM" name="MIR-COMUN-MKT-CNTCT-GIV-NM" stype="Text" maxlength="25" size="25" onfocus="enterField(this)" />
+                    </td>
+                    <td class="celllabelrightalign">
+                        <label for="MIR-COMUN-MKT-CNTCT-SUR-NM">Last Name:</label>
+                    </td>
+                    <td class="celllabeldataentry">
+                        <input type="text" value=" " id="MIR-COMUN-MKT-CNTCT-SUR-NM" name="MIR-COMUN-MKT-CNTCT-SUR-NM" stype="Text" maxlength="25" size="25" onfocus="enterField(this)" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celllabelrightalign">
+                        <label for="MIR-COMUN-MKT-CNTCT-SEX-CD">Sex:</label>
+                    </td>
+                    <td class="celllabeldataentry">
+                        <select id="MIR-COMUN-MKT-CNTCT-SEX-CD" name="MIR-COMUN-MKT-CNTCT-SEX-CD" size="1" stype="Selection" onfocus="enterField(this)"></select>
+                    </td>
+                    <td class="celllabelrightalign">
+                        <label for="MIR-COMUN-MKT-CNTCT-LANG-CD">Language:</label>
+                    </td>
+                    <td class="celllabeldataentry">
+                        <select id="MIR-COMUN-MKT-CNTCT-LANG-CD" name="MIR-COMUN-MKT-CNTCT-LANG-CD" size="1" stype="Selection" onfocus="enterField(this)"></select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celllabelrightalign">
+                        <label for="MIR-COMUN-MKT-CNTCT-EMAIL">Email:</label>
+                    </td>
+                    <td class="celllabeldataentry">
+                        <input type="text" value=" " id="MIR-COMUN-MKT-CNTCT-EMAIL" name="MIR-COMUN-MKT-CNTCT-EMAIL" stype="Text" maxlength="50" size="50" onfocus="enterField(this)" />
+                    </td>
+                    <td class="celllabelrightalign">
+                        <label for="MIR-COMUN-MKT-CNTCT-PHONE">Phone:</label>
+                    </td>
+                    <td class="celllabeldataentry">
+                        <input type="text" value=" " id="MIR-COMUN-MKT-CNTCT-PHONE" name="MIR-COMUN-MKT-CNTCT-PHONE" stype="Text" maxlength="20" onfocus="enterField(this)" />
+                    </td>
+                </tr>
+            </table>
+           	<br/>
+            <table class="tabledataentry">
+                <tr>
+                    <td class="celldisplayheading" colspan="4">
+                        <a id="Miscellaneous (correspondent 2)" name="Miscellaneous (correspondent 2)">Miscellaneous (respondent 2)</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celllabelrightalign">
+                        <label for="MIR-MISC-2-CNTCT-GIV-NM">First Name:</label>
+                    </td>
+                    <td class="celllabeldataentry">
+                        <input type="text" value=" " id="MIR-MISC-2-CNTCT-GIV-NM" name="MIR-MISC-2-CNTCT-GIV-NM" stype="Text" maxlength="25" size="25" onfocus="enterField(this)" />
+                    </td>
+                    <td class="celllabelrightalign">
+                        <label for="MIR-MISC-2-CNTCT-SUR-NM">Last Name:</label>
+                    </td>
+                    <td class="celllabeldataentry">
+                        <input type="text" value=" " id="MIR-MISC-2-CNTCT-SUR-NM" name="MIR-MISC-2-CNTCT-SUR-NM" stype="Text" maxlength="25" size="25" onfocus="enterField(this)" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celllabelrightalign">
+                        <label for="MIR-MISC-2-CNTCT-SEX-CD">Sex:</label>
+                    </td>
+                    <td class="celllabeldataentry">
+                        <select id="MIR-MISC-2-CNTCT-SEX-CD" name="MIR-MISC-2-CNTCT-SEX-CD" size="1" stype="Selection" onfocus="enterField(this)"></select>
+                    </td>
+                    <td class="celllabelrightalign">
+                        <label for="MIR-MISC-2-CNTCT-LANG-CD">Language:</label>
+                    </td>
+                    <td class="celllabeldataentry">
+                        <select id="MIR-MISC-2-CNTCT-LANG-CD" name="MIR-MISC-2-CNTCT-LANG-CD" size="1" stype="Selection" onfocus="enterField(this)"></select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celllabelrightalign">
+                        <label for="MIR-MISC-2-CNTCT-EMAIL">Email:</label>
+                    </td>
+                    <td class="celllabeldataentry">
+                        <input type="text" value=" " id="MIR-MISC-2-CNTCT-EMAIL" name="MIR-MISC-2-CNTCT-EMAIL" stype="Text" maxlength="50" size="50" onfocus="enterField(this)" />
+                    </td>
+                    <td class="celllabelrightalign">
+                        <label for="MIR-MISC-2-CNTCT-PHONE">Phone:</label>
+                    </td>
+                    <td class="celllabeldataentry">
+                        <input type="text" value=" " id="MIR-MISC-2-CNTCT-PHONE" name="MIR-MISC-2-CNTCT-PHONE" stype="Text" maxlength="20" onfocus="enterField(this)" />
+                    </td>
+                </tr>
+				<tr>
+                    <td class="celllabelrightalign">
+                        <label for="MIR-MISC-2-CNTCT-NOTE">Note:</label>
+                    </td>
+					<td class="celllabeldataentry">
+						<textarea id="MIR-MISC-2-CNTCT-NOTE"  rows="5" cols="50" name="MIR-MISC-2-CNTCT-NOTE" onkeyup="showcount(80,this,counter2)" onblur="CheckCountCharInBox(80,this)" onfocus="enterField(this)" ></textarea>
+<!-- J05102				<textarea id="MiscNote"  rows="5" cols="50" name="MIR-MISC-2-CNTCT-NOTE" onkeyup="showcount(80,this,counter2)" onblur="CheckCountCharInBox(80,this)" onfocus="enterField(this)" ></textarea>  -->
+<!--					<textarea id="MiscNote"  rows="5" cols="50" name="MIR-MISC-2-CNTCT-NOTE" onkeyup="showcount(80,this,counter2)" onblur="CheckCountCharInBox(80,this)" onmouseover="process(this)" onfocus="enterField(this)" ></textarea> -->
+                    </td>
+             	</tr>
+				<tr>
+                    <td class="celllabelrightalign">
+                    </td>	
+					<td class="celllabelleftalign"> 
+		  				<DL>
+		  					<DT><b><span style="font-size: 10.0pt; font-family: Times New Roman; color: darkblue">
+		                                   The number of characters allowed in the text box is limited to 80</span></b></DT>
+		  					<DT><b><span style="font-size: 10.0pt; font-family: Times New Roman; color: darkblue">
+		                                   including 2 characters on each carriage-return.</span></b></DT>
+							<DT><b><span style="font-size: 10.0pt; font-family: Times New Roman; color: darkblue">
+		                                   		Characters remaining: <input type="text" stype="Currency" elength="5" id="counter2" name="counter2" size="5"/> (limit: 80) </span></b></DT>
+		  				</DL>
+					</td>
+				</tr>                
+            </table>
+           	<br/>
+<!-- J03329   Debut -->
+            <table id="Notification" class="tabledataentry">
+                <tr>
+                    <td class="celldisplayheading" colspan="4" style="height: 20px">
+                        <a id="Notification" name="Notification">Notification</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celllabelrightalign">
+                        <label for="MIR-BRCH-NOTI-IND">Notified agency:</label>
+                    </td>
+                    <td class="celllabeldataentry">
+                        <input type="checkbox" value="Y" id="MIR-BRCH-NOTI-IND" name="MIR-BRCH-NOTI-IND" stype="Indicator" onclick="onCheckBox(),validateBrchNotiInd()" onfocus="enterField(this)"/>
+                    </td>
+                    <td class="celllabelrightalign" />
+                    <td class="celllabeldataentry" />
+                </tr>
+<!-- J04290 Begin -->
+                <tr>
+                    <td class="celllabelrightalign">
+                        <label for="MIR-NOTI-TRNSMT-MAIN-BR-IND">Notification sent to main agency (will be consolidated):</label>
+                    </td>
+                    <td class="celllabeldataentry">
+                        <input type="checkbox" value="Y" id="MIR-NOTI-TRNSMT-MAIN-BR-IND" name="MIR-NOTI-TRNSMT-MAIN-BR-IND" stype="Indicator" onclick="onCheckBox(),validateNotiMainBrInd()" onfocus="enterField(this)"/>
+                    </td>
+                    <td class="celllabelrightalign" />
+                    <td class="celllabeldataentry" />
+                </tr>
+                <tr>
+                  <td class="celllabelrightalign">
+                        <label for="MIR-NOTI-TRNSMT-OTHR-BR-ID">Notification sent to ANOTHER agency (will be consolidated):</label>
+                    </td>
+                    <td class="celllabeldataentry">
+                        <select id="MIR-NOTI-TRNSMT-OTHR-BR-ID" name="MIR-NOTI-TRNSMT-OTHR-BR-ID" size="1" stype="Selection" onchange="validateNotiOthrBrId(this)" onfocus="enterField(this)"></select>
+                    </td>
+                    <td class="celllabelrightalign" />
+                    <td class="celllabeldataentry" />
+                </tr>
+                <tr>
+                    <td class="celllabelrightalign">
+                        <label for="MIR-BRCH-NOTI-EMAIL">Notification sent to ANOTHER email:</label>
+                    </td>
+                    <td class="celllabeldataentry">
+                        <input type="text" value=" " id="MIR-BRCH-NOTI-EMAIL" name="MIR-BRCH-NOTI-EMAIL" stype="Text" maxlength="50" size="50" onfocus="enterField(this)" />
+                    </td>
+                    <td class="celllabelrightalign">
+                        <label for="MIR-BRCH-NOTI-LANG-CD">Language:</label>
+                    </td>
+                    <td class="celllabeldataentry">
+                        <select id="MIR-BRCH-NOTI-LANG-CD" name="MIR-BRCH-NOTI-LANG-CD" size="1" stype="Selection" onfocus="enterField(this)"></select>
+                    </td>
+                </tr>
+<!-- J04290 end -->
+            </table>
+<!-- J03329   FIN -->
+            <p align="right">
+                <a href="#top" class="backtotop">
+                    <img src="../images/top.gif" border="0" alt="Haut de page" width="14" height="14"/>Back to top</a>
+            </p>   
+<!-- J04290 Begin --> 
+            <table id="CLIEDISPending" class="tabledataentry">
+                <tr>
+                    <td class="celldisplayheading" colspan="4">
+                        <a id="CLIEDIS" name="CLIEDIS">CLIEDIS File – Pending Policies (PENDING)</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celllabelrightalign" colspan="3">
+                        <label for="MIR-SUSP-FILE-TRNSMT-TYP-CD">File type to send:</label>
+                    </td>
+                    <td class="celllabeldataentry" colspan="1">
+                        <select id="MIR-SUSP-FILE-TRNSMT-TYP-CD" name="MIR-SUSP-FILE-TRNSMT-TYP-CD" size="1" stype="Selection" onchange="validateSuspTrnsmtTypCd(this)" onfocus="enterField(this)"></select>
+                    </td>
+               </tr>
+                <tr>
+                    <td class="celllabelrightalign" colspan="3">
+                        <label for="MIR-SUSP-TRNSMT-MAIN-BR-IND">File sent to main agency:</label>
+                    </td>
+                    <td class="celllabeldataentry" colspan="1">
+                        <input type="checkbox" value="Y" id="MIR-SUSP-TRNSMT-MAIN-BR-IND" name="MIR-SUSP-TRNSMT-MAIN-BR-IND" stype="Indicator" onclick="onCheckBox(),validateSuspMainBrInd()" onfocus="enterField(this)"/>
+                    </td>
+				</tr>
+				<tr>
+                    <td class="celllabelrightalign" colspan="3">
+                        <label for="MIR-SUSP-TRNSMT-OTHR-BR-ID">File sent to ANOTHER agency:</label>
+                    </td>
+                    <td class="celllabeldataentry" colspan="1">
+                        <select id="MIR-SUSP-TRNSMT-OTHR-BR-ID" name="MIR-SUSP-TRNSMT-OTHR-BR-ID" size="1" stype="Selection" onchange="validateSuspOthrBrId(this)" onfocus="enterField(this)"></select>
+                    </td>
+                </tr>
+            </table>
+	        <br/>
+            <table id="CLIEDISEapp" class="tabledataentry">
+                <tr>
+                    <td class="celldisplayheading" colspan="4">
+                        <a id="CLIEDIS" name="CLIEDIS">CLIEDIS File – Electronic Application (EAPP)</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celllabelrightalign" colspan="3">
+                        <label for="MIR-EAPP-FILE-TRNSMT-TYP-CD">File type  to send:</label>
+                    </td>
+                    <td class="celllabeldataentry" colspan="1">
+                        <select id="MIR-EAPP-FILE-TRNSMT-TYP-CD" name="MIR-EAPP-FILE-TRNSMT-TYP-CD" size="1" stype="Selection" onchange="validateEappTrnsmtTypCd(this)" onfocus="enterField(this)"></select>
+                    </td>
+               </tr>
+                <tr>
+                    <td class="celllabelrightalign" colspan="3">
+                        <label for="MIR-EAPP-TRNSMT-MAIN-BR-IND">File sent to main agency:</label>
+                    </td>
+                    <td class="celllabeldataentry" colspan="1">
+                        <input type="checkbox" value="Y" id="MIR-EAPP-TRNSMT-MAIN-BR-IND" name="MIR-EAPP-TRNSMT-MAIN-BR-IND" stype="Indicator" onclick="onCheckBox(),validateEapppMainBrInd()" onfocus="enterField(this)"/>
+                    </td>
+				</tr>
+				<tr>
+                    <td class="celllabelrightalign" colspan="3">
+                        <label for="MIR-EAPP-TRNSMT-OTHR-BR-ID">File sent to ANOTHER agency:</label>
+                    </td>
+                    <td class="celllabeldataentry" colspan="1">
+                        <select id="MIR-EAPP-TRNSMT-OTHR-BR-ID" name="MIR-EAPP-TRNSMT-OTHR-BR-ID" size="1" stype="Selection" onchange="validateEappOthrBrId(this)" onfocus="enterField(this)"></select>
+                    </td>
+                </tr>
+<!-- J05986   DEBUT -->
+                <tr>
+                    <td class="celllabelrightalign" colspan="3">
+                        <label for="MIR-EAPP-CNTCT-EMAIL">eApp-Email:</label>
+                    </td>
+                    <td class="celllabeldataentry" colspan="1">
+                        <input type="text" value=" " id="MIR-EAPP-CNTCT-EMAIL" name="MIR-EAPP-CNTCT-EMAIL" stype="Text" maxlength="50" size="50" onfocus="enterField(this)" />
+                    </td>
+                </tr>
+<!-- J05986   FIN -->
+            </table>
+	        <br/>
+            <table id="CLIEDISInforce" class="tabledataentry">
+                <tr>
+                    <td class="celldisplayheading" colspan="4">
+                        <a id="CLIEDIS" name="CLIEDIS">CLIEDIS File – In-Force Policies (INFORCE) </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celllabelrightalign" colspan="3">
+                        <label for="MIR-INFC-FILE-TRNSMT-TYP-CD">File type  to send:</label>
+                    </td>
+                    <td class="celllabeldataentry" colspan="1">
+                        <select id="MIR-INFC-FILE-TRNSMT-TYP-CD" name="MIR-INFC-FILE-TRNSMT-TYP-CD" size="1" stype="Selection" onchange="validateInfcTrnsmtTypCd(this)" onfocus="enterField(this)"></select>
+                    </td>
+               </tr>
+                <tr>
+                    <td class="celllabelrightalign" colspan="3">
+                        <label for="MIR-INFC-TRNSMT-MAIN-BR-IND">File sent to main agency:</label>
+                    </td>
+                    <td class="celllabeldataentry" colspan="1">
+                        <input type="checkbox" value="Y" id="MIR-INFC-TRNSMT-MAIN-BR-IND" name="MIR-INFC-TRNSMT-MAIN-BR-IND" stype="Indicator" onclick="onCheckBox(),validateInfcMainBrInd()" onfocus="enterField(this)"/>
+                    </td>
+				</tr>
+				<tr>
+                    <td class="celllabelrightalign" colspan="3">
+                        <label for="MIR-INFC-TRNSMT-OTHR-BR-ID">File sent to ANOTHER agency:</label>
+                    </td>
+                    <td class="celllabeldataentry" colspan="1">
+                        <select id="MIR-INFC-TRNSMT-OTHR-BR-ID" name="MIR-INFC-TRNSMT-OTHR-BR-ID" size="1" stype="Selection" onchange="validateInfcOthrBrId(this)" onfocus="enterField(this)"></select>
+                    </td>
+                </tr>
+            </table>
+	        <br/>
+            <table id="CLIEDISCommission" class="tabledataentry">
+                <tr>
+                    <td class="celldisplayheading" colspan="4">
+                        <a id="CLIEDIS" name="CLIEDIS">CLIEDIS File – Commissions</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celllabelrightalign" colspan="3">
+                        <label for="MIR-COMM-FILE-TRNSMT-TYP-CD">File type  to send:</label>
+                    </td>
+                    <td class="celllabeldataentry" colspan="1">
+                        <select id="MIR-COMM-FILE-TRNSMT-TYP-CD" name="MIR-COMM-FILE-TRNSMT-TYP-CD" size="1" stype="Selection" onchange="validateCommTrnsmtTypCd(this)" onfocus="enterField(this)"></select>
+                    </td>
+               </tr>
+                <tr>
+                    <td class="celllabelrightalign" colspan="3">
+                        <label for="MIR-COMM-TRNSMT-MAIN-BR-IND">File sent to main agency:</label>
+                    </td>
+                    <td class="celllabeldataentry" colspan="1">
+                        <input type="checkbox" value="Y" id="MIR-COMM-TRNSMT-MAIN-BR-IND" name="MIR-COMM-TRNSMT-MAIN-BR-IND" stype="Indicator" onclick="onCheckBox(),validateCommMainBrInd()" onfocus="enterField(this)"/>
+                    </td>
+				</tr>
+				<tr>
+                    <td class="celllabelrightalign" colspan="3">
+                        <label for="MIR-COMM-TRNSMT-OTHR-BR-ID">File sent to ANOTHER agency:</label>
+                    </td>
+                    <td class="celllabeldataentry" colspan="1">
+                        <select id="MIR-COMM-TRNSMT-OTHR-BR-ID" name="MIR-COMM-TRNSMT-OTHR-BR-ID" size="1" stype="Selection" onchange="validateCommOthrBrId(this)" onfocus="enterField(this)"></select>
+                    </td>
+                </tr>
+            </table>
+	        <br/>
+            <table id="CLIEDISProduct" class="tabledataentry">
+                <tr>
+                    <td class="celldisplayheading" colspan="4">
+                        <a id="CLIEDIS" name="CLIEDIS">CLIEDIS File – Product Details</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celllabelrightalign" colspan="3">
+                        <label for="MIR-PROD-FILE-TRNSMT-TYP-CD">File type  to send:</label>
+                    </td>
+                    <td class="celllabeldataentry" colspan="1">
+                        <select id="MIR-PROD-FILE-TRNSMT-TYP-CD" name="MIR-PROD-FILE-TRNSMT-TYP-CD" size="1" stype="Selection" onchange="validateProdTrnsmtTypCd(this)" onfocus="enterField(this)"></select>
+                    </td>
+               </tr>
+                <tr>
+                    <td class="celllabelrightalign" colspan="3">
+                        <label for="MIR-PROD-TRNSMT-MAIN-BR-IND">File sent to main agency:</label>
+                    </td>
+                    <td class="celllabeldataentry" colspan="1">
+                        <input type="checkbox" value="Y" id="MIR-PROD-TRNSMT-MAIN-BR-IND" name="MIR-PROD-TRNSMT-MAIN-BR-IND" stype="Indicator" onclick="onCheckBox(),validateProdMainBrInd()" onfocus="enterField(this)"/>
+                    </td>
+				</tr>
+				<tr>
+                    <td class="celllabelrightalign" colspan="3">
+                        <label for="MIR-PROD-TRNSMT-OTHR-BR-ID">File sent to ANOTHER agency:</label>
+                    </td>
+                    <td class="celllabeldataentry" colspan="1">
+                        <select id="MIR-PROD-TRNSMT-OTHR-BR-ID" name="MIR-PROD-TRNSMT-OTHR-BR-ID" size="1" stype="Selection" onchange="validateProdOthrBrId(this)" onfocus="enterField(this)"></select>
+                    </td>
+                </tr>
+            </table>
+            <p align="right">
+                <a href="#top" class="backtotop">
+                    <img src="../images/top.gif" border="0" alt="Haut de page" width="14" height="14"/>Back to top</a>
+            </p>  
+<!-- J04290 end -->
+       	
+             <center>
+             	 <table class="tableanchors">
+                    <tr>
+                        <td class="cellanchors">
+                            <a href="#Branch Phones Numbers">Phones Numbers of agency</a>
+                        </td>
+                        <td class="cellanchors">
+                            <a href="#General Information">General Information</a>
+                        </td>
+                        <td class="cellanchors">
+                            <a href="#Extranet ID">Extranet ID</a>
+                        </td>
+                        <td class="cellanchors">
+                            <a href="#Branch Principal Contact">Branch principal contact</a>
+                        </td>                        
+                        <td class="cellanchors">
+                            <a href="#Operations Contact/Coordinator">Operations contact/Coordinator</a></td>
+                        <td class="cellanchors">
+                            <a href="#Contracting Contact">Contracting contact</a>
+                        </td>
+                    </tr>
+                </table>
+           	</center>
+            <center>
+             	<table class="tableanchors">
+                    <tr>
+                        <td class="cellanchors">
+                            <a href="#Compensation Contact">Compensation contact</a>
+                        </td>
+                        <td class="cellanchors">
+                            <a href="#New Business Contact">New Business contact</a>
+                        </td>
+                        <td class="cellanchors">
+                            <a href="#Inforce Contact">Inforce contact</a>
+                        </td>
+                        <td class="cellanchors">
+                            <a href="#Communication-Marketing Contact">Communication-Marketing contact</a>
+                        </td>
+                        <td class="cellanchors">
+                            <a href="#Miscellaneous (correspondent 2)">Miscellaneous (respondent 2)</a>
+                        </td>
+<!-- J03329   DEBUT -->
+                        <td class="cellanchors">
+                            <a href="#Notification">Notification</a>
+                        </td>
+<!-- J03329   FIN -->  
+<!-- J04290   DEBUT -->
+                        <td class="cellanchors">
+                            <a href="#CLIEDIS">CLIEDIS</a>
+                        </td>
+<!-- J04290   FIN -->      
+                    </tr>                    
+               </table>
+           </center>
+<!-- J02547 FIN -->            
+        </form>
+    </body>
+    <script src="../js/ActionHandlers.js"></script>
+    <script src="../js/MessageFunctions.js"></script>
+    <script src="../js/MessagesEnglish.js"></script>
+    <script src="../js/ClientLevelEdits.js"></script>
+    <script src="../js/GlobalUserMethods.js"></script>
+    <script src="../js/BF0992.js"></script>
+</html>

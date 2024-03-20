@@ -1,0 +1,3258 @@
+<!--
+* Converted to Pathfinder 3.0 on Jan 20, 2004 2:40:07 PM EST
+*
+*********************************************************************************
+*  (C) COPYRIGHT 2001 INSURANCE SOFTWARE SOLUTIONS CORP.  ALL RIGHTS RESERVED
+*********************************************************************************
+*  Component:   BFA302GestionInterm-I.htm
+*  Description:
+*
+*********************************************************************************
+*	Chg#	Date		Auth.		Description
+*
+*	J04940	28OCT2016	JPA			Nouveau pour la gestion des intermédiaires
+*	J05102	06JUL2017	GABRIELP	Modifs pour IE11 Natif
+*   J05356  19JUL2017   JFO         configurer le champ MIR-RQST-INFO-USER-ID-T en SPAN
+*   J05987  09AVR2019   JFO         Ajouter lien niveau décision.
+*********************************************************************************
+ -->
+<html>
+    <head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>BFA302GestionInterm-I</title>
+        <link rel="stylesheet" type="text/css" href="../french/Ingenium.css" charset="UTF-8" />
+    </head>
+    <body class="bodyws" onload="onLoadCustom()">
+        <form action="pageserver" method="post" id="inputForm" target="_parent" onsubmit="onSubmitCustom(); return(onSubmit());"> 
+<!--    <body class="bodyws">
+        <form action="pageserver" method="post" id="inputForm" target="_parent" onsubmit="return(onSubmit());"> -->
+            <input type="hidden" id="index" name="index" stype="Hidden"/>
+            <input type="hidden" id="action" name="action" stype="Hidden"/>
+            <input type="hidden" id="MIR-DV-PRCES-DT" name="MIR-DV-PRCES-DT" stype="Date"/>
+            <input type="hidden" id="MIR-USER-ID" name="MIR-USER-ID" stype="Text"/>
+            <input type="hidden" id="MIR-RQST-INFO-SEQ-NUM-T[1]" name="MIR-RQST-INFO-SEQ-NUM-T[1]" stype="Hidden"/>
+            <input type="hidden" id="MIR-RQST-INFO-SEQ-NUM-T[2]" name="MIR-RQST-INFO-SEQ-NUM-T[2]" stype="Hidden"/>
+            <input type="hidden" id="MIR-RQST-INFO-SEQ-NUM-T[3]" name="MIR-RQST-INFO-SEQ-NUM-T[3]" stype="Hidden"/>
+            <input type="hidden" id="MIR-RQST-INFO-SEQ-NUM-T[4]" name="MIR-RQST-INFO-SEQ-NUM-T[4]" stype="Hidden"/>
+            <input type="hidden" id="MIR-RQST-INFO-SEQ-NUM-T[5]" name="MIR-RQST-INFO-SEQ-NUM-T[5]" stype="Hidden"/>
+            <input type="hidden" id="MIR-RQST-INFO-SEQ-NUM-T[6]" name="MIR-RQST-INFO-SEQ-NUM-T[6]" stype="Hidden"/>
+            <input type="hidden" id="MIR-RQST-INFO-SEQ-NUM-T[7]" name="MIR-RQST-INFO-SEQ-NUM-T[7]" stype="Hidden"/>
+            <input type="hidden" id="MIR-RQST-INFO-SEQ-NUM-T[8]" name="MIR-RQST-INFO-SEQ-NUM-T[8]" stype="Hidden"/>
+            <input type="hidden" id="MIR-RQST-INFO-SEQ-NUM-T[9]" name="MIR-RQST-INFO-SEQ-NUM-T[9]" stype="Hidden"/>
+            <input type="hidden" id="MIR-RQST-INFO-SEQ-NUM-T[10]" name="MIR-RQST-INFO-SEQ-NUM-T[10]" stype="Hidden"/>
+            <input type="hidden" id="MIR-CODIF-IND-T[1]" name="MIR-CODIF-IND-T[1]" stype="Hidden"/>
+            <input type="hidden" id="MIR-CODIF-IND-T[2]" name="MIR-CODIF-IND-T[2]" stype="Hidden"/>
+            <input type="hidden" id="MIR-CODIF-IND-T[3]" name="MIR-CODIF-IND-T[3]" stype="Hidden"/>
+            <input type="hidden" id="MIR-CODIF-IND-T[4]" name="MIR-CODIF-IND-T[4]" stype="Hidden"/>
+            <input type="hidden" id="MIR-CODIF-IND-T[5]" name="MIR-CODIF-IND-T[5]" stype="Hidden"/>
+            <input type="hidden" id="MIR-DECID-IND-T[1]" name="MIR-DECID-IND-T[1]" stype="Hidden"/>
+            <input type="hidden" id="MIR-DECID-IND-T[2]" name="MIR-DECID-IND-T[2]" stype="Hidden"/>
+            <input type="hidden" id="MIR-DECID-IND-T[3]" name="MIR-DECID-IND-T[3]" stype="Hidden"/>
+            <input type="hidden" id="MIR-DECID-IND-T[4]" name="MIR-DECID-IND-T[4]" stype="Hidden"/>
+            <input type="hidden" id="MIR-DECID-IND-T[5]" name="MIR-DECID-IND-T[5]" stype="Hidden"/>
+            <input type="hidden" id="MIR-DECID-IND-T[6]" name="MIR-DECID-IND-T[1]" stype="Hidden"/>
+            <input type="hidden" id="MIR-DECID-IND-T[7]" name="MIR-DECID-IND-T[2]" stype="Hidden"/>
+            <input type="hidden" id="MIR-DECID-IND-T[8]" name="MIR-DECID-IND-T[3]" stype="Hidden"/>
+            <input type="hidden" id="MIR-DECID-IND-T[9]" name="MIR-DECID-IND-T[4]" stype="Hidden"/>
+            <input type="hidden" id="MIR-DECID-IND-T[10]" name="MIR-DECID-IND-T[5]" stype="Hidden"/>
+            <input type="hidden" id="MIR-DECID-IND-T[11]" name="MIR-DECID-IND-T[1]" stype="Hidden"/>
+            <input type="hidden" id="MIR-DECID-IND-T[12]" name="MIR-DECID-IND-T[2]" stype="Hidden"/>
+            <input type="hidden" id="MIR-DECID-IND-T[13]" name="MIR-DECID-IND-T[3]" stype="Hidden"/>
+            <input type="hidden" id="MIR-DECID-IND-T[14]" name="MIR-DECID-IND-T[4]" stype="Hidden"/>
+            <input type="hidden" id="MIR-DECID-IND-T[15]" name="MIR-DECID-IND-T[5]" stype="Hidden"/>
+            <input type="hidden" id="MIR-DECID-IND-T[16]" name="MIR-DECID-IND-T[1]" stype="Hidden"/>
+            <input type="hidden" id="MIR-DECID-IND-T[17]" name="MIR-DECID-IND-T[2]" stype="Hidden"/>
+            <input type="hidden" id="MIR-DECID-IND-T[18]" name="MIR-DECID-IND-T[3]" stype="Hidden"/>
+            <input type="hidden" id="MIR-DECID-IND-T[19]" name="MIR-DECID-IND-T[4]" stype="Hidden"/>
+            <input type="hidden" id="MIR-DECID-IND-T[20]" name="MIR-DECID-IND-T[5]" stype="Hidden"/>
+            <input type="hidden" id="MIR-PROC-IND-T[1]" name="MIR-PROC-IND-T[1]" stype="Hidden"/>
+            <input type="hidden" id="MIR-PROC-IND-T[2]" name="MIR-PROC-IND-T[2]" stype="Hidden"/>
+            <input type="hidden" id="MIR-PROC-IND-T[3]" name="MIR-PROC-IND-T[3]" stype="Hidden"/>
+            <input type="hidden" id="MIR-PROC-IND-T[4]" name="MIR-PROC-IND-T[4]" stype="Hidden"/>
+            <input type="hidden" id="MIR-PROC-IND-T[5]" name="MIR-PROC-IND-T[5]" stype="Hidden"/>
+            <input type="hidden" id="MIR-PROC-IND-T[6]" name="MIR-PROC-IND-T[1]" stype="Hidden"/>
+            <input type="hidden" id="MIR-PROC-IND-T[7]" name="MIR-PROC-IND-T[2]" stype="Hidden"/>
+            <input type="hidden" id="MIR-PROC-IND-T[8]" name="MIR-PROC-IND-T[3]" stype="Hidden"/>
+            <input type="hidden" id="MIR-PROC-IND-T[9]" name="MIR-PROC-IND-T[4]" stype="Hidden"/>
+            <input type="hidden" id="MIR-PROC-IND-T[10]" name="MIR-PROC-IND-T[5]" stype="Hidden"/>
+            <input type="hidden" id="MIR-PROC-IND-T[11]" name="MIR-PROC-IND-T[1]" stype="Hidden"/>
+            <input type="hidden" id="MIR-PROC-IND-T[12]" name="MIR-PROC-IND-T[2]" stype="Hidden"/>
+            <input type="hidden" id="MIR-PROC-IND-T[13]" name="MIR-PROC-IND-T[3]" stype="Hidden"/>
+            <input type="hidden" id="MIR-PROC-IND-T[14]" name="MIR-PROC-IND-T[4]" stype="Hidden"/>
+            <input type="hidden" id="MIR-PROC-IND-T[15]" name="MIR-PROC-IND-T[5]" stype="Hidden"/>
+            <input type="hidden" id="MIR-PROC-IND-T[16]" name="MIR-PROC-IND-T[1]" stype="Hidden"/>
+            <input type="hidden" id="MIR-PROC-IND-T[17]" name="MIR-PROC-IND-T[2]" stype="Hidden"/>
+            <input type="hidden" id="MIR-PROC-IND-T[18]" name="MIR-PROC-IND-T[3]" stype="Hidden"/>
+            <input type="hidden" id="MIR-PROC-IND-T[19]" name="MIR-PROC-IND-T[4]" stype="Hidden"/>
+            <input type="hidden" id="MIR-PROC-IND-T[20]" name="MIR-PROC-IND-T[5]" stype="Hidden"/>
+            <table class="tabledisplaykey">
+                <tr>
+                    <td class="celldisplaykeylabel">
+                        <label for="MIR-WRKSHT-ID">Numéro de la requête:</label>
+                    </td>
+                    <td class="celldisplaykey">
+                        <span id="MIR-WRKSHT-ID" stype="Text" displayonly="yes">MIR-WRKSHT-ID</span>
+                    </td>
+                    <td class="celldisplaykeylabel">
+                        <label for="MIR-WRKSHT-TYP-CD">Type de demande:</label>
+                    </td>
+                    <td class="celldisplaykey">
+                        <span id="MIR-WRKSHT-TYP-CD" stype="Text" displayonly="yes">MIR-WRKSHT-TYP-CD</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celldisplaykeylabel">
+                        <label for="MIR-AGT-CLI-ID">Numéro de client :</label>
+                    </td>
+                    <td class="celldisplaykey">
+                        <span id="MIR-AGT-CLI-ID" stype="Text" displayonly="yes">MIR-AGT-CLI-ID</span>
+                    </td>
+                    <td class="celldisplaykeylabel">
+                        <label for="MIR-GI-STAT-CD">Statut de la demande:</label>
+                    </td>
+                    <td class="celldisplaykey">
+                        <span id="MIR-GI-STAT-CD" stype="Text" displayonly="yes">MIR-GI-STAT-CD</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celldisplaykeylabel">
+                        <label for="MIR-DV-CLI-NM">Nom du conseiller :</label>
+                    </td>
+                    <td class="celldisplaykey">
+                        <span id="MIR-DV-CLI-NM" stype="Text" displayonly="yes">MIR-DV-CLI-NM</span>
+                    </td>
+                    <td class="celldisplaykeylabel">
+                        <label for="MIR-GI-EFF-DT">Date d'effet:</label>
+                    </td>
+                    <td class="celldisplaykey">
+                        <span id="MIR-GI-EFF-DT" stype="Date" displayonly="yes">MIR-GI-EFF-DT</span>
+                    </td>
+                </tr>
+            </table> 
+            <br/>
+         <center>
+		<table class="tableanchors">
+                <tr>
+                    <td class="cellanchors"><a href="#ClientInformation">Information du client</a> </td>
+                    <td class="cellanchors"><a href="#ContactInformation">ContactClient</a> </td>
+                    <td class="cellanchors"><a href="#BankingInformation">Information bancaire</a> </td>
+                    <td class="cellanchors"><a href="#AgentInformation">Information sur l'agent</a> </td>
+                    <td class="cellanchors"><a href="#LicenceInformation">Information sur le permis</a> </td>
+                    <td class="cellanchors"><a href="#SucommInfo">Sucommissions</a> </td>
+                    <td class="cellanchors"><a href="#RqstTyp">Types de demande</a> </td>
+                    <td class="cellanchors"><a href="#BranchSection">Succursales</a> </td>
+                    <td class="cellanchors"><a href="#Reception">Réception</a> </td>
+                </tr>
+		   </table>
+         </center>
+         <center>
+            <table class="tableanchors">
+                <tr>
+                    <td class="cellanchors"><a href="#ValidAdminFile">Validation de la fiche admin.</a> </td>
+                    <td class="cellanchors"><a href="#ValidChngNmForm">Validation du formulaire de changement de nom</a> </td>
+                    <td class="cellanchors"><a href="#ValidTrsfForm">Validation du formulaire de transfert.</a> </td>
+                    <td class="cellanchors"><a href="#ValidChq">Validation du spécimen de chèque</a> </td>
+                    <td class="cellanchors"><a href="#ValidCert">Validation des certifications</a> </td>
+                    <td class="cellanchors"><a href="#ValidCorpDoc">Validation des documents corporatifs</a> </td>
+                    <td class="cellanchors"><a href="#ValidBonRateForm">Validation du formulaire des taux boni</a> </td>
+                    <td class="cellanchors"><a href="#ValidQuest">Validation du questionnaire</a> </td>
+                    <td class="cellanchors"><a href="#ValidAgtCntrct">Validation du contrat de représentation</a> </td>
+                </tr>
+            </table>        
+          </center>
+         <center>
+            <table class="tableanchors">
+                <tr>
+                    <td class="cellanchors"><a href="#NecSteps">Étapes nécessaires</a> </td>
+                    <td class="cellanchors"><a href="#PrelAnalysisSection">Analyse Préliminaire</a> </td>
+                    <td class="cellanchors"><a href="#ComplexAnalysisSection">Analyse Complexe</a> </td>
+                    <td class="cellanchors"><a href="#Comunication">Communication</a> </td>
+                    <td class="cellanchors"><a href="#CodifSection">Codification</a> </td>
+                    <td class="cellanchors"><a href="#ComplianceSection">Conformité</a> </td>
+                    <td class="cellanchors"><a href="#Decision">Décision</a> </td>
+                    <td class="cellanchors"><a href="#Processing">Traitement</a> </td>
+                </tr>
+            </table>        
+          </center>
+         <center>
+            <table class="tableanchors">
+                <tr>
+                    <td class="cellanchors"><a href="#QualityControlSection">Contrôle Qualité</a> </td>
+                    <td class="cellanchors"><a href="#Correction">Correction</a> </td>
+                    <td class="cellanchors"><a href="#ExpedSection">Expédition</a> </td>
+                    <td class="cellanchors"><a href="#Archive">Archivage</a> </td>
+                    <td class="cellanchors"><a href="#CloseSection">Fermeture</a> </td>
+<!--                    <td class="cellanchors"><a href="#InternalNotes">Notes internes</a> </td> -->
+                </tr>
+            </table>        
+          </center>
+<!--            <table class="tabledataentry">
+                <tr>
+                    <td class="celldisplayheading" colspan="4">Dossier VIP</td>
+                </tr>
+                <tr>
+                    <td class="celllabelrightalign">
+                        <span class="clsmandatory">
+                        <label for="MIR-VIP-IND">Dossier VIP?:</label></span>
+                    </td>
+                    <td class="celllabeldataentry">
+                        <input type="checkbox" value="Y" id="MIR-VIP-IND" name="MIR-VIP-IND" stype="Indicator" onclick="onCheckBox()" onfocus="enterField(this)"/>
+                    </td>
+                </tr>
+            </table> -->
+<br />
+
+            <h2>
+                <a name="ClientInformation">Information sur le client</a>
+            </h2>
+            <table class="tabledisplay">
+                <tr>
+                    <td class="celldisplayheading" colspan="4">Information sur le client</td>
+                </tr>
+                <tr>
+                    <td class="celldisplaylabel">
+                        <label for="MIR-CLI-TAX-ID">Numéro d'identification aux fins de l'impôt:</label>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-CLI-TAX-ID" stype="Text" displayonly="yes">MIR-CLI-TAX-ID</span>
+                    </td>
+                    <td class="celldisplaylabel">
+                        <label for="MIR-CLI-BTH-DT">Date de naissance:</label>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-CLI-BTH-DT" stype="Date" displayonly="yes">MIR-CLI-BTH-DT</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celldisplaylabel">
+                        <label for="MIR-CLI-SEX-CD">Sexe:</label>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-CLI-SEX-CD" stype="Text" displayonly="yes">MIR-CLI-SEX-CD</span>
+                    </td>
+                    <td class="celldisplaylabel">
+                        <label for="MIR-CLI-LANG-CD">Langue de correspondance:</label>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-CLI-LANG-CD" stype="Text" displayonly="yes">MIR-CLI-LANG-CD</span>
+                    </td>
+                </tr>
+            </table>
+<br />
+            <h2>
+                <a name="ContactInformation">Contact Client</a>
+            </h2>
+            <table class="tabledisplay" genrows="0">
+                <tr>
+                    <td class="celldisplayheading">
+                        <label for="MIR-CLI-CNTCT-ID-CD-T[1]">Genre</label>
+                    </td>
+                    <td class="celldisplayheading">
+                        <label for="MIR-CLI-CNTCT-ID-TXT-T[1]">Détails</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celldisplay">
+                        <span id="MIR-CLI-CNTCT-ID-CD-T[]" stype="Text" displayonly="yes">MIR-CLI-CNTCT-ID-CD-T[]</span>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-CLI-CNTCT-ID-TXT-T[]" stype="Text" displayonly="yes">MIR-CLI-CNTCT-ID-TXT-T[]</span>
+                    </td>
+                </tr>
+            </table>
+       <br />
+            <h2>
+                <a name="BankingInformation">Information bancaire</a>
+            </h2>
+            <table class="tabledisplay" genrows="1" keyfield="00">
+                <tr>
+                    <td class="celldisplayheading" colspan="8">Comptes bancaires</td>
+                </tr>
+                <tr>
+                    <td class="celldisplayheading">
+                        <label for="MIR-DV-CLI-BNK-ACCT-NUM-T[1]">Compte n°</label>
+                    </td>
+                    <td class="celldisplayheading">
+						<label for="MIR-CLI-BNK-ACCT-DT-T[1]">Date d'effet du compte bancaire</label>
+                    </td>
+                    <td class="celldisplayheading">
+                        <label for="MIR-BNK-ID-T[1]">Numéro de banque</label>
+                    </td>
+                    <td class="celldisplayheading">
+                        <label for="MIR-BNK-BR-ID-T[1]">Succursale</label>
+                    </td>
+                    <td class="celldisplayheading">
+                        <label for="MIR-BNK-ACCT-ID-T[1]">Numéro de compte bancaire</label>
+                    </td>
+                    <td class="celldisplayheading">
+                        <label for="MIR-BNK-ACCT-TYP-CD-T[1]">Genre de compte</label>
+                    </td>
+                    <td class="celldisplayheading">
+                        <label for="MIR-BNK-ACCT-MICR-IND-T[1]">Chèques codés de caractères magnétiques</label>
+                    </td>
+                    <td class="celldisplayheading">
+                        <label for="MIR-BNK-ACCT-HLDR-NM-T[1]">Nom du titulaire de compte</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celldisplay">
+                        <span id="MIR-DV-CLI-BNK-ACCT-NUM-T[]" stype="Text" displayonly="yes">MIR-DV-CLI-BNK-ACCT-NUM-T[]</span>
+                    </td>
+                    <td class="celldisplay">
+						<span id="MIR-CLI-BNK-ACCT-DT-T[]" stype="Date" displayonly="yes">MIR-CLI-BNK-ACCT-DT-T[]</span>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-BNK-ID-T[]" stype="Text" displayonly="yes">MIR-BNK-ID-T[]</span>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-BNK-BR-ID-T[]" stype="Text" displayonly="yes">MIR-BNK-BR-ID-T[]</span>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-BNK-ACCT-ID-T[]" stype="Text" displayonly="yes">MIR-BNK-ACCT-ID-T[]</span>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-BNK-ACCT-TYP-CD-T[]" stype="Text" displayonly="yes">MIR-BNK-ACCT-TYP-CD-T[]</span>
+                    </td>
+                    <td class="celldisplay">
+                        <input type="checkbox" name="MIR-BNK-ACCT-MICR-IND-T[]" stype="Indicator" value="Y" disabled="yes"></input>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-BNK-ACCT-HLDR-NM-T[]" stype="Text" displayonly="yes">MIR-BNK-ACCT-HLDR-NM-T[]</span>
+                    </td>
+                </tr>
+            </table>
+        <p align="right"><a href="#top" class="backtotop"> <img src="../images/top.gif" border="0" alt="Haut de page" width="14" height="14"/>Haut de page</a> </p>
+            <h2>
+                <a name="AgentInformation">Information sur l'agent</a>
+            </h2>
+			<table class="tabledisplay">
+                <tr>
+                    <td class="celldisplayheading" colspan="4">
+                        <a name="AgentDetail">Information sur le conseiller</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celldisplaylabel">
+                        <label for="MIR-AGT-CNTRCT-STRT-DT">Date d'effet:</label>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-AGT-CNTRCT-STRT-DT" stype="Date" displayonly="yes">MIR-AGT-CNTRCT-STRT-DT</span>
+                    </td>
+                    <td class="celldisplaylabel">
+                        <label for="MIR-AGT-CNTRCT-TRMN-DT">Date changement État de l'agent:</label>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-AGT-CNTRCT-TRMN-DT" stype="Date" displayonly="yes">MIR-AGT-CNTRCT-TRMN-DT</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celldisplaylabel">
+                        <label for="MIR-AGT-STAT-CD">État de l'agent:</label>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-AGT-STAT-CD" stype="Text" displayonly="yes">MIR-AGT-STAT-CD</span>
+                    </td>
+                    <td class="celldisplaylabel">
+                        <label for="MIR-AGT-CNTRCT-STAT-CD">État du contrat:</label>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-AGT-CNTRCT-STAT-CD" stype="Text" displayonly="yes">MIR-AGT-CNTRCT-STAT-CD</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celldisplaylabel">
+                        <label for="MIR-BR-ID">Succursale:</label>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-BR-ID" stype="Text" displayonly="yes">MIR-BR-ID</span>
+                    </td>
+                    <td class="celldisplaylabel">
+                        <label for="MIR-PREV-BR-ID">Succursale précédente:</label>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-PREV-BR-ID" stype="Text" displayonly="yes">MIR-PREV-BR-ID</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celldisplaylabel">
+                        <label for="MIR-AGT-EXTRANET-MAIN-TXT">Code Extranet Principal:</label>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-AGT-EXTRANET-MAIN-TXT" stype="Text" displayonly="yes">MIR-AGT-EXTRANET-MAIN-TXT</span>
+                    </td>
+                    <td class="celldisplaylabel">
+                        <label for="MIR-AGT-REGRPN-CD">Code Regroupement:</label>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-AGT-REGRPN-CD" stype="Text" displayonly="yes">MIR-AGT-REGRPN-CD</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celldisplaylabel">
+                        <label for="MIR-AGT-GROUP-ID">Paiement au Code:</label>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-AGT-GROUP-ID" stype="Text" displayonly="yes">MIR-AGT-GROUP-ID</span>
+                    </td>
+                    <td class="celldisplaylabel">
+                        <label for="MIR-REL-AGT-REP-ID">Code de représentant SSQ:</label>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-REL-AGT-REP-ID" stype="Text" displayonly="yes">MIR-REL-AGT-REP-ID</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celldisplaylabel">
+                        <label for="MIR-DV-AGT-TAX-CLI-ID">Client feuillet d'impôt :</label>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-DV-AGT-TAX-CLI-ID" stype="Text" displayonly="yes">MIR-DV-AGT-TAX-CLI-ID</span>
+                    </td>
+                    <td class="celldisplaylabel">
+                        <label for="MIR-AGT-TYP-CD">Genre d'agent:</label>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-AGT-TYP-CD" stype="Text" displayonly="yes">MIR-AGT-TYP-CD</span>
+                    </td>
+				</tr>
+                <tr>
+                    <td class="celldisplaylabel">
+                        <label for="MIR-AGT-CMPNST-SCHD-CD">Genre de contrat:</label>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-AGT-CMPNST-SCHD-CD" stype="Text" displayonly="yes">MIR-AGT-CMPNST-SCHD-CD</span>
+                    </td>
+                    <td class="celldisplaylabel">
+                        <label for="MIR-AGT-HIER-TYP-CD">Type Hiérarchique:</label>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-AGT-HIER-TYP-CD" stype="Text" displayonly="yes">MIR-AGT-HIER-TYP-CD</span>
+                    </td>
+				</tr>
+                <tr>
+                    <td class="celldisplaylabel">
+                        <label for="MIR-AUTO-COMM-PMT-CD">Versement automatique des commissions:</label>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-AUTO-COMM-PMT-CD" stype="Text" displayonly="yes">MIR-AUTO-COMM-PMT-CD</span>
+                    </td>
+                    <td class="celldisplaylabel">
+                        <label for="MIR-OVRID-ID">Code de surcommission:</label>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-OVRID-ID" stype="Text" displayonly="yes">MIR-OVRID-ID</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celldisplaylabel">
+                        <label for="MIR-BEST-TIME-CALL-TXT">Type et date du contrat:</label>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-BEST-TIME-CALL-TXT" stype="Text" displayonly="yes">MIR-BEST-TIME-CALL-TXT</span>
+                    </td>
+                    <td class="celldisplaylabel">
+                        <label for="MIR-ADDR-BOX-CD">Boite Postale:</label>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-ADDR-BOX-CD" stype="Text" displayonly="yes">MIR-ADDR-BOX-CD</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celldisplaylabel">
+                        <label for="MIR-AGT-PAYBL-BAL-AMT">Solde actuel:</label>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-AGT-PAYBL-BAL-AMT" stype="Currency" elength="13" signed="yes" displayonly="yes">MIR-AGT-PAYBL-BAL-AMT</span>
+                    </td>
+                    <td class="celldisplaylabel"/>
+                    <td class="celldisplay"/>
+                </tr>
+	        </table> 
+        <p align="right"><a href="#top" class="backtotop"> <img src="../images/top.gif" border="0" alt="Haut de page" width="14" height="14"/>Haut de page</a> </p>
+            <h2>
+                <a name="LicenceInformation">Information sur le permis</a>
+            </h2>
+            <table id="LicenceTable" class="tabledisplay" genrows="1" keyfield="1">
+                <tr>
+                    <td class="celldisplayheading">
+                        <label for="MIR-LIC-ID-T[1]">Numéro d'agent</label>
+                    </td>
+                    <td class="celldisplayheading">
+                        <label for="MIR-LIC-LOC-CD-T[1]">Lieu</label>
+                    </td>
+                    <td class="celldisplayheading">
+                        <label for="MIR-LIC-LIAB-STAT-CD-T[1]">Statut</label>
+                    </td>
+                    <td class="celldisplayheading" style="width: 114px">
+                        <label for="MIR-LIC-EFF-DT-T[1]">Date d'effet permis</label>
+                    </td>
+                    <td class="celldisplayheading">
+                        <label for="MIR-LIC-XPRY-DT-T[1]">Date d'expiration permis</label>
+                    </td>
+                    <td class="celldisplayheading">
+                        <label for="MIR-LIC-DESC-TXT-T[1]">Numéro du permis</label>
+                    </td>
+                    <td class="celldisplayheading">
+                        <label for="MIR-LIC-LIAB-EFF-DT-T[1]">Date d'effet assurance responsabilité</label>
+                    </td>
+                    <td class="celldisplayheading">
+                        <label for="MIR-LIC-LIAB-XPRY-DT-T[1]">Date d'expiration assurance responsabilité</label>
+                    </td>
+                    <td class="celldisplayheading">
+                        <label for="MIR-LIC-LIAB-DESC-TXT-T[1]">Numéro assurance responsabilité</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celldisplay">
+                        <a name="MIR-LIC-ID-T[]" href="a" action="SelectItem" index="1" onclick="onAction();return(false)" onfocus="enterField(this)">Numéro d'agent</a>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-LIC-LOC-CD-T[]" stype="Text" displayonly="yes">MIR-LIC-LOC-CD-T[]</span>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-LIC-LIAB-STAT-CD-T[]" stype="Text" displayonly="yes">MIR-LIC-LIAB-STAT-CD-T[]</span>
+                    </td>
+                    <td class="celldisplay" style="width: 114px">
+                        <span id="MIR-LIC-EFF-DT-T[]" stype="Date" displayonly="yes">MIR-LIC-EFF-DT-T[]</span>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-LIC-XPRY-DT-T[]" stype="Date" displayonly="yes">MIR-LIC-XPRY-DT-T[]</span>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-LIC-DESC-TXT-T[]" stype="Text" displayonly="yes">MIR-LIC-DESC-TXT-T[]</span>
+                   </td>
+                   <td class="celldisplay">
+                        <span id="MIR-LIC-LIAB-EFF-DT-T[]" stype="Date" displayonly="yes">MIR-LIC-LIAB-EFF-DT-T[]</span>
+                  </td>
+                  <td class="celldisplay">
+                        <span id="MIR-LIC-LIAB-XPRY-DT-T[]" stype="Date" displayonly="yes">MIR-LIC-LIAB-XPRY-DT-T[]</span>
+                  </td>
+                   <td class="celldisplay">
+                        <span id="MIR-LIC-LIAB-DESC-TXT-T[]" stype="Text" displayonly="yes">MIR-LIC-LIAB-DESC-TXT-T[]</span>
+                  </td>
+                </tr>
+            </table>
+        <p align="right"><a href="#top" class="backtotop"> <img src="../images/top.gif" border="0" alt="Haut de page" width="14" height="14"/>Haut de page</a> </p>
+            <h2>
+                <a name="RqstTyp">Types de demande</a>
+            </h2>
+            <table id="RqstTypeSection" class="tabledataentry" genrows="5">
+				<tr>
+                    <td class="celldataentryheading" colspan="6"><a name="Documentation">Documentation</a> </td>
+                </tr>
+                <tr>
+                    <td class="celldisplayheading" align="center">
+                        <label for="MIR-RQST-TYP-CD-T[1]">Type de demande</label>
+                    </td>
+                    <td class="celldisplayheading" align="center">
+                        <label for="MIR-BUS-CLAS-1-CD-T[1]">Type de produit #1</label>
+                    </td>
+                    <td class="celldisplayheading" align="center">
+                        <label for="MIR-BUS-CLAS-1-CD-T[2]">Type de produit #2</label>
+                    </td>
+                    <td class="celldisplayheading" align="center">
+                        <label for="MIR-BUS-CLAS-1-CD-T[3]">Type de produit #3</label>
+                    </td>
+                    <td class="celldisplayheading" align="center">
+                        <label for="MIR-BUS-CLAS-1-CD-T[4]">Type de produit #4</label>
+                    </td>
+                    <td class="celldisplayheading" align="center">
+                        <label for="MIR-BUS-CLAS-1-CD-T[5]">Type de produit #5</label>
+                    </td>
+                </tr>
+                <tr>
+				    <td class="celllabeldataentry">
+                        <select name="MIR-RQST-TYP-CD-T[]" size="1" stype="Selection" index = "1" onfocus="enterField(this)"></select>
+                    </td>	
+				    <td class="celllabeldataentry">
+                        <select name="MIR-BUS-CLAS-1-CD-T[]" size="1" stype="Selection" index = "1" onfocus="enterField(this)"></select>
+                    </td>	
+				    <td class="celllabeldataentry">
+                        <select name="MIR-BUS-CLAS-2-CD-T[]" size="1" stype="Selection" index = "1" onfocus="enterField(this)"></select>
+                    </td>	
+				    <td class="celllabeldataentry">
+                        <select name="MIR-BUS-CLAS-3-CD-T[]" size="1" stype="Selection" index = "1" onfocus="enterField(this)"></select>
+                    </td>	
+				    <td class="celllabeldataentry">
+                        <select name="MIR-BUS-CLAS-4-CD-T[]" size="1" stype="Selection" index = "1" onfocus="enterField(this)"></select>
+                    </td>	
+				    <td class="celllabeldataentry">
+                        <select name="MIR-BUS-CLAS-5-CD-T[]" size="1" stype="Selection" index = "1" onfocus="enterField(this)"></select>
+                    </td>	
+                </tr>
+            </table>
+        <br/>
+            <h2>
+                <a name="Branch">Succursales</a>
+            </h2>
+            <table id="BranchSection" class="tabledataentry">
+                <tr>
+                    <td class="celldataentryheading" colspan="2" style="height: 20px"><a name="Branch">Succursales</a> </td>
+                </tr>
+                <tr>
+                    <td class="celllabelrightalign">
+                        <label for="MIR-BR-1-ID">Succursale #1 :</label>
+                    </td>
+                    <td class="celllabeldataentry">
+                        <select name="MIR-BR-1-ID" size="1" stype="Selection" onfocus="enterField(this)"></select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celllabelrightalign">
+                        <label for="MIR-BR-2-ID">Succursale #2 :</label>
+                    </td>
+                    <td class="celllabeldataentry">
+                        <select name="MIR-BR-2-ID" size="1" stype="Selection" onfocus="enterField(this)"></select>
+                    </td>
+                </tr>
+            </table>
+        <p align="right"><a href="#top" class="backtotop"> <img src="../images/top.gif" border="0" alt="Haut de page" width="14" height="14"/>Haut de page</a> </p>
+            <h2>
+                <a name="Réception">Étape Réception</a>
+            </h2>
+            <table id="ReceptionSection" class="tabledataentry">
+                <tr>
+                    <td class="celldataentryheading" colspan="4" style="height: 20px"><a name="Reception">Réception</a> </td>
+                </tr>
+                <tr>
+                    <td class="celllabelrightalign">
+                        <label for="MIR-RECPT-USER-ID">Utilisateur :</label>
+                    </td>
+                    <td class="celllabeldataentry">
+                        <select id="MIR-RECPT-USER-ID" name="MIR-RECPT-USER-ID" size="1" stype="Selection" onfocus="enterField(this)"></select>
+                    </td>
+                    <td class="celllabelrightalign">
+                        <label for="MIR-RECPT-EFF-DT">Date complétée:</label>
+                    </td>
+                    <td class="celllabeldataentry">
+                        <span id="MIR-RECPT-EFF-DT" stype="Date" displayonly="yes">MIR-RECPT-EFF-DT</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celllabelrightalign">
+                        <label for="MIR-RECPT-TERM-IND">Réception complétée:</label>
+                    </td>
+                    <td class="celllabeldataentry">
+                        <input type="checkbox" value="Y" id="MIR-RECPT-TERM-IND" name="MIR-RECPT-TERM-IND" stype="Indicator" onclick="onCheckBox()" onfocus="enterField(this)"/>
+<!--                        <input type="checkbox" value="Y" name="MIR-RECPT-TERM-IND" stype="Indicator" onclick="onCheckBox(),checkRecvStepInd()" onfocus="enterField(this)"/>
+-->
+                    </td>
+                    <td class="celllabelrightalign">
+                    </td>
+                    <td class="celllabeldataentry">
+                    </td>
+                </tr>
+<!--                <tr>
+                    <td class="celllabelrightalign" colspan="1">
+                         <label for="MIR-RECPT-COMMENTS-TXT">Note :</label>
+                    </td>
+                    <td class="celllabeldataentry" colspan="3">
+                        <input type="text" value=" " name="MIR-RECPT-COMMENTS-TXT" stype="Text" maxlength="100" onfocus="enterField(this)" onblur="validateField(this)" size="100"/>
+                    </td>
+                </tr> -->
+            </table>
+        <p align="right"><a href="#top" class="backtotop"> <img src="../images/top.gif" border="0" alt="Haut de page" width="14" height="14"/>Haut de page</a> </p>
+            <h2>
+                <a name="ValidAdminfile">Validation de la fiche administrative</a>
+            </h2>
+            <table id="validAdminFileSection" class="tabledataentry" genrows="0">
+                <tr>
+                    <td class="celldataentryheading" colspan="5" style="height: 20px"><a name="AdminFile">Validation de la fiche administrative</a> </td>
+                </tr>
+                <tr>
+                    <td class="celldisplayheading" align="center">
+                        <label for="MIR-CHK-ADM-FILE-1-NUM-T[1]">Vérification</label>
+                    </td>
+                    <td class="celldisplayheading" align="center" style="width: 113px">
+                        <label for="MIR-CHK-ADM-FILE-1-IND-T[1]">Validation</label>
+                    </td>
+
+                    <td class="celldisplayheading" style="width: 98px" />
+
+                    <td class="celldisplayheading" align="center">
+                        <label for="MIR-CHK-ADM-FILE-2-NUM-T[1]">Vérification</label>
+                    </td>
+                    <td class="celldisplayheading" align="center">
+                        <label for="MIR-CHK-ADM-FILE-2-IND-T[1]">Validation</label>
+                    </td>
+                </tr>
+                <tr>
+				    <td class="celllabelrightalign">
+                        <span id="MIR-CHK-ADM-FILE-1-NUM-T[]" stype="Text" displayonly="yes">MIR-CHK-ADM-FILE-1-NUM-T[]</span>
+                    </td>	
+                    <td class="celllabeldataentry" >
+                        <input type="radio" name="MIR-CHK-ADM-FILE-1-IND-T[]" value="Y" stype="YesNoNotApplicable" onfocus="saveValue(); enterField(this)" /> Oui 
+                        <input type="radio" name="MIR-CHK-ADM-FILE-1-IND-T[]" value="N" stype="YesNoNotApplicable" onfocus="saveValue(); enterField(this)" /> Non 
+                        <input type="radio" name="MIR-CHK-ADM-FILE-1-IND-T[]" value="X" stype="YesNoNotApplicable" onfocus="saveValue(); enterField(this)" /> N/A 
+                    </td>
+                    <td class="celllabeldataentry" style="width: 100px"/>
+				    <td class="celllabelrightalign">
+                        <span id="MIR-CHK-ADM-FILE-2-NUM-T[]" stype="Text" displayonly="yes">MIR-CHK-ADM-FILE-2-NUM-T[]</span>
+                    </td>	
+                    <td class="celllabeldataentry">
+                        <input type="radio" name="MIR-CHK-ADM-FILE-2-IND-T[]" value="Y" stype="YesNoNotApplicable" onfocus="saveValue(); enterField(this)" /> Oui 
+                        <input type="radio" name="MIR-CHK-ADM-FILE-2-IND-T[]" value="N" stype="YesNoNotApplicable" onfocus="saveValue(); enterField(this)" /> Non 
+                        <input type="radio" name="MIR-CHK-ADM-FILE-2-IND-T[]" value="X" stype="YesNoNotApplicable" onfocus="saveValue(); enterField(this)" /> N/A 
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celllabeldataentry"  colspan="5" align="center">
+                        <input type="button" name="AllAnswersNAButton" value="Toutes les vérifications sont non applicables" onclick="setAllInTableToNA('validAdminFileSection')" />
+                    </td>
+                </tr>
+            </table>
+        <br/>
+            <table id="AdminFileDetailsSection" class="tabledataentry">
+                <tr>
+                    <td class="celldataentryheading" colspan="4" style="height: 20px"><a name="AdminFileDetails">Fiche administrative détails</a> </td>
+                </tr>
+                <tr>
+                    <td class="celllabelrightalign">
+                        <label for="MIR-ADM-REC-STAT-CD">Statut selon la fiche administrative :</label>
+                    </td>
+                    <td class="celllabeldataentry">
+                        <select name="MIR-ADM-REC-STAT-CD" size="1" stype="Selection" onfocus="enterField(this)"></select>
+                    </td>
+                    <td class="celllabelrightalign">
+                        <label for="MIR-CNTCT-INFO-MOD-IND">Coordonnées à modifier :</label>
+                    </td>
+                    <td class="celllabeldataentry">
+                        <select name="MIR-CNTCT-INFO-MOD-IND" size="1" stype="Selection" onfocus="enterField(this)"></select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celllabelrightalign">
+                        <label for="MIR-FUNDSERV-CD">Code Fundserv:</label>
+                    </td>
+                    <td class="celllabeldataentry">
+                         <input type="text" value=" " name="MIR-FUNDSERV-CD" stype="Text"  maxlength="10" onfocus="enterField(this)" onblur="validateField(this)" size="20"/>
+                    </td>
+                    <td class="celllabelrightalign">
+                    </td>
+                    <td class="celllabeldataentry">
+                    </td>
+                </tr>
+            </table>
+        <br/>
+         		<tr>
+					<td class="celllabelleftalign" colspan="2"> 
+		  				<DL>
+							<DT><b><span style="font-size: 12.0pt; font-family: Times New Roman; color: red">
+		                                 *Le Code Fundserv est obligatoire pour les agences IR commençant par F seulement. </span></b>
+		                    </DT>
+        <br/>
+							<DT><b><span style="font-size: 12.0pt; font-family: Times New Roman; color: red">
+		                                 *Consentement Loi anti-pourriels non signé veuillez envoyer un « Avis interne » à assuranceetretraite @ssq.ca ou voir modèle. </span></b>
+		                    </DT>
+		  				</DL>
+					</td> 
+         		</tr>
+        <br/>
+            <table id="ValidAdmFileNote" class="tabledataentry">
+                <tr>
+                   	<td class="celldataentryheading" colspan="2">
+                        		<a name="ValidCorpDocNote">Note pour la validation de la fiche administrative</a>
+                   	</td>
+                </tr>
+                <tr>
+					<td class="celllabeldataentry" colspan="2">
+<!-- J05102				<textarea id="ValidChqSamplNoteTxt" stype="TextArea" style="border-style: double; border-width: 3" height="18" rows="8" cols="132" name="MIR-ADM-FILE-NOTE-TXT" onkeyup="showcount(500,this,counter1)" onblur="CheckCountCharInBox(500,this)" onfocus="enterField(this)" ></textarea>  -->
+						<textarea id="MIR-ADM-FILE-NOTE-TXT" stype="TextArea" style="border-style: double; border-width: 3" height="18" rows="8" cols="132" name="MIR-ADM-FILE-NOTE-TXT" onkeyup="showcount(500,this,counter1)" onblur="CheckCountCharInBox(500,this)" onfocus="enterField(this)" ></textarea>
+         				<tr>
+							<td class="celllabelleftalign" colspan="2"> 
+		  						<DL>
+				  					<DT><b><span style="font-size: 10.0pt; font-family: Times New Roman; color: darkblue">
+<!-- J05102                                		Caractères restant: <input type="text" stype="Number" elength="5" name="counter1" size="5"> </input> (limite: 500) </span></b></DT>  -->
+		                                   		Caractères restant: <input type="text" stype="Number" elength="5" id="counter1" name="counter1" size="5"> </input> (limite: 500) </span></b></DT>
+		  						</DL>
+							</td> 
+         				</tr>
+					</td>
+				</tr>
+            </table>
+        <p align="right"><a href="#top" class="backtotop"> <img src="../images/top.gif" border="0" alt="Haut de page" width="14" height="14"/>Haut de page</a> </p>
+            <h2>
+                <a name="ValidChngNmForm">Validation du formulaire de changement de nom</a>
+            </h2>
+            <table id="validChngNmSection" class="tabledataentry" genrows="0">
+                <tr>
+                    <td class="celldataentryheading" colspan="5" style="height: 20px"><a name="ValidChngNm">Validation du formulaire de changement de nom</a> </td>
+                </tr>
+                <tr>
+                    <td class="celldisplayheading" align="center">
+                        <label for="MIR-CHK-CHNG-NM-FORM-1-NUM-T[1]">Vérification</label>
+                    </td>
+                    <td class="celldisplayheading" align="center" style="width: 113px">
+                        <label for="MIR-CHK-CHNG-NM-FORM-1-IND-T[1]">Validation</label>
+                    </td>
+
+                    <td class="celldisplayheading" style="width: 98px" />
+
+                    <td class="celldisplayheading" align="center">
+                        <label for="MIR-CHK-CHNG-NM-FORM-2-NUM-T[1]">Vérification</label>
+                    </td>
+                    <td class="celldisplayheading" align="center">
+                        <label for="MIR-CHK-CHNG-NM-FORM-2-IND-T[1]">Validation</label>
+                    </td>
+                </tr>
+                <tr>
+				    <td class="celllabelrightalign">
+                        <span id="MIR-CHK-CHNG-NM-FORM-1-NUM-T[]" stype="Text" displayonly="yes">MIR-CHK-CHNG-NM-FORM-1-NUM-T[]</span>
+                    </td>	
+                    <td class="celllabeldataentry" >
+                        <input type="radio" name="MIR-CHK-CHNG-NM-FORM-1-IND-T[]" value="Y" stype="YesNoNotApplicable" onfocus="saveValue(); enterField(this)" /> Oui 
+                        <input type="radio" name="MIR-CHK-CHNG-NM-FORM-1-IND-T[]" value="N" stype="YesNoNotApplicable" onfocus="saveValue(); enterField(this)" /> Non 
+                        <input type="radio" name="MIR-CHK-CHNG-NM-FORM-1-IND-T[]" value="X" stype="YesNoNotApplicable" onfocus="saveValue(); enterField(this)" /> N/A 
+                    </td>
+                    <td class="celllabeldataentry" style="width: 100px"/>
+				    <td class="celllabelrightalign">
+                        <span id="MIR-CHK-CHNG-NM-FORM-2-NUM-T[]" stype="Text" displayonly="yes">MIR-CHK-CHNG-NM-FORM-2-NUM-T[]</span>
+                    </td>	
+                    <td class="celllabeldataentry">
+                        <input type="radio" name="MIR-CHK-CHNG-NM-FORM-2-IND-T[]" value="Y" stype="YesNoNotApplicable" onfocus="saveValue(); enterField(this)" /> Oui 
+                        <input type="radio" name="MIR-CHK-CHNG-NM-FORM-2-IND-T[]" value="N" stype="YesNoNotApplicable" onfocus="saveValue(); enterField(this)" /> Non 
+                        <input type="radio" name="MIR-CHK-CHNG-NM-FORM-2-IND-T[]" value="X" stype="YesNoNotApplicable" onfocus="saveValue(); enterField(this)" /> N/A 
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celllabeldataentry"  colspan="5" align="center">
+                        <input type="button" name="AllAnswersNAButton" value="Toutes les vérifications sont non applicables" onclick="setAllInTableToNA('validChngNmSection')" />
+                    </td>
+                </tr>
+            </table>
+        <br/>
+            <table id="ValidChngNmFormNote" class="tabledataentry">
+                <tr>
+                   	<td class="celldataentryheading" colspan="2">
+                        		<a name="ValidCorpDocNote">Note pour la validation du changement de nom</a>
+                   	</td>
+                </tr>
+                <tr>
+					<td class="celllabeldataentry" colspan="2">
+<!-- J05102				<textarea id="ValidChqSamplNoteTxt" stype="TextArea" style="border-style: double; border-width: 3" height="18" rows="8" cols="132" name="MIR-CHNG-NM-FORM-NOTE-TXT" onkeyup="showcount(500,this,counter2)" onblur="CheckCountCharInBox(500,this)" onfocus="enterField(this)" ></textarea>  -->
+						<textarea id="MIR-CHNG-NM-FORM-NOTE-TXT" stype="TextArea" style="border-style: double; border-width: 3" height="18" rows="8" cols="132" name="MIR-CHNG-NM-FORM-NOTE-TXT" onkeyup="showcount(500,this,counter2)" onblur="CheckCountCharInBox(500,this)" onfocus="enterField(this)" ></textarea>
+         				<tr>
+							<td class="celllabelleftalign" colspan="2"> 
+		  						<DL>
+				  					<DT><b><span style="font-size: 10.0pt; font-family: Times New Roman; color: darkblue">
+<!-- J05102		                                   		Caractères restant: <input type="text" stype="Number" elength="5" name="counter2" size="5"> </input> (limite: 500) </span></b></DT>  -->
+		                                   		Caractères restant: <input type="text" stype="Number" elength="5" id="counter2" name="counter2" size="5"> </input> (limite: 500) </span></b></DT>
+		  						</DL>
+							</td> 
+         				</tr>
+					</td>
+				</tr>
+            </table>
+        <p align="right"><a href="#top" class="backtotop"> <img src="../images/top.gif" border="0" alt="Haut de page" width="14" height="14"/>Haut de page</a> </p>
+            <h2>
+                <a name="ValidTrsfForm">Validation du formulaire de transfert</a>
+            </h2>
+            <table id="validTrsfFormSection" class="tabledataentry" genrows="0">
+                <tr>
+                    <td class="celldataentryheading" colspan="5" style="height: 20px"><a name="TrsfForm">Validation du formulaire de transfert</a> </td>
+                </tr>
+                <tr>
+                    <td class="celldisplayheading" align="center">
+                        <label for="MIR-CHK-AGT-TRSF-FORM-1-NUM-T[1]">Vérification</label>
+                    </td>
+                    <td class="celldisplayheading" align="center" style="width: 113px">
+                        <label for="MIR-CHK-AGT-TRSF-FORM-1-IND-T[1]">Validation</label>
+                    </td>
+
+                    <td class="celldisplayheading" style="width: 98px" />
+
+                    <td class="celldisplayheading" align="center">
+                        <label for="MIR-CHK-AGT-TRSF-FORM-2-NUM-T[1]">Vérification</label>
+                    </td>
+                    <td class="celldisplayheading" align="center">
+                        <label for="MIR-CHK-AGT-TRSF-FORM-2-IND-T[1]">Validation</label>
+                    </td>
+                </tr>
+                <tr>
+				    <td class="celllabelrightalign">
+                        <span id="MIR-CHK-AGT-TRSF-FORM-1-NUM-T[]" stype="Text" displayonly="yes">MIR-CHK-AGT-TRSF-FORM-1-NUM-T[]</span>
+                    </td>	
+                    <td class="celllabeldataentry" >
+                        <input type="radio" name="MIR-CHK-AGT-TRSF-FORM-1-IND-T[]" value="Y" stype="YesNoNotApplicable" onfocus="saveValue(); enterField(this)" /> Oui 
+                        <input type="radio" name="MIR-CHK-AGT-TRSF-FORM-1-IND-T[]" value="N" stype="YesNoNotApplicable" onfocus="saveValue(); enterField(this)" /> Non 
+                        <input type="radio" name="MIR-CHK-AGT-TRSF-FORM-1-IND-T[]" value="X" stype="YesNoNotApplicable" onfocus="saveValue(); enterField(this)" /> N/A 
+                    </td>
+                    <td class="celllabeldataentry" style="width: 100px"/>
+				    <td class="celllabelrightalign">
+                        <span id="MIR-CHK-AGT-TRSF-FORM-2-NUM-T[]" stype="Text" displayonly="yes">MIR-CHK-AGT-TRSF-FORM-2-NUM-T[]</span>
+                    </td>	
+                    <td class="celllabeldataentry">
+                        <input type="radio" name="MIR-CHK-AGT-TRSF-FORM-2-IND-T[]" value="Y" stype="YesNoNotApplicable" onfocus="saveValue(); enterField(this)" /> Oui 
+                        <input type="radio" name="MIR-CHK-AGT-TRSF-FORM-2-IND-T[]" value="N" stype="YesNoNotApplicable" onfocus="saveValue(); enterField(this)" /> Non 
+                        <input type="radio" name="MIR-CHK-AGT-TRSF-FORM-2-IND-T[]" value="X" stype="YesNoNotApplicable" onfocus="saveValue(); enterField(this)" /> N/A 
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celllabeldataentry"  colspan="5" align="center">
+                        <input type="button" name="AllAnswersNAButton" value="Toutes les vérifications sont non applicables" onclick="setAllInTableToNA('validTrsfFormSection')" />
+                    </td>
+                </tr>
+            </table>
+        <br/>
+            <table id="ValidAgtTrsfFormNote" class="tabledataentry">
+                <tr>
+                   	<td class="celldataentryheading" colspan="2">
+                        		<a name="ValidCorpDocNote">Note pour la validation du formulaire de transfert</a>
+                   	</td>
+                </tr>
+                <tr>
+					<td class="celllabeldataentry" colspan="2">
+<!-- J05102				<textarea id="ValidChqSamplNoteTxt" stype="TextArea" style="border-style: double; border-width: 3" height="18" rows="8" cols="132" name="MIR-AGT-TRSF-FORM-NOTE-TXT" onkeyup="showcount(500,this,counter3)" onblur="CheckCountCharInBox(500,this)" onfocus="enterField(this)" ></textarea>  -->
+						<textarea id="MIR-AGT-TRSF-FORM-NOTE-TXT" stype="TextArea" style="border-style: double; border-width: 3" height="18" rows="8" cols="132" name="MIR-AGT-TRSF-FORM-NOTE-TXT" onkeyup="showcount(500,this,counter3)" onblur="CheckCountCharInBox(500,this)" onfocus="enterField(this)" ></textarea>
+         				<tr>
+							<td class="celllabelleftalign" colspan="2"> 
+		  						<DL>
+				  					<DT><b><span style="font-size: 10.0pt; font-family: Times New Roman; color: darkblue">
+<!-- J05102                                		Caractères restant: <input type="text" stype="Number" elength="5" name="counter3" size="5"> </input> (limite: 500) </span></b></DT>  -->
+		                                 		Caractères restant: <input type="text" stype="Number" elength="5" id="counter3" name="counter3" size="5"> </input> (limite: 500) </span></b></DT>
+
+		  						</DL>
+							</td> 
+         				</tr>
+					</td>
+				</tr>
+            </table>
+        <p align="right"><a href="#top" class="backtotop"> <img src="../images/top.gif" border="0" alt="Haut de page" width="14" height="14"/>Haut de page</a> </p>
+            <h2>
+                <a name="ValidChq">Validation du spécimen de chèque</a>
+            </h2>
+            <table id="validChqSection" class="tabledataentry" genrows="0">
+                <tr>
+                    <td class="celldataentryheading" colspan="5" style="height: 20px"><a name="ChqInfo">Validation du spécimen de chèque</a> </td>
+                </tr>
+                <tr>
+                    <td class="celldisplayheading" align="center">
+                        <label for="MIR-CHK-CHQ-SAMPL-1-NUM-T[1]">Vérification</label>
+                    </td>
+                    <td class="celldisplayheading" align="center" style="width: 113px">
+                        <label for="MIR-CHK-CHQ-SAMPL-1-IND-T[1]">Validation</label>
+                    </td>
+
+                    <td class="celldisplayheading" style="width: 98px" />
+
+                    <td class="celldisplayheading" align="center">
+                        <label for="MIR-CHK-CHQ-SAMPL-2-NUM-T[1]">Vérification</label>
+                    </td>
+                    <td class="celldisplayheading" align="center">
+                        <label for="MIR-CHK-CHQ-SAMPL-2-IND-T[1]">Validation</label>
+                    </td>
+                </tr>
+                <tr>
+				    <td class="celllabelrightalign">
+                        <span id="MIR-CHK-CHQ-SAMPL-1-NUM-T[]" stype="Text" displayonly="yes">MIR-CHK-CHQ-SAMPL-1-NUM-T[]</span>
+                    </td>	
+                    <td class="celllabeldataentry" >
+                        <input type="radio" name="MIR-CHK-CHQ-SAMPL-1-IND-T[]" value="Y" stype="YesNoNotApplicable" onfocus="saveValue(); enterField(this)" /> Oui 
+                        <input type="radio" name="MIR-CHK-CHQ-SAMPL-1-IND-T[]" value="N" stype="YesNoNotApplicable" onfocus="saveValue(); enterField(this)" /> Non 
+                        <input type="radio" name="MIR-CHK-CHQ-SAMPL-1-IND-T[]" value="X" stype="YesNoNotApplicable" onfocus="saveValue(); enterField(this)" /> N/A 
+                    </td>
+                    <td class="celllabeldataentry" style="width: 100px"/>
+				    <td class="celllabelrightalign">
+                        <span id="MIR-CHK-CHQ-SAMPL-2-NUM-T[]" stype="Text" displayonly="yes">MIR-CHK-CHQ-SAMPL-2-NUM-T[]</span>
+                    </td>	
+                    <td class="celllabeldataentry">
+                        <input type="radio" name="MIR-CHK-CHQ-SAMPL-2-IND-T[]" value="Y" stype="YesNoNotApplicable" onfocus="saveValue(); enterField(this)" /> Oui 
+                        <input type="radio" name="MIR-CHK-CHQ-SAMPL-2-IND-T[]" value="N" stype="YesNoNotApplicable" onfocus="saveValue(); enterField(this)" /> Non 
+                        <input type="radio" name="MIR-CHK-CHQ-SAMPL-2-IND-T[]" value="X" stype="YesNoNotApplicable" onfocus="saveValue(); enterField(this)" /> N/A 
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celllabeldataentry"  colspan="5" align="center">
+                        <input type="button" name="AllAnswersNAButton" value="Toutes les vérifications sont non applicables" onclick="setAllInTableToNA('validChqSection')" />
+                    </td>
+                </tr>
+            </table>
+        <br/>
+            <table id="ValidChqSamplNote" class="tabledataentry">
+                <tr>
+                   	<td class="celldataentryheading" colspan="2">
+                        		<a name="ValidChqSamplNote">Note pour la validation du spécimen de chèque</a>
+                   	</td>
+                </tr>
+                <tr>
+					<td class="celllabeldataentry" colspan="2">
+<!-- J05102				<textarea id="ValidChqSamplNoteTxt" stype="TextArea" style="border-style: double; border-width: 3" height="18" rows="8" cols="132" name="MIR-CHQ-SAMPL-NOTE-TXT" onkeyup="showcount(500,this,counter4)" onblur="CheckCountCharInBox(500,this)" onfocus="enterField(this)" ></textarea>  -->
+						<textarea id="MIR-CHQ-SAMPL-NOTE-TXT" stype="TextArea" style="border-style: double; border-width: 3" height="18" rows="8" cols="132" name="MIR-CHQ-SAMPL-NOTE-TXT" onkeyup="showcount(500,this,counter4)" onblur="CheckCountCharInBox(500,this)" onfocus="enterField(this)" ></textarea>
+         				<tr>
+							<td class="celllabelleftalign" colspan="2"> 
+		  						<DL>
+				  					<DT><b><span style="font-size: 10.0pt; font-family: Times New Roman; color: darkblue">
+<!-- J05102										Caractères restant: <input type="text" stype="Number" elength="5" name="counter4" size="5"> </input> (limite: 500) </span></b></DT>  -->
+		                                   		Caractères restant: <input type="text" stype="Number" elength="5" id="counter4" name="counter4" size="5"> </input> (limite: 500) </span></b></DT>
+		  						</DL>
+							</td> 
+         				</tr>
+					</td>
+				</tr>
+            </table>
+        <p align="right"><a href="#top" class="backtotop"> <img src="../images/top.gif" border="0" alt="Haut de page" width="14" height="14"/>Haut de page</a> </p>
+            <h2>
+                <a name="ValidCert">Validation des certifications</a>
+            </h2>
+            <table id="validCertSection" class="tabledataentry" genrows="0">
+                <tr>
+                    <td class="celldataentryheading" colspan="5" style="height: 20px"><a name="Cert">Validation des certifications</a> </td>
+                </tr>
+                <tr>
+                    <td class="celldisplayheading" align="center">
+                        <label for="MIR-CHK-CERT-1-NUM-T[1]">Vérification</label>
+                    </td>
+                    <td class="celldisplayheading" align="center" style="width: 113px">
+                        <label for="MIR-CHK-CERT-1-IND-T[1]">Validation</label>
+                    </td>
+
+                    <td class="celldisplayheading" style="width: 98px" />
+
+                    <td class="celldisplayheading" align="center">
+                        <label for="MIR-CHK-CERT-2-NUM-T[1]">Vérification</label>
+                    </td>
+                    <td class="celldisplayheading" align="center">
+                        <label for="MIR-CHK-CERT-2-IND-T[1]">Validation</label>
+                    </td>
+                </tr>
+                <tr>
+				    <td class="celllabelrightalign">
+                        <span id="MIR-CHK-CERT-1-NUM-T[]" stype="Text" displayonly="yes">MIR-CHK-CERT-1-NUM-T[]</span>
+                    </td>	
+                    <td class="celllabeldataentry" >
+                        <input type="radio" name="MIR-CHK-CERT-1-IND-T[]" value="Y" stype="YesNoNotApplicable" onfocus="saveValue(); enterField(this)" /> Oui 
+                        <input type="radio" name="MIR-CHK-CERT-1-IND-T[]" value="N" stype="YesNoNotApplicable" onfocus="saveValue(); enterField(this)" /> Non 
+                        <input type="radio" name="MIR-CHK-CERT-1-IND-T[]" value="X" stype="YesNoNotApplicable" onfocus="saveValue(); enterField(this)" /> N/A 
+                    </td>
+                    <td class="celllabeldataentry" style="width: 100px"/>
+				    <td class="celllabelrightalign">
+                        <span id="MIR-CHK-CERT-2-NUM-T[]" stype="Text" displayonly="yes">MIR-CHK-CERT-2-NUM-T[]</span>
+                    </td>	
+                    <td class="celllabeldataentry">
+                        <input type="radio" name="MIR-CHK-CERT-2-IND-T[]" value="Y" stype="YesNoNotApplicable" onfocus="saveValue(); enterField(this)" /> Oui 
+                        <input type="radio" name="MIR-CHK-CERT-2-IND-T[]" value="N" stype="YesNoNotApplicable" onfocus="saveValue(); enterField(this)" /> Non 
+                        <input type="radio" name="MIR-CHK-CERT-2-IND-T[]" value="X" stype="YesNoNotApplicable" onfocus="saveValue(); enterField(this)" /> N/A 
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celllabeldataentry"  colspan="5" align="center">
+                        <input type="button" name="AllAnswersNAButton" value="Toutes les vérifications sont non applicables" onclick="setAllInTableToNA('validCertSection')" />
+                    </td>
+                </tr>
+            </table>
+        <br/>
+            <table id="CertificationAddlInfo" class="tabledataentry">
+                <tr>
+                    <td class="celldataentryheading" colspan="4" style="height: 20px"><a name="CertDetails">Détails concernant la certification</a> </td>
+                </tr>
+                <tr>
+                    <td class="celllabelrightalign">
+                        <label for="MIR-LI-STAT-CD">Statut du permis :</label>
+                    </td>
+                    <td class="celllabeldataentry">
+                        <select name="MIR-LI-STAT-CD" size="1" stype="Selection" onfocus="enterField(this)"></select>
+                    </td>
+                    <td class="celllabelrightalign">
+                    </td>
+                    <td class="celllabeldataentry">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celllabelrightalign">
+                        <label for="MIR-RESTR-OR-COND-IND">Condition au permis :</label>
+                    </td>
+                    <td class="celllabeldataentry">
+                        <select name="MIR-RESTR-OR-COND-IND" size="1" stype="Selection" onfocus="enterField(this)"></select>
+                    </td>
+                    <td class="celllabelrightalign">
+                    </td>
+                    <td class="celllabeldataentry">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celllabelrightalign">
+                        <label for="MIR-SUPV-TYP-CD">Type de condition :</label>
+                    </td>
+                    <td class="celllabeldataentry">
+                        <select name="MIR-SUPV-TYP-CD" size="1" stype="Selection" onfocus="enterField(this)"></select>
+                    </td>
+                    <td class="celllabelrightalign">
+                        <label for="MIR-SUPV-NM">Nom du superviseur:</label>
+                    </td>
+                    <td class="celllabeldataentry">
+                        <input type="text" value=" " name="MIR-SUPV-NM" stype="Text" maxlength="30" onfocus="enterField(this)" size="30"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celllabelrightalign">
+                        <label for="MIR-SUPV-DUR">Durée de la supervision :</label>
+                    </td>
+                    <td class="celllabeldataentry">
+                        <select name="MIR-SUPV-DUR" size="1" stype="Selection" onfocus="enterField(this)"></select>
+                    </td>
+                    <td class="celllabelrightalign">
+                        <label for="MIR-SUPV-ID">Code du superviseur:</label>
+                    </td>
+                    <td class="celllabeldataentry">
+                        <input type="text" value=" " name="MIR-SUPV-ID" stype="Text" maxlength="20" onfocus="enterField(this)" size="20"/>
+                    </td>
+                </tr>
+            </table>
+        <br/>
+            <table id="ValidCertNote" class="tabledataentry">
+                <tr>
+                   	<td class="celldataentryheading" colspan="2">
+                        		<a name="ValidCertNote">Note pour la validation de la certification</a>
+                   	</td>
+                </tr>
+                <tr>
+					<td class="celllabeldataentry" colspan="2">
+<!-- J05102				<textarea id="ValidChqSamplNoteTxt" stype="TextArea" style="border-style: double; border-width: 3" height="18" rows="8" cols="132" name="MIR-CERT-NOTE-TXT" onkeyup="showcount(500,this,counter5)" onblur="CheckCountCharInBox(500,this)" onfocus="enterField(this)" ></textarea>  -->
+						<textarea id="MIR-CERT-NOTE-TXT" stype="TextArea" style="border-style: double; border-width: 3" height="18" rows="8" cols="132" name="MIR-CERT-NOTE-TXT" onkeyup="showcount(500,this,counter5)" onblur="CheckCountCharInBox(500,this)" onfocus="enterField(this)" ></textarea>
+         				<tr>
+							<td class="celllabelleftalign" colspan="2"> 
+		  						<DL>
+				  					<DT><b><span style="font-size: 10.0pt; font-family: Times New Roman; color: darkblue">
+<!-- J05102                                		Caractères restant: <input type="text" stype="Number" elength="5" name="counter5" size="5"> </input> (limite: 500) </span></b></DT>  -->
+		                                   		Caractères restant: <input type="text" stype="Number" elength="5" id="counter5" name="counter5" size="5"> </input> (limite: 500) </span></b></DT>
+		  						</DL>
+							</td> 
+         				</tr>
+					</td>
+				</tr>
+            </table>
+        <p align="right"><a href="#top" class="backtotop"> <img src="../images/top.gif" border="0" alt="Haut de page" width="14" height="14"/>Haut de page</a> </p>
+            <h2>
+                <a name="ValidCorpDoc">Validation des documents corporatifs</a>
+            </h2>
+            <table id="validCorpDocSection" class="tabledataentry" genrows="0">
+                <tr>
+                    <td class="celldataentryheading" colspan="5" style="height: 20px"><a name="CorpDoc">Validation des documents corporatifs</a> </td>
+                </tr>
+                <tr>
+                    <td class="celldisplayheading" align="center">
+                        <label for="MIR-CHK-CORP-DOC-1-NUM-T[1]">Vérification</label>
+                    </td>
+                    <td class="celldisplayheading" align="center" style="width: 113px">
+                        <label for="MIR-CHK-CORP-DOC-1-IND-T[1]">Validation</label>
+                    </td>
+
+                    <td class="celldisplayheading" style="width: 98px" />
+
+                    <td class="celldisplayheading" align="center">
+                        <label for="MIR-CHK-CORP-DOC-2-NUM-T[1]">Vérification</label>
+                    </td>
+                    <td class="celldisplayheading" align="center">
+                        <label for="MIR-CHK-CORP-DOC-2-IND-T[1]">Validation</label>
+                    </td>
+                </tr>
+                <tr>
+				    <td class="celllabelrightalign">
+                        <span id="MIR-CHK-CORP-DOC-1-NUM-T[]" stype="Text" displayonly="yes">MIR-CHK-CORP-DOC-1-NUM-T[]</span>
+                    </td>	
+                    <td class="celllabeldataentry" >
+                        <input type="radio" name="MIR-CHK-CORP-DOC-1-IND-T[]" value="Y" stype="YesNoNotApplicable" onfocus="saveValue(); enterField(this)" /> Oui 
+                        <input type="radio" name="MIR-CHK-CORP-DOC-1-IND-T[]" value="N" stype="YesNoNotApplicable" onfocus="saveValue(); enterField(this)" /> Non 
+                        <input type="radio" name="MIR-CHK-CORP-DOC-1-IND-T[]" value="X" stype="YesNoNotApplicable" onfocus="saveValue(); enterField(this)" /> N/A 
+                    </td>
+                    <td class="celllabeldataentry" style="width: 100px"/>
+				    <td class="celllabelrightalign">
+                        <span id="MIR-CHK-CORP-DOC-2-NUM-T[]" stype="Text" displayonly="yes">MIR-CHK-CORP-DOC-2-NUM-T[]</span>
+                    </td>	
+                    <td class="celllabeldataentry">
+                        <input type="radio" name="MIR-CHK-CORP-DOC-2-IND-T[]" value="Y" stype="YesNoNotApplicable" onfocus="saveValue(); enterField(this)" /> Oui 
+                        <input type="radio" name="MIR-CHK-CORP-DOC-2-IND-T[]" value="N" stype="YesNoNotApplicable" onfocus="saveValue(); enterField(this)" /> Non 
+                        <input type="radio" name="MIR-CHK-CORP-DOC-2-IND-T[]" value="X" stype="YesNoNotApplicable" onfocus="saveValue(); enterField(this)" /> N/A 
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celllabeldataentry"  colspan="5" align="center">
+                        <input type="button" name="AllAnswersNAButton" value="Toutes les vérifications sont non applicables" onclick="setAllInTableToNA('validCorpDocSection')" />
+                    </td>
+                </tr>
+            </table>
+        <br/>
+            <table id="ValidCorpDocNote" class="tabledataentry">
+                <tr>
+                   	<td class="celldataentryheading" colspan="2">
+                        		<a name="ValidCorpDocNote">Note pour la validation des documents corporatifs</a>
+                   	</td>
+                </tr>
+                <tr>
+					<td class="celllabeldataentry" colspan="2">
+<!-- J05102				<textarea id="ValidChqSamplNoteTxt" stype="TextArea" style="border-style: double; border-width: 3" height="18" rows="8" cols="132" name="MIR-CORP-DOC-NOTE-TXT" onkeyup="showcount(500,this,counter6)" onblur="CheckCountCharInBox(500,this)" onfocus="enterField(this)" ></textarea>  -->
+						<textarea id="MIR-CORP-DOC-NOTE-TXT" stype="TextArea" style="border-style: double; border-width: 3" height="18" rows="8" cols="132" name="MIR-CORP-DOC-NOTE-TXT" onkeyup="showcount(500,this,counter6)" onblur="CheckCountCharInBox(500,this)" onfocus="enterField(this)" ></textarea>
+         				<tr>
+							<td class="celllabelleftalign" colspan="2"> 
+		  						<DL>
+				  					<DT><b><span style="font-size: 10.0pt; font-family: Times New Roman; color: darkblue">
+<!-- J05102		                                Caractères restant: <input type="text" stype="Number" elength="5" name="counter6" size="5"> </input> (limite: 500) </span></b></DT> -->
+		                                   		Caractères restant: <input type="text" stype="Number" elength="5" id="counter6" name="counter6" size="5"> </input> (limite: 500) </span></b></DT>
+		  						</DL>
+							</td> 
+         				</tr>
+					</td>
+				</tr>
+            </table>
+        <p align="right"><a href="#top" class="backtotop"> <img src="../images/top.gif" border="0" alt="Haut de page" width="14" height="14"/>Haut de page</a> </p>
+            <h2>
+                <a name="ValidBonRateForm">Validation du formulaire des taux boni</a>
+            </h2>
+            <table id="validBonRateSection" class="tabledataentry" genrows="0">
+                <tr>
+                    <td class="celldataentryheading" colspan="5" style="height: 20px"><a name="BonRtForm">Validation du formulaire des taux boni</a> </td>
+                </tr>
+                <tr>
+                    <td class="celldisplayheading" align="center">
+                        <label for="MIR-CHK-BONUS-RT-FORM-1-NUM-T[1]">Vérification</label>
+                    </td>
+                    <td class="celldisplayheading" align="center" style="width: 113px">
+                        <label for="MIR-CHK-BONUS-RT-FORM-1-IND-T[1]">Validation</label>
+                    </td>
+
+                    <td class="celldisplayheading" style="width: 98px" />
+
+                    <td class="celldisplayheading" align="center">
+                        <label for="MIR-CHK-BONUS-RT-FORM-2-NUM-T[1]">Vérification</label>
+                    </td>
+                    <td class="celldisplayheading" align="center">
+                        <label for="MIR-CHK-BONUS-RT-FORM-2-IND-T[1]">Validation</label>
+                    </td>
+                </tr>
+                <tr>
+				    <td class="celllabelrightalign">
+                        <span id="MIR-CHK-BONUS-RT-FORM-1-NUM-T[]" stype="Text" displayonly="yes">MIR-CHK-BONUS-RT-FORM-1-NUM-T[]</span>
+                    </td>	
+                    <td class="celllabeldataentry" >
+                        <input type="radio" name="MIR-CHK-BONUS-RT-FORM-1-IND-T[]" value="Y" stype="YesNoNotApplicable" onfocus="saveValue(); enterField(this)" /> Oui 
+                        <input type="radio" name="MIR-CHK-BONUS-RT-FORM-1-IND-T[]" value="N" stype="YesNoNotApplicable" onfocus="saveValue(); enterField(this)" /> Non 
+                        <input type="radio" name="MIR-CHK-BONUS-RT-FORM-1-IND-T[]" value="X" stype="YesNoNotApplicable" onfocus="saveValue(); enterField(this)" /> N/A 
+                    </td>
+                    <td class="celllabeldataentry" style="width: 100px"/>
+				    <td class="celllabelrightalign">
+                        <span id="MIR-CHK-BONUS-RT-FORM-2-NUM-T[]" stype="Text" displayonly="yes">MIR-CHK-BONUS-RT-FORM-2-NUM-T[]</span>
+                    </td>	
+                    <td class="celllabeldataentry">
+                        <input type="radio" name="MIR-CHK-BONUS-RT-FORM-2-IND-T[]" value="Y" stype="YesNoNotApplicable" onfocus="saveValue(); enterField(this)" /> Oui 
+                        <input type="radio" name="MIR-CHK-BONUS-RT-FORM-2-IND-T[]" value="N" stype="YesNoNotApplicable" onfocus="saveValue(); enterField(this)" /> Non 
+                        <input type="radio" name="MIR-CHK-BONUS-RT-FORM-2-IND-T[]" value="X" stype="YesNoNotApplicable" onfocus="saveValue(); enterField(this)" /> N/A 
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celllabeldataentry"  colspan="5" align="center">
+                        <input type="button" name="AllAnswersNAButton" value="Toutes les vérifications sont non applicables" onclick="setAllInTableToNA('validBonRateSection')" />
+                    </td>
+                </tr>
+            </table>
+        <br/>
+            <table id="ValidBonusRtNote" class="tabledataentry">
+                <tr>
+                   	<td class="celldataentryheading" colspan="2">
+                        		<a name="ValidBonusRtNote">Note pour la validation du formulaire de Taux Boni </a>
+                   	</td>
+                </tr>
+                <tr>
+					<td class="celllabeldataentry" colspan="2">
+<!-- J05102				<textarea id="ValidBonusRtNoteTxt" stype="TextArea" style="border-style: double; border-width: 3" height="18" rows="8" cols="132" name="MIR-BONUS-RT-FORM-NOTE-TXT" onkeyup="showcount(500,this,counter7)" onblur="CheckCountCharInBox(500,this)" onfocus="enterField(this)" ></textarea>  -->
+						<textarea id="MIR-BONUS-RT-FORM-NOTE-TXT" stype="TextArea" style="border-style: double; border-width: 3" height="18" rows="8" cols="132" name="MIR-BONUS-RT-FORM-NOTE-TXT" onkeyup="showcount(500,this,counter7)" onblur="CheckCountCharInBox(500,this)" onfocus="enterField(this)" ></textarea>
+         				<tr>
+							<td class="celllabelleftalign" colspan="2"> 
+		  						<DL>
+				  					<DT><b><span style="font-size: 10.0pt; font-family: Times New Roman; color: darkblue">
+<!-- J05102                                		Caractères restant: <input type="text" stype="Number" elength="5" name="counter7" size="5"> </input> (limite: 500) </span></b></DT>  -->
+		                                   		Caractères restant: <input type="text" stype="Number" elength="5" id="counter7" name="counter7" size="5"> </input> (limite: 500) </span></b></DT>
+		  						</DL>
+							</td> 
+         				</tr>
+					</td>
+				</tr>
+            </table>
+        <p align="right"><a href="#top" class="backtotop"> <img src="../images/top.gif" border="0" alt="Haut de page" width="14" height="14"/>Haut de page</a> </p>
+            <h2>
+                <a name="ValidQuest">Validation du questionnaire</a>
+            </h2>
+            <table id="validQuestSection" class="tabledataentry" genrows="0">
+                <tr>
+                    <td class="celldataentryheading" colspan="5" style="height: 20px"><a name="Quest">Validation du questionnaire</a> </td>
+                </tr>
+                <tr>
+                    <td class="celldisplayheading" align="center">
+                        <label for="MIR-CHK-QUEST-1-NUM-T[1]">Vérification</label>
+                    </td>
+                    <td class="celldisplayheading" align="center" style="width: 113px">
+                        <label for="MIR-CHK-QUEST-1-IND-T[1]">Validation</label>
+                    </td>
+
+                    <td class="celldisplayheading" style="width: 98px" />
+
+                    <td class="celldisplayheading" align="center">
+                        <label for="MIR-CHK-QUEST-2-NUM-T[1]">Vérification</label>
+                    </td>
+                    <td class="celldisplayheading" align="center">
+                        <label for="MIR-CHK-QUEST-2-IND-T[1]">Validation</label>
+                    </td>
+                </tr>
+                <tr>
+				    <td class="celllabelrightalign">
+                        <span id="MIR-CHK-QUEST-1-NUM-T[]" stype="Text" displayonly="yes">MIR-CHK-QUEST-1-NUM-T[]</span>
+                    </td>	
+                    <td class="celllabeldataentry" >
+                        <input type="radio" name="MIR-CHK-QUEST-1-IND-T[]" value="Y" stype="YesNoNotApplicable" onfocus="saveValue(); enterField(this)" /> Oui 
+                        <input type="radio" name="MIR-CHK-QUEST-1-IND-T[]" value="N" stype="YesNoNotApplicable" onfocus="saveValue(); enterField(this)" /> Non 
+                        <input type="radio" name="MIR-CHK-QUEST-1-IND-T[]" value="X" stype="YesNoNotApplicable" onfocus="saveValue(); enterField(this)" /> N/A 
+                    </td>
+                    <td class="celllabeldataentry" style="width: 100px"/>
+				    <td class="celllabelrightalign">
+                        <span id="MIR-CHK-QUEST-2-NUM-T[]" stype="Text" displayonly="yes">MIR-CHK-QUEST-2-NUM-T[]</span>
+                    </td>	
+                    <td class="celllabeldataentry">
+                        <input type="radio" name="MIR-CHK-QUEST-2-IND-T[]" value="Y" stype="YesNoNotApplicable" onfocus="saveValue(); enterField(this)" /> Oui 
+                        <input type="radio" name="MIR-CHK-QUEST-2-IND-T[]" value="N" stype="YesNoNotApplicable" onfocus="saveValue(); enterField(this)" /> Non 
+                        <input type="radio" name="MIR-CHK-QUEST-2-IND-T[]" value="X" stype="YesNoNotApplicable" onfocus="saveValue(); enterField(this)" /> N/A 
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celllabeldataentry"  colspan="5" align="center">
+                        <input type="button" name="AllAnswersNAButton" value="Toutes les vérifications sont non applicables" onclick="setAllInTableToNA('validQuestSection')" />
+                    </td>
+                </tr>
+            </table>
+        <br/>
+            <table id="QuestDetailsSection" class="tabledataentry">
+                <tr>
+                    <td class="celldataentryheading" colspan="2" style="height: 20px"><a name="QuestDetails">Questionnaire : détails</a> </td>
+                </tr>
+                <tr>
+                    <td class="celllabelrightalign">
+                        <label for="MIR-CNSNT-SIGN-IND">Est-ce que le document de consentement est signé? : </label>
+                    </td>
+                    <td class="celllabeldataentry">
+<!-- J05102                        <select name="MIR-CNSNT-SIGN-IND" size="1" stype="Selection" onchange="checkCnsntSignInd()" onfocus="enterField(this)"></select>  -->
+                        <select id="MIR-CNSNT-SIGN-IND" name="MIR-CNSNT-SIGN-IND" size="1" stype="Selection" onchange="checkCnsntSignInd()" onfocus="enterField(this)"></select>
+                    </td>
+                </tr>
+            </table>
+        <br/>
+            <table id="ValidQuestNote" class="tabledataentry">
+                <tr>
+                   	<td class="celldataentryheading" colspan="2">
+                        		<a name="ValidQuestNote">Note pour la validation du questionnaire </a>
+                   	</td>
+                </tr>
+                <tr>
+					<td class="celllabeldataentry" colspan="2">
+<!-- J05102				<textarea id="ValidQuestNoteTxt" stype="TextArea" style="border-style: double; border-width: 3" height="18" rows="8" cols="132" name="MIR-QUEST-NOTE-TXT" onkeyup="showcount(500,this,counter8)" onblur="CheckCountCharInBox(500,this)" onfocus="enterField(this)" ></textarea>  -->
+						<textarea id="MIR-QUEST-NOTE-TXT" stype="TextArea" style="border-style: double; border-width: 3" height="18" rows="8" cols="132" name="MIR-QUEST-NOTE-TXT" onkeyup="showcount(500,this,counter8)" onblur="CheckCountCharInBox(500,this)" onfocus="enterField(this)" ></textarea>
+         				<tr>
+							<td class="celllabelleftalign" colspan="2"> 
+		  						<DL>
+				  					<DT><b><span style="font-size: 10.0pt; font-family: Times New Roman; color: darkblue">
+<!-- J05102                                		Caractères restant: <input type="text" stype="Number" elength="5" name="counter8" size="5"> </input> (limite: 500) </span></b></DT>  -->
+		                                   		Caractères restant: <input type="text" stype="Number" elength="5" id="counter8" name="counter8" size="5"> </input> (limite: 500) </span></b></DT>
+		  						</DL>
+							</td> 
+         				</tr>
+					</td>
+				</tr>
+            </table>
+        <p align="right"><a href="#top" class="backtotop"> <img src="../images/top.gif" border="0" alt="Haut de page" width="14" height="14"/>Haut de page</a> </p>
+            <h2>
+                <a name="ValidAgtCntrct">Validation du contrat de représentation</a>
+            </h2>
+            <table id="validAgtCntrctSection" class="tabledataentry" genrows="0">
+                <tr>
+                    <td class="celldataentryheading" colspan="5" style="height: 20px"><a name="AgtCntrct">Validation du contrat de représentation</a> </td>
+                </tr>
+                <tr>
+                    <td class="celldisplayheading" align="center">
+                        <label for="MIR-CHK-AGT-CNTRCT-1-NUM-T[1]">Vérification</label>
+                    </td>
+                    <td class="celldisplayheading" align="center" style="width: 113px">
+                        <label for="MIR-CHK-AGT-CNTRCT-1-IND-T[1]">Validation</label>
+                    </td>
+
+                    <td class="celldisplayheading" style="width: 98px" />
+
+                    <td class="celldisplayheading" align="center">
+                        <label for="MIR-CHK-AGT-CNTRCT-2-NUM-T[1]">Vérification</label>
+                    </td>
+                    <td class="celldisplayheading" align="center">
+                        <label for="MIR-CHK-AGT-CNTRCT-2-IND-T[1]">Validation</label>
+                    </td>
+                </tr>
+                <tr>
+				    <td class="celllabelrightalign">
+                        <span id="MIR-CHK-AGT-CNTRCT-1-NUM-T[]" stype="Text" displayonly="yes">MIR-CHK-AGT-CNTRCT-1-NUM-T[]</span>
+                    </td>	
+                    <td class="celllabeldataentry" >
+                        <input type="radio" name="MIR-CHK-AGT-CNTRCT-1-IND-T[]" value="Y" stype="YesNoNotApplicable" onfocus="saveValue(); enterField(this)" /> Oui 
+                        <input type="radio" name="MIR-CHK-AGT-CNTRCT-1-IND-T[]" value="N" stype="YesNoNotApplicable" onfocus="saveValue(); enterField(this)" /> Non 
+                        <input type="radio" name="MIR-CHK-AGT-CNTRCT-1-IND-T[]" value="X" stype="YesNoNotApplicable" onfocus="saveValue(); enterField(this)" /> N/A 
+                    </td>
+                    <td class="celllabeldataentry" style="width: 100px"/>
+				    <td class="celllabelrightalign">
+                        <span id="MIR-CHK-AGT-CNTRCT-2-NUM-T[]" stype="Text" displayonly="yes">MIR-CHK-AGT-CNTRCT-2-NUM-T[]</span>
+                    </td>	
+                    <td class="celllabeldataentry">
+                        <input type="radio" name="MIR-CHK-AGT-CNTRCT-2-IND-T[]" value="Y" stype="YesNoNotApplicable" onfocus="saveValue(); enterField(this)" /> Oui 
+                        <input type="radio" name="MIR-CHK-AGT-CNTRCT-2-IND-T[]" value="N" stype="YesNoNotApplicable" onfocus="saveValue(); enterField(this)" /> Non 
+                        <input type="radio" name="MIR-CHK-AGT-CNTRCT-2-IND-T[]" value="X" stype="YesNoNotApplicable" onfocus="saveValue(); enterField(this)" /> N/A 
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celllabeldataentry"  colspan="5" align="center">
+                        <input type="button" name="AllAnswersNAButton" value="Toutes les vérifications sont non applicables" onclick="setAllInTableToNA('validAgtCntrctSection')" />
+                    </td>
+                </tr>
+            </table>
+        <br/>
+            <table id="ValidAgtCntrctNote" class="tabledataentry">
+                <tr>
+                   	<td class="celldataentryheading" colspan="2">
+                        		<a name="ValidAgtCntrctNote">Note pour la validation du contrat de représentation </a>
+                   	</td>
+                </tr>
+                <tr>
+					<td class="celllabeldataentry" colspan="2">
+<!-- J05102				<textarea id="ValidAgtCntrctNoteTxt" stype="TextArea" style="border-style: double; border-width: 3" height="18" rows="8" cols="132" name="MIR-AGT-CNTRCT-NOTE-TXT" onkeyup="showcount(500,this,counter9)" onblur="CheckCountCharInBox(500,this)" onfocus="enterField(this)" ></textarea>  -->
+						<textarea id="MIR-AGT-CNTRCT-NOTE-TXT" stype="TextArea" style="border-style: double; border-width: 3" height="18" rows="8" cols="132" name="MIR-AGT-CNTRCT-NOTE-TXT" onkeyup="showcount(500,this,counter9)" onblur="CheckCountCharInBox(500,this)" onfocus="enterField(this)" ></textarea>
+         				<tr>
+							<td class="celllabelleftalign" colspan="2"> 
+		  						<DL>
+				  					<DT><b><span style="font-size: 10.0pt; font-family: Times New Roman; color: darkblue">
+<!-- J05102                                		Caractères restant: <input type="text" stype="Number" elength="5" name="counter9" size="5"> </input> (limite: 500) </span></b></DT>  -->
+		                                   		Caractères restant: <input type="text" stype="Number" elength="5" id="counter9" name="counter9" size="5"> </input> (limite: 500) </span></b></DT>
+		  						</DL>
+							</td> 
+         				</tr>
+					</td>
+				</tr>
+            </table>
+        <br/>
+            <table id="ContractAddlInfo" class="tabledataentry">
+                <tr>
+                    <td class="celldataentryheading" colspan="4" style="height: 20px"><a name="ContractDetails">Détails concernant le contrat</a> </td>
+                </tr>
+                <tr>
+                    <td class="celllabelrightalign">
+                        <label for="MIR-CNTRCT-STAT-CD">Statut selon le contrat :</label>
+                    </td>
+                    <td class="celllabeldataentry">
+                        <select name="MIR-CNTRCT-STAT-CD" size="1" stype="Selection" onfocus="enterField(this)"></select>
+                    </td>
+                </tr>
+            </table>
+        <br/>
+            <h2>
+                <a name="NecSteps">Étapes nécessaires</a>
+            </h2>
+            <table id="NecStepsSection" class="tabledataentry">
+                <tr>
+                    <td class="celldataentryheading" colspan="2" style="height: 20px"><a name="NecAC">Analyse complexe</a> </td>
+                </tr>
+                <tr>
+                    <td class="celllabelrightalign">
+                        <label for="MIR-NEC-AC-IND">Est-ce que l'analyse complexe est nécessaire? :</label>
+                    </td>
+                    <td class="celllabeldataentry">
+                        <select name="MIR-NEC-AC-IND" size="1" stype="Selection" onfocus="enterField(this)"></select>
+                    </td>
+                </tr>
+            </table>
+		 	<br/> 
+            <table id="NecCodifSection" class="tabledataentry" genrows="0">
+                <tr>
+                    <td class="celldisplayheading" colspan="2" align="center"><a name="NecCodif">Codification: Est-ce qu'on a tout pour effectuer la création?</a></td>
+                </tr>
+                <tr>
+                    <td class="celldisplayheading" align="center">
+                        <label for="MIR-NEC-CODIF-BUS-CLAS-CD-T[1]">Type de produit</label>
+                    </td>
+                    <td class="celldisplayheading" align="center">
+                        <label for="MIR-NEC-CODIF-IND-T[1]">Info complète pour la codif?</label>
+                    </td>
+                </tr>
+                <tr>
+				    <td class="celllabeldataentry">
+                        <select id="MIR-NEC-CODIF-BUS-CLAS-CD-T[]" name="MIR-NEC-CODIF-BUS-CLAS-CD-T[]" size="1" stype="Selection" index = "1" onfocus="enterField(this)"></select>
+                    </td>
+				    <td class="celllabeldataentry">
+                        <select name="MIR-NEC-CODIF-IND-T[]" size="1" stype="Selection" index = "1" onfocus="enterField(this)"></select>
+                    </td>
+                </tr>
+            </table>
+        	<br/>
+            <table id="InfoSupplSection" class="tabledataentry">
+                <tr>
+                    <td class="celldataentryheading" colspan="2" style="height: 20px"><a name="NecSuppInfo">Informations supplémentaires</a> </td>
+                </tr>
+                <tr>
+                    <td class="celllabelrightalign">
+                        <label for="MIR-NEC-SUPP-INFO-IND">Est-ce qu'il faut commander de l'information supplémentaire? :</label>
+                    </td>
+                    <td class="celllabeldataentry">
+                        <select name="MIR-NEC-SUPP-INFO-IND" size="1" stype="Selection" onfocus="enterField(this)"></select>
+                    </td>
+                </tr>
+            </table>
+        	<br/>
+            <table id="RappEnqSection" class="tabledataentry">
+                <tr>
+                    <td class="celldataentryheading" colspan="2" ><a name="NecInvestgRpt">Rapport d'enquête</a> </td>
+                </tr>
+                <tr>
+                    <td class="celllabelrightalign">
+                        <label for="MIR-NEC-INVESTG-RPT-IND">Est-ce qu'il faut commander un rapport d'enquête? :</label>
+                    </td>
+                    <td class="celllabeldataentry">
+<!-- J05102             <select name="MIR-NEC-INVESTG-RPT-IND" size="1" stype="Selection" onfocus="enterField(this)"></select>  -->
+                        <select id="MIR-NEC-INVESTG-RPT-IND" name="MIR-NEC-INVESTG-RPT-IND" size="1" stype="Selection" onfocus="enterField(this)"></select>
+                    </td>
+                </tr>
+            </table>
+        	<br/>
+            <table id="ConformiteSection" class="tabledataentry">
+                <tr>
+                    <td class="celldataentryheading" colspan="2"><a name="NecSuppInfo">Conformité</a> </td>
+                </tr>
+                <tr>
+                    <td class="celllabelrightalign">
+                        <label for="MIR-NEC-COMPLIANCE-IND">Est-ce que la conformité est nécessaire? :</label>
+                    </td>
+                    <td class="celllabeldataentry">
+                        <select name="MIR-NEC-COMPLIANCE-IND" size="1" stype="Selection" onfocus="enterField(this)"></select>
+                    </td>
+                </tr>
+            </table>
+        <p align="right"><a href="#top" class="backtotop"> <img src="../images/top.gif" border="0" alt="Haut de page" width="14" height="14"/>Haut de page</a> </p>
+            <h2>
+                <a name="PrelAnalysisSection">Analyse Préliminaire</a>
+            </h2>
+            <table id="AnalysePrelSection" class="tabledataentry">
+                <tr>
+                    <td class="celldataentryheading" colspan="4" style="height: 20px"><a name="PrelAnalysis">Analyse préliminaire</a> </td>
+                </tr>
+                <tr>
+                    <td class="celllabelrightalign">
+                        <label for="MIR-AP-USER-ID">Utilisateur:</label>
+                    </td>
+                    <td class="celllabeldataentry">
+                        <select id="MIR-AP-USER-ID" name="MIR-AP-USER-ID" size="1" stype="Selection" onfocus="enterField(this)"></select>
+                    </td>
+                    <td class="celllabelrightalign">
+                        <label for="MIR-AP-EFF-DT">Date complétée:</label>
+                    </td>
+                    <td class="celllabeldataentry">
+                        <span id="MIR-AP-EFF-DT" stype="Date" displayonly="yes">MIR-AP-EFF-DT</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celllabelrightalign">
+                        <label for="MIR-AP-TERM-IND">Analyse préliminaire complétée:</label>
+                    </td>
+                    <td class="celllabeldataentry">
+                        <input type="checkbox" value="Y" id="MIR-AP-TERM-IND" name="MIR-AP-TERM-IND" stype="Indicator" onclick="onCheckBox()" onfocus="enterField(this)"/>
+<!--                        <input type="checkbox" value="Y" name="MIR-AP-TERM-IND" stype="Indicator" onclick="onCheckBox(),checkPrelAnalStepInd()" onfocus="enterField(this)"/>
+-->
+                    </td>
+                    <td class="celllabelrightalign">
+                    </td>
+                    <td class="celllabeldataentry">
+                    </td>
+                </tr>
+<!--                <tr>
+                    <td class="celllabelrightalign" colspan="1">
+                         <label for="MIR-AP-COMMENTS-TXT">Note :</label>
+                    </td>
+                    <td class="celllabeldataentry" colspan="3">
+                        <input type="text" value=" " name="MIR-AP-COMMENTS-TXT" stype="Text" maxlength="100" onfocus="enterField(this)" onblur="validateField(this)" size="100"/>
+                    </td>
+                </tr> -->
+            </table>
+        <p align="right"><a href="#top" class="backtotop"> <img src="../images/top.gif" border="0" alt="Haut de page" width="14" height="14"/>Haut de page</a> </p>
+           <h2>
+                <a name="ComplexAnalysisSection">Analyse Complexe</a>
+           </h2>
+           <table id="AnalyseCompSection" class="tabledataentry">
+                <tr>
+                    <td class="celldataentryheading" colspan="4" ><a name="ComplexAnalysis">Analyse complexe</a> </td>
+                </tr>
+                <tr>
+                    <td class="celllabelrightalign">
+                        <label for="MIR-AC-USER-ID">Utilisateur:</label>
+                    </td>
+                    <td class="celllabeldataentry">
+                        <select id="MIR-AC-USER-ID" name="MIR-AC-USER-ID" size="1" stype="Selection" onfocus="enterField(this)"></select>
+                    </td>
+                    <td class="celllabelrightalign">
+                        <label for="MIR-AC-EFF-DT">Date complétée:</label>
+                    </td>
+                    <td class="celllabeldataentry">
+                         <span id="MIR-AC-EFF-DT" stype="Date" displayonly="yes">MIR-AC-EFF-DT</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celllabelrightalign">
+                        <label for="MIR-AC-TERM-IND">Analyse complexe complétée:</label>
+                    </td>
+                    <td class="celllabeldataentry">
+                        <input type="checkbox" value="Y" id="MIR-AC-TERM-IND" name="MIR-AC-TERM-IND" stype="Indicator" onclick="onCheckBox()" onfocus="enterField(this)"/>
+<!--                        <input type="checkbox" value="Y" name="MIR-AC-TERM-IND" stype="Indicator" onclick="onCheckBox(),checkCmplxAnalStepInd()" onfocus="enterField(this)"/>
+-->
+                    </td>
+                    <td class="celllabelrightalign">
+                    </td>
+                    <td class="celllabeldataentry">
+                    </td>
+                </tr>
+<!--                <tr>
+                    <td class="celllabelrightalign" colspan="1">
+                         <label for="MIR-AC-COMMENTS-TXT">Note :</label>
+                    </td>
+                    <td class="celllabeldataentry" colspan="3">
+                        <input type="text" value=" " name="MIR-AC-COMMENTS-TXT" stype="Text" maxlength="100" onfocus="enterField(this)" onblur="validateField(this)" size="100"/>
+                    </td>
+                </tr> -->
+            </table>
+        <br/>
+            <table id="ACNote" class="tabledataentry">
+                <tr>
+                   	<td class="celldataentryheading" colspan="2">
+                        		<a name="ACNote">Note pour l'analyse complexe</a>
+                   	</td>
+                </tr>
+                <tr>
+					<td class="celllabeldataentry" colspan="2">
+<!-- J05102				<textarea id="ACNoteTxt" stype="TextArea" style="border-style: double; border-width: 3" height="18" rows="8" cols="132" name="MIR-AC-NOTE-TXT" onkeyup="showcount(500,this,counter14)" onblur="CheckCountCharInBox(500,this)" onfocus="enterField(this)" ></textarea>  -->
+						<textarea id="MIR-AC-NOTE-TXT" stype="TextArea" style="border-style: double; border-width: 3" height="18" rows="8" cols="132" name="MIR-AC-NOTE-TXT" onkeyup="showcount(500,this,counter14)" onblur="CheckCountCharInBox(500,this)" onfocus="enterField(this)" ></textarea>
+         				<tr>
+							<td class="celllabelleftalign" colspan="2"> 
+		  						<DL>
+				  					<DT><b><span style="font-size: 10.0pt; font-family: Times New Roman; color: darkblue">
+<!-- J05102                                		Caractères restant: <input type="text" stype="Number" elength="5" name="counter14" size="5"> </input> (limite: 500) </span></b></DT>  -->
+		                                   		Caractères restant: <input type="text" stype="Number" elength="5" id="counter14" name="counter14" size="5"> </input> (limite: 500) </span></b></DT>
+		  						</DL>
+							</td> 
+         				</tr>
+					</td>
+				</tr>
+            </table>
+        <p align="right"><a href="#top" class="backtotop"> <img src="../images/top.gif" border="0" alt="Haut de page" width="14" height="14"/>Haut de page</a> </p>
+            <h2>
+                <a name="Comunication">Communication</a>
+            </h2>
+         <center>
+            <table class="tableanchors">
+                <tr>
+                    <td class="cellanchors"><a href="#Correction">Correction</a> </td>
+                </tr>
+            </table>        
+          </center>
+
+            <table id="ComunicationSection" class="tabledataentry" genrows="10">
+				<tr>
+                    <td class="celldataentryheading" colspan="9"><a name="Documentation">Demande à l'agence/Rapport d'enquête/Courriel interne</a> </td>
+                </tr>
+                <tr>
+                    <td class="celldisplayheading" align="center">
+                        <label for="MIR-RQST-INFO-DOC-CD-T[1]">Requête</label>
+                    </td>
+                    <td class="celldisplayheading" align="center">
+                        <label for="MIR-RQST-INFO-RQST-DT-T[1]">Demandé le</label>
+                    </td>
+                    <td class="celldisplayheading" align="center">
+                        <label for="MIR-RQST-INFO-USER-ID-T[1]">Utilisateur</label>
+                    </td>
+                    <td class="celldisplayheading">
+                        <label for="MIR-RQST-INFO-RECPT-IND-T[1]">Requête reçue/Réception non nécessaire</label>
+                    </td>
+                    <td class="celldisplayheading" align="center">
+                        <label for="MIR-RQST-INFO-RQST-DT-T[1]">Reçu le</label>
+                    </td>
+                    <td class="celldisplayheading">
+                        <label for="MIR-RQST-INFO-RECPT-USER-ID-T[1]">Requête reçue par</label>
+                    </td>
+                    <td class="celldisplayheading">
+                        <label for="MIR-RQST-INFO-STAT-CD-T[1]">Statut de la requête</label>
+                    </td>
+                    <td class="celldisplayheading">
+                        <label for="MIR-RQST-INFO-PROC-DT-T[1]">Requête traitée le</label>
+                    </td>
+                    <td class="celldisplayheading">
+                        <label for="MIR-RQST-INFO-PROC-USER-ID-T[1]">Requête traitée par</label>
+                    </td>
+                </tr>
+                <tr>
+				    <td class="celllabeldataentry">
+                        <select name="MIR-RQST-INFO-DOC-CD-T[]" size="1" stype="Selection" index = "1" onfocus="enterField(this)"></select>
+                    </td>	
+				    <td class="celllabeldataentry">
+                        <input type="text" value=" " name="MIR-RQST-INFO-RQST-DT-T[]" stype="Date" onfocus="enterField(this)" onblur="validateField(this)" size="20"/>
+                    </td>
+				    <td class="celllabeldataentry">
+                        <span id="MIR-RQST-INFO-USER-ID-T[]" stype="Text" displayonly="yes">MIR-RQST-INFO-USER-ID-T[]</span>
+<!-- J05356                        <select name="MIR-RQST-INFO-USER-ID-T[]" size="1" stype="Selection" index = "1" onfocus="enterField(this)"></select> -->
+                    </td>	
+                    <td class="celllabeldataentry" align="center">
+                        <input type="checkbox" value="Y" name="MIR-RQST-INFO-RECPT-IND-T[]" stype="Indicator" onclick="onCheckBox()" onfocus="enterField(this)"/>
+                    </td>
+                    <td class="celllabeldataentry" align="center">
+                        <span id="MIR-RQST-INFO-RECPT-DT-T[]" stype="Date" displayonly="yes">MIR-RQST-INFO-RECPT-DT-T[]</span>
+                    </td>
+                    <td class="celllabeldataentry" align="center">
+                        <span id="MIR-RQST-INFO-RECPT-USER-ID-T[]" stype="Text" displayonly="yes">MIR-RQST-INFO-RECPT-USER-ID-T[]</span>
+                    </td>
+				    <td class="celllabeldataentry">
+                        <select name="MIR-RQST-INFO-STAT-CD-T[]" size="1" stype="Selection" index = "1" onfocus="enterField(this)"></select>
+                    </td>	
+                    <td class="celllabeldataentry" align="center">
+                        <span id="MIR-RQST-INFO-PROC-DT-T[]" stype="Date" displayonly="yes">MIR-RQST-INFO-PROC-DT-T[]</span>
+                    </td>
+                    <td class="celllabeldataentry" align="center">
+                        <span id="MIR-RQST-INFO-PROC-USER-ID-T[]" stype="Text" displayonly="yes">MIR-RQST-INFO-PROC-USER-ID-T[]</span>
+                    </td>
+                </tr>
+        	<br/>
+				<tfoot>               
+                <tr>
+					<td class="celllabeldataentry" colspan="9">
+<!-- J05102				<textarea id="RqstInfoNoteTxt" stype="TextArea" style="border-style: double; border-width: 3" height="18" rows="8" cols="132" name="MIR-RQST-INFO-NOTE-TXT" onkeyup="showcount(500,this,counter10)" onblur="CheckCountCharInBox(500,this)" onfocus="enterField(this)" ></textarea>  -->
+						<textarea id="MIR-RQST-INFO-NOTE-TXT" stype="TextArea" style="border-style: double; border-width: 3" height="18" rows="8" cols="132" name="MIR-RQST-INFO-NOTE-TXT" onkeyup="showcount(500,this,counter10)" onblur="CheckCountCharInBox(500,this)" onfocus="enterField(this)" ></textarea>
+         				<tr>
+							<td class="celllabelleftalign" colspan="9"> 
+		  						<DL>
+				  					<DT><b><span style="font-size: 10.0pt; font-family: Times New Roman; color: darkblue">
+<!-- J05102                                		Caractères restant: <input type="text" stype="Number" elength="5" name="counter10" size="5"> </input> (limite: 500) </span></b></DT>  -->		                                   		
+		                                   		Caractères restant: <input type="text" stype="Number" elength="5" id="counter10" name="counter10" size="5"> </input> (limite: 500) </span></b></DT>
+		  						</DL>
+							</td> 
+         				</tr>
+					</td>
+				</tr>
+				</tfoot>
+            </table>
+           <table id="FolwupSection" class="tabledataentry">
+                <tr>
+                    <td class="celldataentryheading" colspan="2" style="height: 20px"><a name="Folwup">Date de suivi</a> </td>
+                </tr>
+                <tr>
+                    <td class="celllabelrightalign">
+                        <label for="MIR-FOLW-UP-DT">Date de suivi :</label>
+                    </td>
+                    <td class="celllabeldataentry">
+                        <span id="MIR-FOLW-UP-DT" stype="Date" displayonly="yes">MIR-FOLW-UP-DT</span>
+                    </td>
+                </tr>
+            </table>
+         <br/> 
+           <table id="InfoConfSection" class="tabledataentry">
+                <tr>
+                    <td class="celldataentryheading" colspan="4"><a name="InfoConf">Analyse/Réception de l'information reçue</a> </td>
+                </tr>
+                <tr>
+                    <td class="celllabelrightalign">
+                        <label for="MIR-INFO-SUPP-USER-ID">Utilisateur:</label>
+                    </td>
+                    <td class="celllabeldataentry">
+                        <select id="MIR-INFO-SUPP-USER-ID" name="MIR-INFO-SUPP-USER-ID" size="1" stype="Selection" onfocus="enterField(this)"></select>
+                    </td>
+                    <td class="celllabelrightalign">
+                        <label for="MIR-INFO-SUPP-EFF-DT">Date complétée:</label>
+                    </td>
+                    <td class="celllabeldataentry">
+                         <input type="text" value="" id="MIR-INFO-SUPP-EFF-DT" name="MIR-INFO-SUPP-EFF-DT" stype="Date"  readonly="readonly" onfocus="enterField(this)" onblur="validateField(this)" size="20"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celllabelrightalign">
+                        <label for="MIR-INFO-SUPP-TERM-IND">Information reçue complète:</label>
+                    </td>
+                    <td class="celllabeldataentry">
+                        <input type="checkbox" value="Y" id="MIR-INFO-SUPP-TERM-IND" name="MIR-INFO-SUPP-TERM-IND" stype="Indicator" onclick="onCheckBox(),checkAnalRecvInfoStepInd(),checkTodisblRqstTypeSection()" onfocus="enterField(this)"/>
+                    </td>
+                    <td class="celllabelrightalign">
+                    </td>
+                    <td class="celllabeldataentry">
+                    </td>
+                </tr>
+<!--                <tr>
+                    <td class="celllabelrightalign" colspan="1">
+                         <label for="MIR-INFO-SUPP-COMMENTS-TXT">Note :</label>
+                    </td>
+                    <td class="celllabeldataentry" colspan="3">
+                        <input type="text" value=" " name="MIR-INFO-SUPP-COMMENTS-TXT" stype="Text" maxlength="100" onfocus="enterField(this)" onblur="validateField(this)" size="100"/>
+                    </td>
+                </tr> -->
+            </table>
+        <p align="right"><a href="#top" class="backtotop"> <img src="../images/top.gif" border="0" alt="Haut de page" width="14" height="14"/>Haut de page</a> </p>
+            <h2>
+                <a name="CodifSection">Codification</a>
+            </h2>
+            <table id="validCodifSection" class="tabledataentry" genrows="0">
+                <tr>
+                    <td class="celldataentryheading" colspan="5" style="height: 20px"><a name="AdminFile">Validation de la codification</a> </td>
+                </tr>
+                <tr>
+                    <td class="celldisplayheading" align="center">
+                        <label for="MIR-CHK-CODIF-1-NUM-T[1]">Vérification</label>
+                    </td>
+                    <td class="celldisplayheading" align="center" style="width: 113px">
+                        <label for="MIR-CHK-CODIF-1-IND-T[1]">Validation</label>
+                    </td>
+
+                    <td class="celldisplayheading" style="width: 98px" />
+
+                    <td class="celldisplayheading" align="center">
+                        <label for="MIR-CHK-CODIF-2-NUM-T[1]">Vérification</label>
+                    </td>
+                    <td class="celldisplayheading" align="center">
+                        <label for="MIR-CHK-CODIF-2-IND-T[1]">Validation</label>
+                    </td>
+                </tr>
+                <tr>
+				    <td class="celllabelrightalign">
+                        <span id="MIR-CHK-CODIF-1-NUM-T[]" stype="Text" displayonly="yes">MIR-CHK-CODIF-1-NUM-T[]</span>
+                    </td>	
+                    <td class="celllabeldataentry" >
+                        <input type="radio" name="MIR-CHK-CODIF-1-IND-T[]" value="Y" stype="YesNoNotApplicable" onfocus="saveValue(); enterField(this)" /> Oui 
+                        <input type="radio" name="MIR-CHK-CODIF-1-IND-T[]" value="N" stype="YesNoNotApplicable" onfocus="saveValue(); enterField(this)" /> Non 
+                        <input type="radio" name="MIR-CHK-CODIF-1-IND-T[]" value="X" stype="YesNoNotApplicable" onfocus="saveValue(); enterField(this)" /> N/A 
+                    </td>
+                    <td class="celllabeldataentry" style="width: 100px"/>
+				    <td class="celllabelrightalign">
+                        <span id="MIR-CHK-CODIF-2-NUM-T[]" stype="Text" displayonly="yes">MIR-CHK-CODIF-2-NUM-T[]</span>
+                    </td>	
+                    <td class="celllabeldataentry">
+                        <input type="radio" name="MIR-CHK-CODIF-2-IND-T[]" value="Y" stype="YesNoNotApplicable" onfocus="saveValue(); enterField(this)" /> Oui 
+                        <input type="radio" name="MIR-CHK-CODIF-2-IND-T[]" value="N" stype="YesNoNotApplicable" onfocus="saveValue(); enterField(this)" /> Non 
+                        <input type="radio" name="MIR-CHK-CODIF-2-IND-T[]" value="X" stype="YesNoNotApplicable" onfocus="saveValue(); enterField(this)" /> N/A 
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celllabeldataentry"  colspan="5" align="center">
+                        <input type="button" name="AllAnswersNAButton" value="Toutes les vérifications sont non applicables" onclick="setAllInTableToNA('validCodifSection')" />
+                    </td>
+                </tr>
+            </table>
+        <br />
+            <table id="CodificationSection" class="tabledataentry" genrows="0">
+                <tr>
+                    <td class="celldisplayheading" colspan="5" align="center"><a name="Codif">Types de produits à coder/traiter</a></td>
+                </tr>
+                <tr>
+                    <td class="celldisplayheading" align="center">
+                        <label for="MIR-CODIF-BUS-CLAS-CD-T[1]">Type de produit</label>
+                    </td>
+                    <td class="celldisplayheading" align="center">
+                        <label for="MIR-CODIF-CD-T[1]">Codification complétée</label>
+                    </td>
+                    <td class="celldisplayheading" align="center">
+                        <label for="MIR-CODIF-USER-ID-T[1]">Utilisateur</label>
+                    </td>
+                    <td class="celldisplayheading" align="center">
+                        <label for="MIR-CODIF-CODE-ID-T[1]">Code</label>
+                    </td>
+                    <td class="celldisplayheading" align="center">
+                        <label for="MIR-CODIF-EFF-DT-T[1]">Date complétée</label>
+                    </td>
+                </tr>
+                <tr>
+				    <td class="celllabeldataentry">
+                        <select name="MIR-CODIF-BUS-CLAS-CD-T[]" size="1" stype="Selection" index = "1" onfocus="enterField(this)"></select>
+                    </td>
+				    <td class="celllabeldataentry">
+                        <select name="MIR-CODIF-CD-T[]" size="1" stype="Selection" index = "1" onfocus="enterField(this)"></select>
+                    </td>
+				    <td class="celllabeldataentry">
+                        <select name="MIR-CODIF-USER-ID-T[]" size="1" stype="Selection" index = "1" onfocus="enterField(this)"></select>
+                    </td>
+				    <td class="celllabeldataentry">
+                        <input type="text" value=" " name="MIR-CODIF-CODE-ID-T[]" stype="Text"/>
+                    </td>
+				    <td class="celllabeldataentry">
+                        <input type="text" value=" " id="MIR-CODIF-EFF-DT-T[]" name="MIR-CODIF-EFF-DT-T[]" stype="Date" onfocus="enterField(this)" onblur="validateField(this)" size="20"/>
+                    </td>
+                </tr>
+            </table>
+        <br/>
+            <table id="CodifNote" class="tabledataentry">
+                <tr>
+                   	<td class="celldataentryheading" colspan="2">
+                        		<a name="CodifNote">Note pour la codification</a>
+                   	</td>
+                </tr>
+                <tr>
+					<td class="celllabeldataentry" colspan="2">
+<!-- J05102				<textarea id="CodifNoteTxt" stype="TextArea" style="border-style: double; border-width: 3" height="18" rows="8" cols="132" name="MIR-CODIF-NOTE-TXT" onkeyup="showcount(500,this,counter15)" onblur="CheckCountCharInBox(500,this)" onfocus="enterField(this)" ></textarea>  -->
+						<textarea id="MIR-CODIF-NOTE-TXT" stype="TextArea" style="border-style: double; border-width: 3" height="18" rows="8" cols="132" name="MIR-CODIF-NOTE-TXT" onkeyup="showcount(500,this,counter15)" onblur="CheckCountCharInBox(500,this)" onfocus="enterField(this)" ></textarea>
+         				<tr>
+							<td class="celllabelleftalign" colspan="2"> 
+		  						<DL>
+				  					<DT><b><span style="font-size: 10.0pt; font-family: Times New Roman; color: darkblue">
+<!-- J05102                                		Caractères restant: <input type="text" stype="Number" elength="5" name="counter15" size="5"> </input> (limite: 500) </span></b></DT>  -->
+		                                   		Caractères restant: <input type="text" stype="Number" elength="5" id="counter15" name="counter15" size="5"> </input> (limite: 500) </span></b></DT>		  						</DL>
+							</td> 
+         				</tr>
+					</td>
+				</tr>
+            </table>
+        <p align="right"><a href="#top" class="backtotop"> <img src="../images/top.gif" border="0" alt="Haut de page" width="14" height="14"/>Haut de page</a> </p>
+            <h2>
+                <a name="ComplianceSection">Conformité</a>
+            </h2>
+            <table id="validComplianceSection" class="tabledataentry" genrows="0">
+                <tr>
+                    <td class="celldataentryheading" colspan="5" style="height: 20px"><a name="AdminFile">Validation de la conformité</a> </td>
+                </tr>
+                <tr>
+                    <td class="celldisplayheading" align="center">
+                        <label for="MIR-CHK-COMPLIANCE-1-NUM-T[1]">Vérification</label>
+                    </td>
+                    <td class="celldisplayheading" align="center" style="width: 113px">
+                        <label for="MIR-CHK-COMPLIANCE-1-IND-T[1]">Validation</label>
+                    </td>
+
+                    <td class="celldisplayheading" style="width: 98px" />
+
+                    <td class="celldisplayheading" align="center">
+                        <label for="MIR-CHK-COMPLIANCE-2-NUM-T[1]">Vérification</label>
+                    </td>
+                    <td class="celldisplayheading" align="center">
+                        <label for="MIR-CHK-COMPLIANCE-2-IND-T[1]">Validation</label>
+                    </td>
+                </tr>
+                <tr>
+				    <td class="celllabelrightalign">
+                        <span id="MIR-CHK-COMPLIANCE-1-NUM-T[]" stype="Text" displayonly="yes">MIR-CHK-COMPLIANCE-1-NUM-T[]</span>
+                    </td>	
+                    <td class="celllabeldataentry" >
+                        <input type="radio" name="MIR-CHK-COMPLIANCE-1-IND-T[]" value="Y" stype="YesNoNotApplicable" onfocus="saveValue(); enterField(this)" /> Oui 
+                        <input type="radio" name="MIR-CHK-COMPLIANCE-1-IND-T[]" value="N" stype="YesNoNotApplicable" onfocus="saveValue(); enterField(this)" /> Non 
+                        <input type="radio" name="MIR-CHK-COMPLIANCE-1-IND-T[]" value="X" stype="YesNoNotApplicable" onfocus="saveValue(); enterField(this)" /> N/A 
+                    </td>
+                    <td class="celllabeldataentry" style="width: 100px"/>
+				    <td class="celllabelrightalign">
+                        <span id="MIR-CHK-COMPLIANCE-2-NUM-T[]" stype="Text" displayonly="yes">MIR-CHK-COMPLIANCE-2-NUM-T[]</span>
+                    </td>	
+                    <td class="celllabeldataentry">
+                        <input type="radio" name="MIR-CHK-COMPLIANCE-2-IND-T[]" value="Y" stype="YesNoNotApplicable" onfocus="saveValue(); enterField(this)" /> Oui 
+                        <input type="radio" name="MIR-CHK-COMPLIANCE-2-IND-T[]" value="N" stype="YesNoNotApplicable" onfocus="saveValue(); enterField(this)" /> Non 
+                        <input type="radio" name="MIR-CHK-COMPLIANCE-2-IND-T[]" value="X" stype="YesNoNotApplicable" onfocus="saveValue(); enterField(this)" /> N/A 
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celllabeldataentry"  colspan="5" align="center">
+                        <input type="button" name="AllAnswersNAButton" value="Toutes les vérifications sont non applicables" onclick="setAllInTableToNA('validComplianceSection')" />
+                    </td>
+                </tr>
+            </table>
+        <br/>
+            <table id="ValidComplianceNote" class="tabledataentry">
+                <tr>
+                   	<td class="celldataentryheading" colspan="2">
+                        		<a name="ValidComplianceNote">Note pour la validation de la conformité </a>
+                   	</td>
+                </tr>
+                <tr>
+					<td class="celllabeldataentry" colspan="2">
+<!-- J05102				<textarea id="ValidComplianceNoteTxt" stype="TextArea" style="border-style: double; border-width: 3" height="18" rows="8" cols="132" name="MIR-COMPLIANCE-NOTE-TXT" onkeyup="showcount(500,this,counter11)" onblur="CheckCountCharInBox(500,this)" onfocus="enterField(this)" ></textarea>  -->
+						<textarea id="MIR-COMPLIANCE-NOTE-TXT" stype="TextArea" style="border-style: double; border-width: 3" height="18" rows="8" cols="132" name="MIR-COMPLIANCE-NOTE-TXT" onkeyup="showcount(500,this,counter11)" onblur="CheckCountCharInBox(500,this)" onfocus="enterField(this)" ></textarea>
+         				<tr>
+							<td class="celllabelleftalign" colspan="2"> 
+		  						<DL>
+				  					<DT><b><span style="font-size: 10.0pt; font-family: Times New Roman; color: darkblue">
+<!-- J05102                                		Caractères restant: <input type="text" stype="Number" elength="5" name="counter11" size="5"> </input> (limite: 500) </span></b></DT>  -->
+		                                   		Caractères restant: <input type="text" stype="Number" elength="5" id="counter11" name="counter11" size="5"> </input> (limite: 500) </span></b></DT>
+		  						</DL>
+							</td> 
+         				</tr>
+					</td>
+				</tr>
+            </table>
+        <br />
+           <table id="ComplianceSection2" class="tabledataentry">
+                <tr>
+                    <td class="celldataentryheading" colspan="4" style="height: 20px"><a name="Compliance2">Conformité</a> </td>
+                </tr>
+                <tr>
+                    <td class="celllabelrightalign">
+                        <label for="MIR-COMPLIANCE-USER-ID">Utilisateur :</label>
+                    </td>
+                    <td class="celllabeldataentry">
+                        <select id="MIR-COMPLIANCE-USER-ID" name="MIR-COMPLIANCE-USER-ID" size="1" stype="Selection" onfocus="enterField(this)"></select>
+                    </td>
+                    <td class="celllabelrightalign">
+                        <label for="MIR-COMPLIANCE-EFF-DT">Date complétée  :</label>
+                    </td>
+                    <td class="celllabeldataentry">
+                        <span id="MIR-COMPLIANCE-EFF-DT" stype="Date" displayonly="yes">MIR-COMPLIANCE-EFF-DT</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celllabelrightalign">
+                        <label for="MIR-COMPLIANCE-TERM-IND">Conformité complétée:</label>
+                    </td>
+                    <td class="celllabeldataentry">
+                        <input type="checkbox" value="Y" id="MIR-COMPLIANCE-TERM-IND" name="MIR-COMPLIANCE-TERM-IND" stype="Indicator" onclick="onCheckBox()" onfocus="enterField(this)"/>
+<!--
+                        <input type="checkbox" value="Y" name="MIR-COMPLIANCE-TERM-IND" stype="Indicator" onclick="onCheckBox(),checkConformityStepInd()" onfocus="enterField(this)"/>
+-->
+                    </td>
+
+                    <td class="celllabelrightalign">
+                    </td>
+                    <td class="celllabeldataentry">
+                    </td>
+                </tr>
+<!--                <tr>
+                    <td class="celllabelrightalign" colspan="1">
+                         <label for="MIR-COMPLIANCE-COMMENTS-TXT">Note :</label>
+                    </td>
+                    <td class="celllabeldataentry" colspan="3">
+                        <input type="text" value=" " name="MIR-COMPLIANCE-COMMENTS-TXT" stype="Text" maxlength="100" onfocus="enterField(this)" onblur="validateField(this)" size="100"/>
+                    </td>
+                </tr> -->
+            </table>
+        <p align="right"><a href="#top" class="backtotop"> <img src="../images/top.gif" border="0" alt="Haut de page" width="14" height="14"/>Haut de page</a> </p>
+            <h2>
+                <a name="Decision">Décision</a>
+            </h2>
+            <table id="validDecisionSection" class="tabledataentry" genrows="0">
+                <tr>
+                    <td class="celldataentryheading" colspan="5" style="height: 20px"><a name="Decision">Validation de la décision</a> </td>
+                </tr>
+                <tr>
+                    <td class="celldisplayheading" align="center">
+                        <label for="MIR-CHK-DECID-1-NUM-T[1]">Vérification</label>
+                    </td>
+                    <td class="celldisplayheading" align="center" style="width: 113px">
+                        <label for="MIR-CHK-DECID-1-IND-T[1]">Validation</label>
+                    </td>
+
+                    <td class="celldisplayheading" style="width: 98px" />
+
+                    <td class="celldisplayheading" align="center">
+                        <label for="MIR-CHK-DECID-2-NUM-T[1]">Vérification</label>
+                    </td>
+                    <td class="celldisplayheading" align="center">
+                        <label for="MIR-CHK-DECID-2-IND-T[1]">Validation</label>
+                    </td>
+                </tr>
+                <tr>
+				    <td class="celllabelrightalign">
+                        <span id="MIR-CHK-DECID-1-NUM-T[]" stype="Text" displayonly="yes">MIR-CHK-DECID-1-NUM-T[]</span>
+                    </td>	
+                    <td class="celllabeldataentry" >
+                        <input type="radio" name="MIR-CHK-DECID-1-IND-T[]" value="Y" stype="YesNoNotApplicable" onfocus="saveValue(); enterField(this)" /> Oui 
+                        <input type="radio" name="MIR-CHK-DECID-1-IND-T[]" value="N" stype="YesNoNotApplicable" onfocus="saveValue(); enterField(this)" /> Non 
+                        <input type="radio" name="MIR-CHK-DECID-1-IND-T[]" value="X" stype="YesNoNotApplicable" onfocus="saveValue(); enterField(this)" /> N/A 
+                    </td>
+                    <td class="celllabeldataentry" style="width: 100px"/>
+				    <td class="celllabelrightalign">
+                        <span id="MIR-CHK-DECID-2-NUM-T[]" stype="Text" displayonly="yes">MIR-CHK-DECID-2-NUM-T[]</span>
+                    </td>	
+                    <td class="celllabeldataentry">
+                        <input type="radio" name="MIR-CHK-DECID-2-IND-T[]" value="Y" stype="YesNoNotApplicable" onfocus="saveValue(); enterField(this)" /> Oui 
+                        <input type="radio" name="MIR-CHK-DECID-2-IND-T[]" value="N" stype="YesNoNotApplicable" onfocus="saveValue(); enterField(this)" /> Non 
+                        <input type="radio" name="MIR-CHK-DECID-2-IND-T[]" value="X" stype="YesNoNotApplicable" onfocus="saveValue(); enterField(this)" /> N/A 
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celllabeldataentry"  colspan="5" align="center">
+                        <input type="button" name="AllAnswersNAButton" value="Toutes les vérifications sont non applicables" onclick="setAllInTableToNA('validDecisionSection')" />
+                    </td>
+                </tr>
+            </table>
+        <br/>
+            <table id="ValidDecisionNote" class="tabledataentry">
+                <tr>
+                   	<td class="celldataentryheading" colspan="2">
+                        		<a name="ValidDecisionNote">Note pour la validation des décisions</a>
+                   	</td>
+                </tr>
+                <tr>
+					<td class="celllabeldataentry" colspan="2">
+<!-- J05102				<textarea id="ValidDecisionNoteTxt" stype="TextArea" style="border-style: double; border-width: 3" height="18" rows="8" cols="132" name="MIR-DECID-NOTE-TXT" onkeyup="showcount(500,this,counter12)" onblur="CheckCountCharInBox(500,this)" onfocus="enterField(this)" ></textarea>  -->
+ 						<textarea id="MIR-DECID-NOTE-TXT" stype="TextArea" style="border-style: double; border-width: 3" height="18" rows="8" cols="132" name="MIR-DECID-NOTE-TXT" onkeyup="showcount(500,this,counter12)" onblur="CheckCountCharInBox(500,this)" onfocus="enterField(this)" ></textarea>
+         				<tr>
+							<td class="celllabelleftalign" colspan="2"> 
+		  						<DL>
+				  					<DT><b><span style="font-size: 10.0pt; font-family: Times New Roman; color: darkblue">
+<!-- J05102                                		Caractères restant: <input type="text" stype="Number" elength="5" name="counter12" size="5"> </input> (limite: 500) </span></b></DT> -->
+		                                   		Caractères restant: <input type="text" stype="Number" elength="5" id="counter12" name="counter12" size="5"> </input> (limite: 500) </span></b></DT>
+		  						</DL>
+							</td> 
+         				</tr>
+					</td>
+				</tr>
+            </table>
+        <br />
+<!--J05987 Begin change  -->
+         <center>
+            <table class="tableanchors">
+                <tr>
+                    <td class="cellanchors"><a href="#Comunication">Communication</a> </td>
+                    <td class="cellanchors"><a href="#Correction">Correction</a> </td>
+                </tr>
+            </table>        
+          </center>
+<!--J05987 End change  -->
+            <table id="DecisionSection" class="tabledataentry" genrows="0">
+                <tr>
+                    <td class="celldisplayheading" colspan="6" align="center"><a name="Decision">Décision</a></td>
+                </tr>
+                <tr>
+                    <td class="celldisplayheading" align="center">
+                        <label for="MIR-DECID-RQST-TYP-CD-T[1]">Type de demande</label>
+                    </td>
+                    <td class="celldisplayheading" align="center">
+                        <label for="MIR-DECID-BUS-CLAS-CD-T[1]">Type de produit</label>
+                    </td>
+                    <td class="celldisplayheading" align="center">
+                        <label for="MIR-DECID-STRT-DT-T[1]">Date de début</label>
+                    </td>
+                    <td class="celldisplayheading" align="center">
+                        <label for="MIR-DECID-CD-T[1]">Décision</label>
+                    </td>
+                    <td class="celldisplayheading" align="center">
+                        <label for="MIR-DECID-USER-ID-T[1]">Utilisateur</label>
+                    </td>
+                    <td class="celldisplayheading" align="center">
+                        <label for="MIR-DECID-EFF-DT-T[1]">Date complétée</label>
+                    </td>
+                </tr>
+                <tr>
+				    <td class="celllabeldataentry">
+                        <select name="MIR-DECID-RQST-TYP-CD-T[]" size="1" stype="Selection" index = "1" onfocus="enterField(this)"></select> 
+                    </td>
+				    <td class="celllabeldataentry">
+                        <select name="MIR-DECID-BUS-CLAS-CD-T[]" size="1" stype="Selection" index = "1" onfocus="enterField(this)"></select> 
+                    </td>
+				    <td class="celllabeldataentry">
+                        <input type="text" value=" " name="MIR-DECID-STRT-DT-T[]" stype="Date" onfocus="enterField(this)" onblur="validateField(this)" size="20"/>
+                    </td>
+				    <td class="celllabeldataentry">
+                        <select name="MIR-DECID-CD-T[]" size="1" stype="Selection" index = "1" onfocus="enterField(this)"></select>
+                    </td>
+				    <td class="celllabeldataentry">
+                        <select name="MIR-DECID-USER-ID-T[]" size="1" stype="Selection" index = "1" onfocus="enterField(this)"></select>
+                    </td>
+				    <td class="celllabeldataentry">
+                        <input type="text" value=" " name="MIR-DECID-EFF-DT-T[]" stype="Date" onfocus="enterField(this)" onblur="validateField(this)" size="20"/>
+                    </td>
+                </tr>
+            </table>
+        <p align="right"><a href="#top" class="backtotop"> <img src="../images/top.gif" border="0" alt="Haut de page" width="14" height="14"/>Haut de page</a> </p>
+            <h2>
+                <a name="Processing">Traitement</a>
+            </h2>
+            <table id="validProcSection" class="tabledataentry" genrows="0">
+                <tr>
+                    <td class="celldataentryheading" colspan="5" style="height: 20px"><a name="Decision">Vérification du traitement</a> </td>
+                </tr>
+                <tr>
+                    <td class="celldisplayheading" align="center">
+                        <label for="MIR-CHK-PROC-1-NUM-T[1]">Vérification</label>
+                    </td>
+                    <td class="celldisplayheading" align="center" style="width: 113px">
+                        <label for="MIR-CHK-PROC-1-IND-T[1]">Validation</label>
+                    </td>
+
+                    <td class="celldisplayheading" style="width: 98px" />
+
+                    <td class="celldisplayheading" align="center">
+                        <label for="MIR-CHK-PROC-2-NUM-T[1]">Vérification</label>
+                    </td>
+                    <td class="celldisplayheading" align="center">
+                        <label for="MIR-CHK-PROC-2-IND-T[1]">Validation</label>
+                    </td>
+                </tr>
+                <tr>
+				    <td class="celllabelrightalign">
+                        <span id="MIR-CHK-PROC-1-NUM-T[]" stype="Text" displayonly="yes">MIR-CHK-PROC-1-NUM-T[]</span>
+                    </td>	
+                    <td class="celllabeldataentry" >
+                        <input type="radio" name="MIR-CHK-PROC-1-IND-T[]" value="Y" stype="YesNoNotApplicable" onfocus="saveValue(); enterField(this)" /> Oui 
+                        <input type="radio" name="MIR-CHK-PROC-1-IND-T[]" value="N" stype="YesNoNotApplicable" onfocus="saveValue(); enterField(this)" /> Non 
+                        <input type="radio" name="MIR-CHK-PROC-1-IND-T[]" value="X" stype="YesNoNotApplicable" onfocus="saveValue(); enterField(this)" /> N/A 
+                    </td>
+                    <td class="celllabeldataentry" style="width: 100px"/>
+				    <td class="celllabelrightalign">
+                        <span id="MIR-CHK-PROC-2-NUM-T[]" stype="Text" displayonly="yes">MIR-CHK-PROC-2-NUM-T[]</span>
+                    </td>	
+                    <td class="celllabeldataentry">
+                        <input type="radio" name="MIR-CHK-PROC-2-IND-T[]" value="Y" stype="YesNoNotApplicable" onfocus="saveValue(); enterField(this)" /> Oui 
+                        <input type="radio" name="MIR-CHK-PROC-2-IND-T[]" value="N" stype="YesNoNotApplicable" onfocus="saveValue(); enterField(this)" /> Non 
+                        <input type="radio" name="MIR-CHK-PROC-2-IND-T[]" value="X" stype="YesNoNotApplicable" onfocus="saveValue(); enterField(this)" /> N/A 
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celllabeldataentry"  colspan="5" align="center">
+                        <input type="button" name="AllAnswersNAButton" value="Toutes les vérifications sont non applicables" onclick="setAllInTableToNA('validProcSection')" />
+                    </td>
+                </tr>
+            </table>
+        <br/>
+            <table id="ValidProcessingNote" class="tabledataentry">
+                <tr>
+                   	<td class="celldataentryheading" colspan="2">
+                        		<a name="ValidProcessingNote">Note pour la vérification du traitement</a>
+                   	</td>
+                </tr>
+                <tr>
+					<td class="celllabeldataentry" colspan="2">
+<!-- J05102				<textarea id="ValidProcessingNoteTxt" stype="TextArea" style="border-style: double; border-width: 3" height="18" rows="8" cols="132" name="MIR-PROC-NOTE-TXT" onkeyup="showcount(500,this,counter13)" onblur="CheckCountCharInBox(500,this)" onfocus="enterField(this)" ></textarea>  -->
+						<textarea id="MIR-PROC-NOTE-TXT" stype="TextArea" style="border-style: double; border-width: 3" height="18" rows="8" cols="132" name="MIR-PROC-NOTE-TXT" onkeyup="showcount(500,this,counter13)" onblur="CheckCountCharInBox(500,this)" onfocus="enterField(this)" ></textarea>
+         				<tr>
+							<td class="celllabelleftalign" colspan="2"> 
+		  						<DL>
+				  					<DT><b><span style="font-size: 10.0pt; font-family: Times New Roman; color: darkblue">
+<!-- J05102                                		Caractères restant: <input type="text" stype="Number" elength="5" name="counter13" size="5"> </input> (limite: 500) </span></b></DT>  -->
+		                                   		Caractères restant: <input type="text" stype="Number" elength="5" id="counter13" name="counter13" size="5"> </input> (limite: 500) </span></b></DT>
+		  						</DL>
+							</td> 
+         				</tr>
+					</td>
+				</tr>
+            </table>
+        <br />
+            <table id="ProcessingSection" class="tabledataentry" genrows="0">
+                <tr>
+                    <td class="celldisplayheading" colspan="6" align="center"><a name="Processing">Traitement</a></td>
+                </tr>
+                <tr>
+                    <td class="celldisplayheading" align="center">
+                        <label for="MIR-PROC-RQST-TYP-CD-T[1]">Type de demande</label>
+                    </td>
+                    <td class="celldisplayheading" align="center">
+                        <label for="MIR-PROC-BUS-CLAS-CD-T[1]">Type de produit</label>
+                    </td>
+                    <td class="celldisplayheading" align="center">
+                        <label for="MIR-PROC-STRT-DT-T[1]">Date de début</label>
+                    </td>
+                    <td class="celldisplayheading" align="center">
+                        <label for="MIR-PROC-CD-T[1]">Traitement complété</label>
+                    </td>
+                    <td class="celldisplayheading" align="center">
+                        <label for="MIR-PROC-USER-ID-T[1]">Utilisateur</label>
+                    </td>
+                    <td class="celldisplayheading" align="center">
+                        <label for="MIR-PROC-EFF-DT-T[1]">Date complétée</label>
+                    </td>
+                </tr>
+                <tr>
+				    <td class="celllabeldataentry">
+                        <select name="MIR-PROC-RQST-TYP-CD-T[]" size="1" stype="Selection" index = "1" onfocus="enterField(this)"></select>
+                    </td>
+				    <td class="celllabeldataentry">
+                        <select name="MIR-PROC-BUS-CLAS-CD-T[]" size="1" stype="Selection" index = "1" onfocus="enterField(this)"></select>
+                    </td>
+				    <td class="celllabeldataentry">
+                        <input type="text" value=" " name="MIR-PROC-STRT-DT-T[]" stype="Date" />
+                    </td>
+				    <td class="celllabeldataentry">
+                        <select name="MIR-PROC-CD-T[]" size="1" stype="Selection" index = "1" onfocus="enterField(this)"></select>
+                    </td>
+				    <td class="celllabeldataentry">
+                        <select name="MIR-PROC-USER-ID-T[]" size="1" stype="Selection" index = "1" onfocus="enterField(this)"></select>
+                    </td>
+				    <td class="celllabeldataentry">
+                        <input type="text" value=" " name="MIR-PROC-EFF-DT-T[]" stype="Date" index = "1" onfocus="enterField(this)" onblur="validateField(this)" size="20"/>
+                    </td>
+                </tr>
+            </table>
+          <p align="right"><a href="#top" class="backtotop"> <img src="../images/top.gif" border="0" alt="Haut de page" width="14" height="14"/>Haut de page</a> </p>
+            <h2>
+                <a name="QualityControlSection">Contrôle Qualité</a>
+            </h2>
+			<table class="tabledisplay">
+                <tr>
+                    <td class="celldisplayheading" colspan="4">
+                        <a name="AgentDetail">Information sur le conseiller</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celldisplaylabel">
+                        <label for="MIR-AGT-CNTRCT-STRT-DT">Date d'effet:</label>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-AGT-CNTRCT-STRT-DT" stype="Date" displayonly="yes">MIR-AGT-CNTRCT-STRT-DT</span>
+                    </td>
+                    <td class="celldisplaylabel">
+                        <label for="MIR-AGT-CNTRCT-TRMN-DT">Date changement État de l'agent:</label>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-AGT-CNTRCT-TRMN-DT" stype="Date" displayonly="yes">MIR-AGT-CNTRCT-TRMN-DT</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celldisplaylabel">
+                        <label for="MIR-AGT-STAT-CD">État de l'agent:</label>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-AGT-STAT-CD" stype="Text" displayonly="yes">MIR-AGT-STAT-CD</span>
+                    </td>
+                    <td class="celldisplaylabel">
+                        <label for="MIR-AGT-CNTRCT-STAT-CD">État du contrat:</label>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-AGT-CNTRCT-STAT-CD" stype="Text" displayonly="yes">MIR-AGT-CNTRCT-STAT-CD</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celldisplaylabel">
+                        <label for="MIR-BR-ID">Succursale:</label>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-BR-ID" stype="Text" displayonly="yes">MIR-BR-ID</span>
+                    </td>
+                    <td class="celldisplaylabel">
+                        <label for="MIR-PREV-BR-ID">Succursale précédente:</label>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-PREV-BR-ID" stype="Text" displayonly="yes">MIR-PREV-BR-ID</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celldisplaylabel">
+                        <label for="MIR-AGT-EXTRANET-MAIN-TXT">Code Extranet Principal:</label>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-AGT-EXTRANET-MAIN-TXT" stype="Text" displayonly="yes">MIR-AGT-EXTRANET-MAIN-TXT</span>
+                    </td>
+                    <td class="celldisplaylabel">
+                        <label for="MIR-AGT-REGRPN-CD">Code Regroupement:</label>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-AGT-REGRPN-CD" stype="Text" displayonly="yes">MIR-AGT-REGRPN-CD</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celldisplaylabel">
+                        <label for="MIR-AGT-GROUP-ID">Paiement au Code:</label>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-AGT-GROUP-ID" stype="Text" displayonly="yes">MIR-AGT-GROUP-ID</span>
+                    </td>
+                    <td class="celldisplaylabel">
+                        <label for="MIR-REL-AGT-REP-ID">Code de représentant SSQ:</label>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-REL-AGT-REP-ID" stype="Text" displayonly="yes">MIR-REL-AGT-REP-ID</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celldisplaylabel">
+                        <label for="MIR-DV-AGT-TAX-CLI-ID">Client feuillet d'impôt:</label>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-DV-AGT-TAX-CLI-ID" stype="Text" displayonly="yes">MIR-DV-AGT-TAX-CLI-ID</span>
+                    </td>
+                    <td class="celldisplaylabel">
+                        <label for="MIR-AGT-TYP-CD">Genre d'agent:</label>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-AGT-TYP-CD" stype="Text" displayonly="yes">MIR-AGT-TYP-CD</span>
+                    </td>
+				</tr>
+                <tr>
+                    <td class="celldisplaylabel">
+                        <label for="MIR-AGT-CMPNST-SCHD-CD">Genre de contrat:</label>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-AGT-CMPNST-SCHD-CD" stype="Text" displayonly="yes">MIR-AGT-CMPNST-SCHD-CD</span>
+                    </td>
+                    <td class="celldisplaylabel">
+                        <label for="MIR-AGT-HIER-TYP-CD">Type Hiérarchique:</label>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-AGT-HIER-TYP-CD" stype="Text" displayonly="yes">MIR-AGT-HIER-TYP-CD</span>
+                    </td>
+				</tr>
+                <tr>
+                    <td class="celldisplaylabel">
+                        <label for="MIR-AUTO-COMM-PMT-CD">Versement automatique des commissions:</label>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-AUTO-COMM-PMT-CD" stype="Text" displayonly="yes">MIR-AUTO-COMM-PMT-CD</span>
+                    </td>
+                    <td class="celldisplaylabel">
+                        <label for="MIR-OVRID-ID">Code de surcommission:</label>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-OVRID-ID" stype="Text" displayonly="yes">MIR-OVRID-ID</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celldisplaylabel">
+                        <label for="MIR-BEST-TIME-CALL-TXT">Type et date du contrat:</label>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-BEST-TIME-CALL-TXT" stype="Text" displayonly="yes">MIR-BEST-TIME-CALL-TXT</span>
+                    </td>
+                    <td class="celldisplaylabel">
+                        <label for="MIR-ADDR-BOX-CD">Boite Postale:</label>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-ADDR-BOX-CD" stype="Text" displayonly="yes">MIR-ADDR-BOX-CD</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celldisplaylabel">
+                        <label for="MIR-AGT-PAYBL-BAL-AMT">Solde actuel:</label>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-AGT-PAYBL-BAL-AMT" stype="Currency" elength="13" signed="yes" displayonly="yes">MIR-AGT-PAYBL-BAL-AMT</span>
+                    </td>
+                    <td class="celldisplaylabel"/>
+                    <td class="celldisplay"/>
+                </tr>
+	        </table> 
+       <br />
+            <h2>
+                <a name="BankingInformation">Information bancaire</a>
+            </h2>
+            <table class="tabledisplay" genrows="1" keyfield="00">
+                <tr>
+                    <td class="celldisplayheading" colspan="8">Comptes bancaires</td>
+                </tr>
+                <tr>
+                    <td class="celldisplayheading">
+                        <label for="MIR-DV-CLI-BNK-ACCT-NUM-T[1]">Compte n°</label>
+                    </td>
+                    <td class="celldisplayheading">
+						<label for="MIR-CLI-BNK-ACCT-DT-T[1]">Date d'effet du compte bancaire</label>
+                    </td>
+                    <td class="celldisplayheading">
+                        <label for="MIR-BNK-ID-T[1]">Numéro de banque</label>
+                    </td>
+                    <td class="celldisplayheading">
+                        <label for="MIR-BNK-BR-ID-T[1]">Succursale</label>
+                    </td>
+                    <td class="celldisplayheading">
+                        <label for="MIR-BNK-ACCT-ID-T[1]">Numéro de compte bancaire</label>
+                    </td>
+                    <td class="celldisplayheading">
+                        <label for="MIR-BNK-ACCT-TYP-CD-T[1]">Genre de compte</label>
+                    </td>
+                    <td class="celldisplayheading">
+                        <label for="MIR-BNK-ACCT-MICR-IND-T[1]">Chèques codés de caractères magnétiques</label>
+                    </td>
+                    <td class="celldisplayheading">
+                        <label for="MIR-BNK-ACCT-HLDR-NM-T[1]">Nom du titulaire de compte</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celldisplay">
+                        <span id="MIR-DV-CLI-BNK-ACCT-NUM-T[]" stype="Text" displayonly="yes">MIR-DV-CLI-BNK-ACCT-NUM-T[]</span>
+                    </td>
+                    <td class="celldisplay">
+						<span id="MIR-CLI-BNK-ACCT-DT-T[]" stype="Date" displayonly="yes">MIR-CLI-BNK-ACCT-DT-T[]</span>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-BNK-ID-T[]" stype="Text" displayonly="yes">MIR-BNK-ID-T[]</span>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-BNK-BR-ID-T[]" stype="Text" displayonly="yes">MIR-BNK-BR-ID-T[]</span>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-BNK-ACCT-ID-T[]" stype="Text" displayonly="yes">MIR-BNK-ACCT-ID-T[]</span>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-BNK-ACCT-TYP-CD-T[]" stype="Text" displayonly="yes">MIR-BNK-ACCT-TYP-CD-T[]</span>
+                    </td>
+                    <td class="celldisplay">
+                        <input type="checkbox" name="MIR-BNK-ACCT-MICR-IND-T[]" stype="Indicator" value="Y" disabled="yes"></input>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-BNK-ACCT-HLDR-NM-T[]" stype="Text" displayonly="yes">MIR-BNK-ACCT-HLDR-NM-T[]</span>
+                    </td>
+                </tr>
+            </table>
+       <br />
+            <h2>
+                <a name="LicenceInformation">Information sur le permis</a>
+            </h2>
+            <table id="LicenceTable" class="tabledisplay" genrows="1" keyfield="1">
+                <tr>
+                    <td class="celldisplayheading">
+                        <label for="MIR-LIC-ID-T[1]">Numéro d'agent</label>
+                    </td>
+                    <td class="celldisplayheading">
+                        <label for="MIR-LIC-LOC-CD-T[1]">Lieu</label>
+                    </td>
+                    <td class="celldisplayheading">
+                        <label for="MIR-LIC-LIAB-STAT-CD-T[1]">Statut</label>
+                    </td>
+                    <td class="celldisplayheading">
+                        <label for="MIR-LIC-EFF-DT-T[1]">Date d'effet permis</label>
+                    </td>
+                    <td class="celldisplayheading">
+                        <label for="MIR-LIC-XPRY-DT-T[1]">Date d'expiration permis</label>
+                    </td>
+                    <td class="celldisplayheading">
+                        <label for="MIR-LIC-DESC-TXT-T[1]">Numéro du permis</label>
+                    </td>
+                    <td class="celldisplayheading">
+                        <label for="MIR-LIC-LIAB-EFF-DT-T[1]">Date d'effet assurance responsabilité</label>
+                    </td>
+                    <td class="celldisplayheading">
+                        <label for="MIR-LIC-LIAB-XPRY-DT-T[1]">Date d'expiration assurance responsabilité</label>
+                    </td>
+                    <td class="celldisplayheading">
+                        <label for="MIR-LIC-LIAB-DESC-TXT-T[1]">Numéro assurance responsabilité</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celldisplay">
+                        <a name="MIR-LIC-ID-T[]" href="a" action="SelectItem" index="1" onclick="onAction();return(false)" onfocus="enterField(this)">Numéro d'agent</a>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-LIC-LOC-CD-T[]" stype="Text" displayonly="yes">MIR-LIC-LOC-CD-T[]</span>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-LIC-LIAB-STAT-CD-T[]" stype="Text" displayonly="yes">MIR-LIC-LIAB-STAT-CD-T[]</span>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-LIC-EFF-DT-T[]" stype="Date" displayonly="yes">MIR-LIC-EFF-DT-T[]</span>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-LIC-XPRY-DT-T[]" stype="Date" displayonly="yes">MIR-LIC-XPRY-DT-T[]</span>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-LIC-DESC-TXT-T[]" stype="Text" displayonly="yes">MIR-LIC-DESC-TXT-T[]</span>
+                   </td>
+                   <td class="celldisplay">
+                        <span id="MIR-LIC-LIAB-EFF-DT-T[]" stype="Date" displayonly="yes">MIR-LIC-LIAB-EFF-DT-T[]</span>
+                  </td>
+                  <td class="celldisplay">
+                        <span id="MIR-LIC-LIAB-XPRY-DT-T[]" stype="Date" displayonly="yes">MIR-LIC-LIAB-XPRY-DT-T[]</span>
+                  </td>
+                   <td class="celldisplay">
+                        <span id="MIR-LIC-LIAB-DESC-TXT-T[]" stype="Text" displayonly="yes">MIR-LIC-LIAB-DESC-TXT-T[]</span>
+                  </td>
+                </tr>
+            </table>
+			<br/> 
+            <h2>
+                <a name="SucommInfo">Information sur la surcommission</a>
+            </h2>
+			<table class="tabledisplay" genrows="0" keyfield="0">
+                <tr>
+                    <td class="celldisplayheading">
+                        <label for="MIR-OVRID-AGT-ID-T[1]">Numéro d'agent</label>
+                    </td>
+                    <td class="celldisplayheading">
+                        <label for="MIR-OVRID-TBAC-ID-T[1]">Pointeur du taux de commission</label>
+                    </td>
+                    <td class="celldisplayheading" colspan="2">
+                        <label for="MIR-OVRID-CALC-CD-T[1]">Genre de calcul des surcommissions</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celldisplay">
+                        <span id="MIR-OVRID-AGT-ID-T[]" stype="Text" displayonly="yes">MIR-OVRID-AGT-ID-T[]</span>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-OVRID-TBAC-ID-T[]" stype="Text" displayonly="yes">MIR-OVRID-TBAC-ID-T[]</span>
+                    </td>
+                    <td class="celldisplay" colspan="2">
+                        <span id="MIR-OVRID-CALC-CD-T[]" stype="Text" displayonly="yes">MIR-OVRID-CALC-CD-T[]</span>
+                    </td>
+                </tr>
+				<tfoot>
+                <tr>
+                    <td class="celldisplaylabel">
+                        <label for="MIR-OVRID-MAX-AMT-PCT">Surcommission maximale:</label>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-OVRID-MAX-AMT-PCT" stype="Number" decimals="4" displayonly="yes">MIR-OVRID-MAX-AMT-PCT</span>
+                    </td>
+                    <td class="celldisplaylabel">
+                        <label for="MIR-OVRID-MAX-TYP-CD">Genre de surcommission maximale:</label>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-OVRID-MAX-TYP-CD" stype="Text" displayonly="yes">MIR-OVRID-MAX-TYP-CD</span>
+                    </td>
+                </tr>
+				</tfoot>
+            </table>
+        <p align="right"><a href="#top" class="backtotop"> <img src="../images/top.gif" border="0" alt="Haut de page" width="14" height="14"/>Haut de page</a> </p>
+            <table id="validQCSection" class="tabledataentry" genrows="0">
+                <tr>
+                    <td class="celldataentryheading" colspan="5" style="height: 20px"><a name="VerifQualityControle">Vérification contrôle qualité</a> </td>
+                </tr>
+                <tr>
+                    <td class="celldisplayheading" align="center">
+                        <label for="MIR-CHK-QC-1-NUM-T[1]">Vérification</label>
+                    </td>
+                    <td class="celldisplayheading" align="center" style="width: 113px">
+                        <label for="MIR-CHK-QC-1-IND-T[1]">Validation</label>
+                    </td>
+
+                    <td class="celldisplayheading" style="width: 98px" />
+
+                    <td class="celldisplayheading" align="center">
+                        <label for="MIR-CHK-QC-2-NUM-T[1]">Vérification</label>
+                    </td>
+                    <td class="celldisplayheading" align="center">
+                        <label for="MIR-CHK-QC-2-IND-T[1]">Validation</label>
+                    </td>
+                </tr>
+                <tr>
+				    <td class="celllabelrightalign">
+                        <span id="MIR-CHK-QC-1-NUM-T[]" stype="Text" displayonly="yes">MIR-CHK-QC-1-NUM-T[]</span>
+                    </td>	
+                    <td class="celllabeldataentry" >
+                        <input type="radio" name="MIR-CHK-QC-1-IND-T[]" value="Y" stype="YesNoNotApplicable" onfocus="saveValue(); enterField(this)" /> Bon 
+                        <input type="radio" name="MIR-CHK-QC-1-IND-T[]" value="N" stype="YesNoNotApplicable" onfocus="saveValue(); enterField(this)" /> Erreur 
+                        <input type="radio" name="MIR-CHK-QC-1-IND-T[]" value="X" stype="YesNoNotApplicable" onfocus="saveValue(); enterField(this)" /> N/A 
+                    </td>
+                    <td class="celllabeldataentry" style="width: 100px"/>
+				    <td class="celllabelrightalign">
+                        <span id="MIR-CHK-QC-2-NUM-T[]" stype="Text" displayonly="yes">MIR-CHK-QC-2-NUM-T[]</span>
+                    </td>	
+                    <td class="celllabeldataentry">
+                        <input type="radio" name="MIR-CHK-QC-2-IND-T[]" value="Y" stype="YesNoNotApplicable" onfocus="saveValue(); enterField(this)" /> Bon 
+                        <input type="radio" name="MIR-CHK-QC-2-IND-T[]" value="N" stype="YesNoNotApplicable" onfocus="saveValue(); enterField(this)" /> Erreur 
+                        <input type="radio" name="MIR-CHK-QC-2-IND-T[]" value="X" stype="YesNoNotApplicable" onfocus="saveValue(); enterField(this)" /> N/A 
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celllabeldataentry"  colspan="5" align="center">
+                        <input type="button" id="AllAnswersNAButton" name="AllAnswersNAButton" value="Toutes les vérifications sont non applicables" onclick="setAllInTableToNA('validQCSection')" />
+                    </td>
+                </tr>
+            </table>
+        <p align="right"><a href="#top" class="backtotop"> <img src="../images/top.gif" border="0" alt="Haut de page" width="14" height="14"/>Haut de page</a> </p>
+            <table id="QualitySection" class="tabledataentry">
+                <tr>
+                    <td class="celldataentryheading" colspan="4"><a name="QualityControl">Contrôle qualité</a> </td>
+                </tr>
+                <tr>
+                    <td class="celllabelrightalign" >
+                        <label for="MIR-QC-USER-ID">Employé du contrôle qualité:</label>
+                    </td>
+                    <td class="celllabeldataentry" >
+                        <select id="MIR-QC-USER-ID" name="MIR-QC-USER-ID" size="1" stype="Selection" onfocus="enterField(this)"></select>
+                    </td>
+                    <td class="celllabelrightalign" >
+                        <label for="MIR-QC-EFF-DT">Date du contrôle qualité:</label>
+                    </td>
+                    <td class="celllabeldataentry" >
+                         <span id="MIR-QC-EFF-DT" stype="Date" displayonly="yes">MIR-QC-EFF-DT</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celllabelrightalign">
+                        <label for="MIR-QC-TERM-IND">Traitement du contrôle qualité:</label>
+                    </td>
+                    <td class="celllabeldataentry">
+                        <input type="checkbox" value="Y" id="MIR-QC-TERM-IND" name="MIR-QC-TERM-IND" stype="Indicator" onclick="onCheckBox(),setAllInTableToDisabled('validQCSection')" onfocus="enterField(this)"/>
+<!--                        <input type="checkbox" value="Y" name="MIR-QC-TERM-IND" stype="Indicator" onclick="onCheckBox(),checkQCStepInd()" onfocus="enterField(this)"/>
+-->
+                    </td>
+                    <td class="celllabelrightalign">
+                    </td>
+                    <td class="celllabeldataentry">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celllabelrightalign">
+                        <label for="MIR-QC-STAT-CD">Statut du contrôle qualité:</label>
+                    </td>
+                    <td class="celllabeldataentry">
+                        <select id="MIR-QC-STAT-CD" name="MIR-QC-STAT-CD" size="1" stype="Selection" onchange="checkToDisblCorectSection()" onfocus="enterField(this)"></select>
+                    </td>
+                    <td class="celllabelrightalign" >
+                        <label for="MIR-QC-APROV-EFF-DT">Date d'approbation du contrôle qualité:</label>
+                    </td>
+                    <td class="celllabeldataentry" >
+                        <span id="MIR-QC-APROV-EFF-DT" stype="Date" displayonly="yes">MIR-QC-APROV-EFF-DT</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celllabelrightalign" >
+                        <label for="MIR-QC-APROV-USER-ID">Employé d'approbation du contrôle qualité:</label>
+                    </td>
+                    <td class="celllabeldataentry" >
+                        <span id="MIR-QC-APROV-USER-ID" stype="Text" displayonly="yes">MIR-QC-APROV-USER-ID</span>
+                    </td>
+                    <td class="celllabelrightalign">
+                    </td>
+                    <td class="celllabeldataentry">
+                    </td>
+                </tr>
+<!--                <tr>
+                    <td class="celllabelrightalign" colspan="1">
+                         <label for="MIR-QC-COMMENTS-TXT">Note:</label>
+                    </td>
+                    <td class="celllabeldataentry" colspan="3">
+                        <input type="text" value=" " name="MIR-QC-COMMENTS-TXT" stype="Text" maxlength="100" onfocus="enterField(this)" onblur="validateField(this)" size="100"/>
+                    </td>
+                </tr> -->
+            </table>
+        <br/>
+            <table id="ControlQualityNote" class="tabledataentry">
+                <tr>
+                   	<td class="celldataentryheading" colspan="2">
+                        		<a name="ControlQualityNote">Note pour le contrôle qualité</a>
+                   	</td>
+                </tr>
+                <tr>
+					<td class="celllabeldataentry" colspan="2">
+<!-- J05102				<textarea id="ControlQualityNoteTxt" stype="TextArea" style="border-style: double; border-width: 3" height="18" rows="8" cols="132" name="MIR-QC-NOTE-TXT" onkeyup="showcount(500,this,counter16)" onblur="CheckCountCharInBox(500,this)" onfocus="enterField(this)" ></textarea>  -->
+						<textarea id="MIR-QC-NOTE-TXT" stype="TextArea" style="border-style: double; border-width: 3" height="18" rows="8" cols="132" name="MIR-QC-NOTE-TXT" onkeyup="showcount(500,this,counter16)" onblur="CheckCountCharInBox(500,this)" onfocus="enterField(this)" ></textarea>
+         				<tr>
+							<td class="celllabelleftalign" colspan="2"> 
+		  						<DL>
+				  					<DT><b><span style="font-size: 10.0pt; font-family: Times New Roman; color: darkblue">
+<!-- J05102                                		Caractères restant: <input type="text" stype="Number" elength="5" name="counter16" size="5"> </input> (limite: 500) </span></b></DT>  -->
+		                                   		Caractères restant: <input type="text" stype="Number" elength="5" id="counter16" name="counter16" size="5"> </input> (limite: 500) </span></b></DT>
+		  						</DL>
+							</td> 
+         				</tr>
+					</td>
+				</tr>
+            </table>
+        <p align="right"><a href="#top" class="backtotop"> <img src="../images/top.gif" border="0" alt="Haut de page" width="14" height="14"/>Haut de page</a> </p>
+            <h2>
+                <a name="Correction">Correction</a>
+            </h2>
+            <table id="CorrectionSection" class="tabledataentry" genrows="5">
+				<tr>
+                    <td class="celldataentryheading" colspan="7"><a name="Documentation">Correction</a> </td>
+                </tr>
+                <tr>
+                    <td class="celldisplayheading" align="center">
+                        <label for="MIR-CORCT-STEP-CD-T[1]">Étape</label>
+                    </td>
+                    <td class="celldisplayheading" align="center">
+                        <label for="MIR-CORCT-RQST-TYP-CD-T[1]">Type de demande</label>
+                    </td>
+                    <td class="celldisplayheading" align="center">
+                        <label for="MIR-CORCT-BUS-CLAS-CD-T[1]">Type de produit</label>
+                    </td>
+                    <td class="celldisplayheading" align="center">
+                        <label for="MIR-CORCT-STRT-DT-T[1]">Date assignée</label>
+                    </td>
+                    <td class="celldisplayheading" align="center">
+                        <label for="MIR-CORCT-USER-ID-T[1]">Assigné à :</label>
+                    </td>
+                    <td class="celldisplayheading" align="center">
+                        <label for="MIR-CORCT-IND-T[1]">Correction complétée</label>
+                    </td>
+                    <td class="celldisplayheading" align="center">
+                        <label for="MIR-CORCT-EFF-DT-T[1]">Date complétée</label>
+                    </td>
+                </tr>
+                <tr>
+				    <td class="celllabeldataentry">
+                        <select name="MIR-CORCT-STEP-CD-T[]" size="1" stype="Selection" index = "1" onfocus="enterField(this)"></select>
+                    </td>	
+				    <td class="celllabeldataentry">
+                        <select name="MIR-CORCT-RQST-TYP-CD-T[]" size="1" stype="Selection" index = "1" onfocus="enterField(this)"></select>
+                    </td>	
+				    <td class="celllabeldataentry">
+                        <select name="MIR-CORCT-BUS-CLAS-CD-T[]" size="1" stype="Selection" index = "1" onfocus="enterField(this)"></select>
+                    </td>	
+				    <td class="celllabeldataentry">
+                        <span id="MIR-CORCT-STRT-DT-T[]" stype="Date" displayonly="yes">MIR-CORCT-STRT-DT-T[]</span>
+                    </td>	
+				    <td class="celllabeldataentry">
+                        <select name="MIR-CORCT-USER-ID-T[]" size="1" stype="Selection" index = "1" onfocus="enterField(this)"></select>
+                    </td>	
+				    <td class="celllabeldataentry" align="center">
+                        <input type="checkbox" value="Y" name="MIR-CORCT-IND-T[]" stype="Indicator" onclick="onCheckBox(),checkToDisblCorectSection()" onfocus="enterField(this)"/>
+                    </td>	
+				    <td class="celllabeldataentry">
+                        <span id="MIR-CORCT-EFF-DT-T[]" stype="Date" displayonly="yes">MIR-CORCT-EFF-DT-T[]</span>
+                    </td>	
+                </tr>
+            </table>
+        <center>
+            <table class="tableanchors">
+                <tr>
+                    <td class="cellanchors"><a href="#Comunication">Communication</a> </td>
+                    <td class="cellanchors"><a href="#Decision">Décision</a> </td>
+                </tr>
+            </table>        
+          </center>
+        <p align="right"><a href="#top" class="backtotop"> <img src="../images/top.gif" border="0" alt="Haut de page" width="14" height="14"/>Haut de page</a> </p>
+            <h2>
+                <a name="ExpeditionSection">Expédition</a>
+            </h2>
+            <table id="ExpedSection" class="tabledataentry">
+                <tr>
+                    <td class="celldataentryheading" colspan="4" style="height: 20px"><a name="Expedition">Expédition</a> </td>
+                </tr>
+                <tr>
+                    <td class="celllabelrightalign">
+                        <label for="MIR-EXPED-USER-ID">Utilisateur :</label>
+                    </td>
+                    <td class="celllabeldataentry">
+                        <select id="MIR-EXPED-USER-ID" name="MIR-EXPED-USER-ID" size="1" stype="Selection" onfocus="enterField(this)"></select>
+                    </td>
+                    <td class="celllabelrightalign">
+                        <label for="MIR-EXPED-EFF-DT">Date complétée  :</label>
+                    </td>
+                    <td class="celllabeldataentry">
+                         <span id="MIR-EXPED-EFF-DT" stype="Date" displayonly="yes">MIR-EXPED-EFF-DT</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celllabelrightalign">
+                        <label for="MIR-EXPED-TERM-IND">Expédition complétée:</label>
+                    </td>
+                    <td class="celllabeldataentry">
+                        <input type="checkbox" value="Y" id="MIR-EXPED-TERM-IND" name="MIR-EXPED-TERM-IND" stype="Indicator" onclick="onCheckBox(),validateExpedTermInd(this)" onfocus="enterField(this)"/>
+<!--
+                        <input type="checkbox" value="Y" name="MIR-EXPED-TERM-IND" stype="Indicator" onclick="onCheckBox(),checkExpedStepInd()" onfocus="enterField(this)"/>
+-->
+                    </td>
+                    <td class="celllabelrightalign">
+                    </td>
+                    <td class="celllabeldataentry">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celllabelrightalign" colspan="1">
+                         <label for="MIR-EXPED-COMMENTS-TXT">Note :</label>
+                    </td>
+                    <td class="celllabeldataentry" colspan="3">
+                        <input type="text" value=" " name="MIR-EXPED-COMMENTS-TXT" stype="Text" maxlength="100" onfocus="enterField(this)" onblur="validateField(this)" size="100"/>
+                    </td>
+                </tr>
+            </table>
+        <p align="right"><a href="#top" class="backtotop"> <img src="../images/top.gif" border="0" alt="Haut de page" width="14" height="14"/>Haut de page</a> </p>
+            <h2>
+                <a name="Archive">Archivage</a>
+            </h2>
+            <table id="ArchiveSection" class="tabledataentry">
+                <tr>
+                    <td class="celldataentryheading" colspan="4" style="height: 20px"><a name="Archive">Archivage</a> </td>
+                </tr>
+                <tr>
+                    <td class="celllabelrightalign">
+                        <label for="MIR-ARCHV-USER-ID">Utilisateur :</label>
+                    </td>
+                    <td class="celllabeldataentry">
+                        <select id="MIR-ARCHV-USER-ID" name="MIR-ARCHV-USER-ID" size="1" stype="Selection" onfocus="enterField(this)"></select>
+                    </td>
+                    <td class="celllabelrightalign">
+                        <label for="MIR-ARCHV-EFF-DT">Date complétée  :</label>
+                    </td>
+                    <td class="celllabeldataentry">
+                         <span id="MIR-ARCHV-EFF-DT" stype="Date" displayonly="yes">MIR-ARCHV-EFF-DT</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celllabelrightalign">
+                        <label for="MIR-ARCHV-TERM-IND">Archivage complétée:</label>
+                    </td>
+                    <td class="celllabeldataentry">
+                        <input type="checkbox" value="Y" id="MIR-ARCHV-TERM-IND" name="MIR-ARCHV-TERM-IND" stype="Indicator" onclick="onCheckBox()" onfocus="enterField(this)"/>
+<!--
+                        <input type="checkbox" value="Y" name="MIR-ARCHV-TERM-IND" stype="Indicator" onclick="onCheckBox(),checkArcvStepInd()" onfocus="enterField(this)"/>
+-->
+                    </td>
+                    <td class="celllabelrightalign">
+                    </td>
+                    <td class="celllabeldataentry">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celllabelrightalign" colspan="1">
+                         <label for="MIR-ARCHV-COMMENTS-TXT">Note :</label>
+                    </td>
+                    <td class="celllabeldataentry" colspan="3">
+                        <input type="text" value=" " name="MIR-ARCHV-COMMENTS-TXT" stype="Text" maxlength="100" onfocus="enterField(this)" onblur="validateField(this)" size="100"/>
+                    </td>
+                </tr>
+            </table>
+       <p align="right"><a href="#top" class="backtotop"> <img src="../images/top.gif" border="0" alt="Haut de page" width="14" height="14"/>Haut de page</a> </p>
+            <table id="CloseSection" class="tabledataentry">
+                <tr>
+                    <td class="celldataentryheading" colspan="4"><a name="Fermeture">Fermeture de la feuille de travail</a> </td>
+                </tr>
+                <tr>
+                    <td class="celllabelrightalign">
+                        <label for="MIR-FORCE-CLOS-CD">Code de fermeture :</label>
+                    </td>
+                    <td class="celllabeldataentry">
+                        <select name="MIR-FORCE-CLOS-CD" size="1" stype="Selection" onfocus="enterField(this)"></select>
+                    </td>
+                    <td class="celllabelrightalign">
+                        <label for="MIR-FORCE-CLOS-USER-ID">Employé :</label>
+                    </td>
+                    <td class="celllabeldataentry">
+                        <select name="MIR-FORCE-CLOS-USER-ID" size="1" stype="Selection" onfocus="enterField(this)"></select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celllabelrightalign">
+                        <label for="MIR-FORCE-CLOS-EFF-DT">Date de la fermeture :</label>
+                    </td>
+                    <td class="celllabeldataentry">
+                         <input type="text" value=" " name="MIR-FORCE-CLOS-EFF-DT" stype="Date"  readonly="readonly" onfocus="enterField(this)" onblur="validateField(this)" size="20"/>
+                    </td>
+                    <td class="celllabelrightalign">
+                    </td>
+                    <td class="celllabeldataentry">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celllabelrightalign" colspan="1">
+                         <label for="MIR-FORCE-CLOS-COMMENTS-TXT">Note :</label>
+                    </td>
+                    <td class="celllabeldataentry" colspan="3">
+                        <input type="text" value=" " name="MIR-FORCE-CLOS-COMMENTS-TXT" stype="Text" maxlength="100" onfocus="enterField(this)" onblur="validateField(this)" size="100"/>
+                    </td>
+                </tr>
+            </table>
+	       <span id="InternalNotes" style="display: none"> 
+        <p align="right"><a href="#top" class="backtotop"> <img src="../images/top.gif" border="0" alt="Haut de page" width="14" height="14"/>Haut de page</a> </p>
+            <table id="Comments" class="tabledataentry">
+                <tr>
+                   	<td class="celldataentryheading" colspan="2">
+                        <a name="InternalNotes">Notes internes</a>
+                   	</td>
+                </tr>
+                <tr>
+                    <td class="celllabelleftalign" colspan="1">
+                        <label for="MIR-GINT-NOTE-DT">Note entrée le:</label>
+                         <span id="MIR-GINT-NOTE-DT" stype="Date" displayonly="yes">MIR-GINT-NOTE-DT</span>
+                    </td>
+                    <td class="celllabelleftalign" colspan="1" >
+                       <label for="MIR-GINT-USER-ID">Analyste:</label>
+                        <span id="MIR-GINT-USER-ID" stype="Text" displayonly="yes">MIR-GINT-USER-ID</span>
+                    </td>
+                </tr>
+                <tr>
+					<td class="celllabeldataentry" colspan="2">
+<!-- J05102				<textarea id="CommentsTxt" style="border-style: double; border-width: 3" height="58" rows="10" cols="132" name="MIR-GINT-COMMENTS-TXT-TXT" stype="TextArea" onkeyup="showcount(500,this,counter)" onblur="CheckCountCharInBox(500,this)" onfocus="enterField(this)" ></textarea>  -->
+						<textarea id="MIR-GINT-COMMENTS-TXT-TXT" style="border-style: double; border-width: 3" height="58" rows="10" cols="132" name="MIR-GINT-COMMENTS-TXT-TXT" stype="TextArea" onkeyup="showcount(500,this,counter)" onblur="CheckCountCharInBox(500,this)" onfocus="enterField(this)" ></textarea>
+         				<tr>
+							<td class="celllabelleftalign" colspan="2"> 
+		  						<DL>
+				  					<DT><b><span style="font-size: 10.0pt; font-family: Times New Roman; color: darkblue">
+		                                   Le nombre de caractères permis dans la boîte de texte est limité à 500 incluant 2 caractères sur chaque retour de chariot. </span></b></DT>
+									<DT><b><span style="font-size: 10.0pt; font-family: Times New Roman; color: darkblue">
+<!-- J05102                                		Caractères restant: <input type="text" stype="Number" elength="5" name="counter" size="5"> </input> (limite: 500) </span></b></DT>  -->
+		                                   		Caractères restant: <input type="text" stype="Number" elength="5" id="counter" name="counter" size="5"> </input> (limite: 500) </span></b></DT>
+		  						</DL>
+							</td> 
+         				</tr>
+					</td>
+				</tr>
+            </table>
+        <p align="right">
+                <a href="#top" class="backtotop">
+                    <img src="../images/top.gif" border="0" alt="Back to top" width="14" height="14" />
+                     Haut de page
+                </a>
+            </p>
+	       </span> 
+	       <span id="InternalNotes1" style="display: none"> 
+            <table class="tabledisplay">
+               <tr>    
+                    <td class="celldisplayheading" colspan="2" >
+                   		<a name="InternalNotesHist">Historique des notes internes </a>
+                    </td>
+               </tr>
+                <tr>
+                    <td class="celllabelleftalign">
+                        <label for="MIR-GINT-NOTE-DT-OUT-T[1]">Note entrée le:</label>
+                         <span id="MIR-GINT-NOTE-DT-OUT-T[1]" stype="Date" displayonly="yes">MIR-GINT-NOTE-DT-OUT-T[1]</span>
+                     </td>
+             		<td class="celllabelleftalign">
+                        <label for="MIR-GINT-USER-ID-OUT-T[1]">Analyste:</label>
+                        <span id="MIR-GINT-USER-ID-OUT-T[1]" stype="Text" displayonly="yes">MIR-GINT-USER-ID-OUT-T[1]</span>
+                    </td>
+                </tr>
+               <tr>
+ 					<td class="celldisplay" colspan="2" >
+ 						<textarea name="MIR-GINT-COMMENTS-TXT-OUT-T[1]" stype="TextArea" style="border-style: double; border-width: 3; font-weight:bold; color:BlackText" readonly="true" rows="10" cols="132" ></textarea> 
+  					</td>
+  				</tr>
+		  </table>
+       </span> 
+	       <span id="InternalNotes2" style="display: none"> 
+            <table class="tabledisplay">
+                <tr>
+                    <td class="celllabelleftalign">
+                        <label for="MIR-GINT-NOTE-DT-OUT-T[2]">Note entrée le:</label>
+                         <span id="MIR-GINT-NOTE-DT-OUT-T[2]" stype="Date" displayonly="yes">MIR-GINT-NOTE-DT-OUT-T[2]</span>
+                     </td>
+             		<td class="celllabelleftalign">
+                        <label for="MIR-GINT-USER-ID-OUT-T[2]">Analyste:</label>
+                        <span id="MIR-GINT-USER-ID-OUT-T[2]" stype="Text" displayonly="yes">MIR-GINT-USER-ID-OUT-T[2]</span>
+                    </td>
+                </tr>
+               <tr>
+ 					<td class="celldisplay" colspan="2" >
+ 						<textarea name="MIR-GINT-COMMENTS-TXT-OUT-T[2]" stype="TextArea" style="border-style: double; border-width: 3; font-weight:bold; color:BlackText" readonly="true" rows="10" cols="132" ></textarea> 
+  					</td>
+  				</tr>
+		  </table>
+       </span>
+	       <span id="InternalNotes3" style="display: none"> 
+            <table class="tabledisplay">
+                <tr>
+                    <td class="celllabelleftalign">
+                        <label for="MIR-GINT-NOTE-DT-OUT-T[3]">Note entrée le:</label>
+                         <span id="MIR-GINT-NOTE-DT-OUT-T[3]" stype="Date" displayonly="yes">MIR-GINT-NOTE-DT-OUT-T[3]</span>
+                     </td>
+             		<td class="celllabelleftalign">
+                        <label for="MIR-GINT-USER-ID-OUT-T[3]">Analyste:</label>
+                        <span id="MIR-GINT-USER-ID-OUT-T[3]" stype="Text" displayonly="yes">MIR-GINT-USER-ID-OUT-T[3]</span>
+                    </td>
+                </tr>
+               <tr>
+ 					<td class="celldisplay" colspan="2" >
+ 						<textarea name="MIR-GINT-COMMENTS-TXT-OUT-T[3]" stype="TextArea" style="border-style: double; border-width: 3; font-weight:bold; color:BlackText" readonly="true" rows="10" cols="132" ></textarea> 
+  					</td>
+  				</tr>
+		  </table>
+       </span>
+	       <span id="InternalNotes4" style="display: none"> 
+            <table class="tabledisplay">
+                <tr>
+                    <td class="celllabelleftalign">
+                        <label for="MIR-GINT-NOTE-DT-OUT-T[4]">Note entrée le:</label>
+                         <span id="MIR-GINT-NOTE-DT-OUT-T[4]" stype="Date" displayonly="yes">MIR-GINT-NOTE-DT-OUT-T[4]</span>
+                     </td>
+             		<td class="celllabelleftalign">
+                        <label for="MIR-GINT-USER-ID-OUT-T[4]">Analyste:</label>
+                        <span id="MIR-GINT-USER-ID-OUT-T[4]" stype="Text" displayonly="yes">MIR-GINT-USER-ID-OUT-T[4]</span>
+                    </td>
+                </tr>
+               <tr>
+ 					<td class="celldisplay" colspan="2" >
+ 						<textarea name="MIR-GINT-COMMENTS-TXT-OUT-T[4]" stype="TextArea" style="border-style: double; border-width: 3; font-weight:bold; color:BlackText" readonly="true" rows="10" cols="132" ></textarea> 
+  					</td>
+  				</tr>
+		  </table>
+       </span>
+	       <span id="InternalNotes5" style="display: none"> 
+            <table class="tabledisplay">
+                <tr>
+                    <td class="celllabelleftalign">
+                        <label for="MIR-GINT-NOTE-DT-OUT-T[5]">Note entrée le:</label>
+                         <span id="MIR-GINT-NOTE-DT-OUT-T[5]" stype="Date" displayonly="yes">MIR-GINT-NOTE-DT-OUT-T[5]</span>
+                     </td>
+             		<td class="celllabelleftalign">
+                        <label for="MIR-GINT-USER-ID-OUT-T[5]">Analyste:</label>
+                        <span id="MIR-GINT-USER-ID-OUT-T[5]" stype="Text" displayonly="yes">MIR-GINT-USER-ID-OUT-T[5]</span>
+                    </td>
+                </tr>
+               <tr>
+ 					<td class="celldisplay" colspan="2" >
+ 						<textarea name="MIR-GINT-COMMENTS-TXT-OUT-T[5]" stype="TextArea" style="border-style: double; border-width: 3; font-weight:bold; color:BlackText" readonly="true" rows="10" cols="132" ></textarea> 
+  					</td>
+  				</tr>
+		  </table>
+       </span>
+	       <span id="InternalNotes6" style="display: none"> 
+            <table class="tabledisplay">
+                <tr>
+                    <td class="celllabelleftalign">
+                        <label for="MIR-GINT-NOTE-DT-OUT-T[6]">Note entrée le:</label>
+                         <span id="MIR-GINT-NOTE-DT-OUT-T[6]" stype="Date" displayonly="yes">MIR-GINT-NOTE-DT-OUT-T[6]</span>
+                     </td>
+             		<td class="celllabelleftalign">
+                        <label for="MIR-GINT-USER-ID-OUT-T[6]">Analyste:</label>
+                        <span id="MIR-GINT-USER-ID-OUT-T[6]" stype="Text" displayonly="yes">MIR-GINT-USER-ID-OUT-T[6]</span>
+                    </td>
+                </tr>
+               <tr>
+ 					<td class="celldisplay" colspan="2" >
+ 						<textarea name="MIR-GINT-COMMENTS-TXT-OUT-T[6]" stype="TextArea" style="border-style: double; border-width: 3; font-weight:bold; color:BlackText" readonly="true" rows="10" cols="132" ></textarea> 
+  					</td>
+  				</tr>
+		  </table>
+       </span>
+	       <span id="InternalNotes7" style="display: none"> 
+            <table class="tabledisplay">
+                <tr>
+                    <td class="celllabelleftalign">
+                        <label for="MIR-GINT-NOTE-DT-OUT-T[7]">Note entrée le:</label>
+                         <span id="MIR-GINT-NOTE-DT-OUT-T[7]" stype="Date" displayonly="yes">MIR-GINT-NOTE-DT-OUT-T[7]</span>
+                     </td>
+             		<td class="celllabelleftalign">
+                        <label for="MIR-GINT-USER-ID-OUT-T[7]">Analyste:</label>
+                        <span id="MIR-GINT-USER-ID-OUT-T[7]" stype="Text" displayonly="yes">MIR-GINT-USER-ID-OUT-T[7]</span>
+                    </td>
+                </tr>
+               <tr>
+ 					<td class="celldisplay" colspan="2" >
+ 						<textarea name="MIR-GINT-COMMENTS-TXT-OUT-T[7]" stype="TextArea" style="border-style: double; border-width: 3; font-weight:bold; color:BlackText" readonly="true" rows="10" cols="132" ></textarea> 
+  					</td>
+  				</tr>
+		  </table>
+       </span>
+	       <span id="InternalNotes8" style="display: none"> 
+            <table class="tabledisplay">
+                <tr>
+                    <td class="celllabelleftalign">
+                        <label for="MIR-GINT-NOTE-DT-OUT-T[8]">Note entrée le:</label>
+                         <span id="MIR-GINT-NOTE-DT-OUT-T[8]" stype="Date" displayonly="yes">MIR-GINT-NOTE-DT-OUT-T[8]</span>
+                     </td>
+             		<td class="celllabelleftalign">
+                        <label for="MIR-GINT-USER-ID-OUT-T[8]">Analyste:</label>
+                        <span id="MIR-GINT-USER-ID-OUT-T[8]" stype="Text" displayonly="yes">MIR-GINT-USER-ID-OUT-T[8]</span>
+                    </td>
+                </tr>
+               <tr>
+ 					<td class="celldisplay" colspan="2" >
+ 						<textarea name="MIR-GINT-COMMENTS-TXT-OUT-T[8]" stype="TextArea" style="border-style: double; border-width: 3; font-weight:bold; color:BlackText" readonly="true" rows="10" cols="132" ></textarea> 
+  					</td>
+  				</tr>
+		  </table>
+       </span>
+	       <span id="InternalNotes9" style="display: none"> 
+            <table class="tabledisplay">
+                <tr>
+                    <td class="celllabelleftalign">
+                        <label for="MIR-GINT-NOTE-DT-OUT-T[9]">Note entrée le:</label>
+                         <span id="MIR-GINT-NOTE-DT-OUT-T[9]" stype="Date" displayonly="yes">MIR-GINT-NOTE-DT-OUT-T[9]</span>
+                     </td>
+             		<td class="celllabelleftalign">
+                        <label for="MIR-GINT-USER-ID-OUT-T[9]">Analyste:</label>
+                        <span id="MIR-GINT-USER-ID-OUT-T[9]" stype="Text" displayonly="yes">MIR-GINT-USER-ID-OUT-T[9]</span>
+                    </td>
+                </tr>
+               <tr>
+ 					<td class="celldisplay" colspan="2" >
+ 						<textarea name="MIR-GINT-COMMENTS-TXT-OUT-T[9]" stype="TextArea" style="border-style: double; border-width: 3; font-weight:bold; color:BlackText" readonly="true" rows="10" cols="132" ></textarea> 
+  					</td>
+  				</tr>
+		  </table>
+       </span>
+	       <span id="InternalNotes10" style="display: none"> 
+            <table class="tabledisplay">
+                <tr>
+                    <td class="celllabelleftalign">
+                        <label for="MIR-GINT-NOTE-DT-OUT-T[10]">Note entrée le:</label>
+                         <span id="MIR-GINT-NOTE-DT-OUT-T[10]" stype="Date" displayonly="yes">MIR-GINT-NOTE-DT-OUT-T[10]</span>
+                     </td>
+             		<td class="celllabelleftalign">
+                        <label for="MIR-GINT-USER-ID-OUT-T[10]">Analyste:</label>
+                        <span id="MIR-GINT-USER-ID-OUT-T[10]" stype="Text" displayonly="yes">MIR-GINT-USER-ID-OUT-T[10]</span>
+                    </td>
+                </tr>
+               <tr>
+ 					<td class="celldisplay" colspan="2" >
+ 						<textarea name="MIR-GINT-COMMENTS-TXT-OUT-T[10]" stype="TextArea" style="border-style: double; border-width: 3; font-weight:bold; color:BlackText" readonly="true" rows="10" cols="132" ></textarea> 
+  					</td>
+  				</tr>
+		  </table>
+       </span>
+<!-- J03967 Begin -->
+       	    <span id="DisplayRestGantNotesInd" style="display: none"> 
+            <br />
+	            <table id="DisplayRestGantNotesIndSection" class="tabledataentrynoborder">
+                <tr>
+                    <td class="celllabelrightalign">
+                        <label for="DisplayHistNotes">Pour voir le reste de l'historique des notes, Cliquer ici:</label>
+                    </td>
+                    <td class="celllabeldataentry">
+                        <input type="checkbox" value="Y" name="DisplayGantNt" stype="Indicator" onclick="DisplayRestGantNotes(this);onCheckBox()" onfocus="enterField(this)" />
+                    </td>
+                </tr>
+            </table>
+		</span>
+<!-- J03967 Ended -->
+	       <span id="InternalNotes11" style="display: none"> 
+            <table class="tabledisplay">
+                <tr>
+                    <td class="celllabelleftalign">
+                        <label for="MIR-GINT-NOTE-DT-OUT-T[11]">Note entrée le:</label>
+                         <span id="MIR-GINT-NOTE-DT-OUT-T[11]" stype="Date" displayonly="yes">MIR-GINT-NOTE-DT-OUT-T[11]</span>
+                     </td>
+             		<td class="celllabelleftalign">
+                        <label for="MIR-GINT-USER-ID-OUT-T[11]">Analyste:</label>
+                        <span id="MIR-GINT-USER-ID-OUT-T[11]" stype="Text" displayonly="yes">MIR-GINT-USER-ID-OUT-T[11]</span>
+                    </td>
+                </tr>
+               <tr>
+ 					<td class="celldisplay" colspan="2" >
+ 						<textarea name="MIR-GINT-COMMENTS-TXT-OUT-T[11]" stype="TextArea" style="border-style: double; border-width: 3; font-weight:bold; color:BlackText" readonly="true" rows="10" cols="132" ></textarea> 
+  					</td>
+  				</tr>
+		  </table>
+       </span>
+            <p align="right">
+                <a href="#top" class="backtotop">
+                    <img src="../images/top.gif" border="0" alt="Back to top" width="14" height="14" />
+                     Haut de page
+                </a>
+            </p>
+
+         <center>
+		<table class="tableanchors">
+                <tr>
+                    <td class="cellanchors"><a href="#ClientInformation">Information du client</a> </td>
+                    <td class="cellanchors"><a href="#ContactInformation">ContactClient</a> </td>
+                    <td class="cellanchors"><a href="#BankingInformation">Information bancaire</a> </td>
+                    <td class="cellanchors"><a href="#AgentInformation">Information sur l'agent</a> </td>
+                    <td class="cellanchors"><a href="#LicenceInformation">Information sur le permis</a> </td>
+                    <td class="cellanchors"><a href="#SucommInfo">Sucommissions</a> </td>
+                    <td class="cellanchors"><a href="#RqstTyp">Types de demande</a> </td>
+                    <td class="cellanchors"><a href="#BranchSection">Succursales</a> </td>
+                    <td class="cellanchors"><a href="#Reception">Réception</a> </td>
+                </tr>
+		   </table>
+         </center>
+         <center>
+            <table class="tableanchors">
+                <tr>
+                    <td class="cellanchors"><a href="#ValidAdminFile">Validation de la fiche admin.</a> </td>
+                    <td class="cellanchors"><a href="#ValidChngNmForm">Validation du formulaire de changement de nom</a> </td>
+                    <td class="cellanchors"><a href="#ValidTrsfForm">Validation du formulaire de transfert.</a> </td>
+                    <td class="cellanchors"><a href="#ValidChq">Validation du spécimen de chèque</a> </td>
+                    <td class="cellanchors"><a href="#ValidCert">Validation des certifications</a> </td>
+                    <td class="cellanchors"><a href="#ValidCorpDoc">Validation des documents corporatifs</a> </td>
+                    <td class="cellanchors"><a href="#ValidBonRateForm">Validation du formulaire des taux boni</a> </td>
+                    <td class="cellanchors"><a href="#ValidQuest">Validation du questionnaire</a> </td>
+                    <td class="cellanchors"><a href="#ValidAgtCntrct">Validation du contrat de représentation</a> </td>
+                </tr>
+            </table>        
+          </center>
+         <center>
+            <table class="tableanchors">
+                <tr>
+                    <td class="cellanchors"><a href="#NecSteps">Étapes nécessaires</a> </td>
+                    <td class="cellanchors"><a href="#PrelAnalysisSection">Analyse Préliminaire</a> </td>
+                    <td class="cellanchors"><a href="#Comunication">Communication</a> </td>
+                    <td class="cellanchors"><a href="#ComplexAnalysisSection">Analyse Complexe</a> </td>
+                    <td class="cellanchors"><a href="#CodifSection">Codification</a> </td>
+                    <td class="cellanchors"><a href="#ComplianceSection">Conformité</a> </td>
+                    <td class="cellanchors"><a href="#Decision">Décision</a> </td>
+                    <td class="cellanchors"><a href="#Processing">Traitement</a> </td>
+                </tr>
+            </table>        
+          </center>
+         <center>
+            <table class="tableanchors">
+                <tr>
+                    <td class="cellanchors"><a href="#QualityControlSection">Contrôle Qualité</a> </td>
+                    <td class="cellanchors"><a href="#Correction">Correction</a> </td>
+                    <td class="cellanchors"><a href="#ExpedSection">Expédition</a> </td>
+                    <td class="cellanchors"><a href="#Archive">Archivage</a> </td>
+                    <td class="cellanchors"><a href="#CloseSection">Fermeture</a> </td>
+ <!--                   <td class="cellanchors"><a href="#InternalNotes">Notes internes</a> </td> -->
+                </tr>
+            </table>        
+          </center>
+       </form>
+    </body>
+    <script src="../js/ActionHandlers.js"></script>
+    <script src="../js/MessageFunctions.js"></script>
+    <script src="../js/MessagesFrench.js"></script>
+    <script src="../js/ClientLevelEdits.js"></script>
+    <script src="../js/GlobalUserMethods.js"></script>
+	<script src="../js/ShowCountTextBox.js"></script>
+    <script src="../js/BFA302-I.js"></script> 
+    <script src="../js/BFA300-O.js"></script>
+</html>

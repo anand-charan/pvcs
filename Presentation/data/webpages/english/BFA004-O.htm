@@ -1,0 +1,122 @@
+<!-- 
+* Converted to Pathfinder 3.0 on Jan 20, 2004 2:40:11 PM EST
+*
+*********************************************************************************
+*  (C) COPYRIGHT 2015 	SSQ FINANCIAL GROUP.  ALL RIGHTS RESERVED  
+*********************************************************************************
+*  Component:   BFA004-O.htm                                                   
+*  Description:                                                                
+*                                                                              
+*********************************************************************************
+*  Chg#    Release  Description                                                
+*                                                                              
+*  J06022   JFO     26Sep2019 - List Life Suite Decision historic record (LSSH)
+*********************************************************************************
+ -->
+<html>
+    <head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>BFA004-O</title>
+        <link rel="stylesheet" type="text/css" href="../french/Ingenium.css" charset="UTF-8"/>
+    <style type="text/css">
+.auto-style1 {
+	FONT-WEIGHT: bold;
+	font-style: italic;
+}
+</style>
+    </head>
+    <body class="bodyws" >
+        <form action="pageserver" method="post" id="inputForm" target="_parent" onsubmit="return(onSubmit());">
+<!-- ************************************************************************************************************************ -->
+<!-- *********************************************** HEADER DEFINITION TABLE ************************************************ -->
+<!-- ************************************************************************************************************************ -->
+            <table class="tabledatakey">
+                <tr>
+                    <td class="celldatakeylabel">
+                        Numéro de contrat Life Suite<label for="MIR-LS-POL-ID">:</label>
+                    </td>
+                    <td class="celldatakey">
+                         <input type="text" value=" " id="MIR-LS-POL-ID" name="MIR-LS-POL-ID" stype="Text" maxlength="10" onfocus="enterField(this)"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celldatakeylabel">
+                        <label for="MIR-LSSH-EFF-DT">Date d'effet:</label>
+                    </td>
+                    <td class="celldatakey">
+                        <input type="text" value=" " id="MIR-LSSH-EFF-DT" name="MIR-LSSH-EFF-DT" stype="Date" onfocus="enterField(this)" onblur="validateField(this)"/>
+                    </td>
+                    <td class="celldatakeylabel">
+                        <label for="MIR-LSSH-SEQ-NUM">Numéro de séquence:</label>
+                    </td>
+                    <td class="celldatakey">
+                         <input type="text" value=" " id="MIR-LSSH-SEQ-NUM" name="MIR-LSSH-SEQ-NUM" stype="Text" maxlength="3" onfocus="enterField(this)"/>
+                    </td>
+                </tr>
+            </table>           
+            <br/> 
+<!-- ************************************************************************************************************************** -->
+<!-- *************************************************** LIST DEFINITION TABLE ************************************************ -->
+<!-- ************************************************************************************************************************** -->
+            <table id="ApplListInfoTable" class="tabledisplay" genrows="0">
+                <tr>
+                    <td class="celldisplayheading">
+                        <label for="SELECT-T[1]"/>
+                    </td>
+                    <td class="celldisplayheading">
+                        <label for="MIR-LS-POL-ID-T[1]">Numéro de police Life Suite</label>
+                    </td>
+                    <td class="celldisplayheading">
+                        <label for="MIR-LSSH-EFF-DT-T[1]">Date effective</label>
+                    </td>
+                    <td class="celldisplayheading">
+                        <label for="MIR-APP-PROC-EFF-DT-T[1]">Heure de traitement</label>
+                    </td>
+                    <td class="celldisplayheading">
+                        <label for="MIR-LSSH-SEQ-NUM-T[1]">Séquence</label>
+                    </td>
+                    <td class="celldisplayheading">
+                        <label for="MIR-LSSH-ACTV-TYP-ID-T[1]">Type d'activité</label>
+                    </td>
+                    <td class="celldisplayheading">
+                        <label for="MIR-MSG-TXT-T[1]">Message</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celldisplay">
+                        <input stype="Indicator" type="checkbox" id="SELECT-T[]" name="SELECT-T[]" value=" " index="1" onclick="onListCheckBox()" disabled="disabled"/>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-LS-POL-ID-T[]" stype="Text" displayonly="yes">MIR-LS-POL-ID-T[]</span>
+<!--                        <a id="MIR-LS-POL-ID-T[]" name="MIR-LS-POL-ID-T[]" href="a" action="SelectItem" index="1" onclick="onAction();return(false)" onfocus="enterField(this)">Numéro de police Life Suite</a> -->
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-LSSH-EFF-DT-T[]" stype="Date" displayonly="yes">MIR-LSSH-EFF-DT-T[]</span>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-PREV-UPDT-TS-TIME-T[]" stype="Time" displayonly="yes">MIR-PREV-UPDT-TS-TIME-T[]</span>
+                    </td>                    
+                    <td class="celldisplay">
+                        <span id="MIR-LSSH-SEQ-NUM-T[]" stype="Text" displayonly="yes">MIR-LSSH-SEQ-NUM-T[]</span>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-LSSH-ACTV-TYP-ID-T[]" stype="Text" displayonly="yes">MIR-LSSH-ACTV-TYP-ID-T[]</span>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-MSG-TXT-T[]" stype="Text" displayonly="yes">MIR-MSG-TXT-T[]</span>
+                    </td>
+                </tr>
+            </table>
+            <p>
+                <input type="hidden" id="action" name="action" stype="Hidden"/>
+                <input type="hidden" id="index" name="index" stype="Hidden"/>
+            </p>
+        </form>
+    </body>
+    <script src="../js/ActionHandlers.js"></script>
+    <script src="../js/MessageFunctions.js"></script>
+    <script src="../js/MessagesFrench.js"></script>
+    <script src="../js/ClientLevelEdits.js"></script>
+    <script src="../js/GlobalUserMethods.js"></script>
+</html>
+

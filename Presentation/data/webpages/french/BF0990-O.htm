@@ -1,0 +1,1091 @@
+﻿<!--
+* Converted to Pathfinder 3.0 on Jan 20, 2004 2:40:16 PM EST
+*
+*********************************************************************************
+*  (C) COPYRIGHT 2001 INSURANCE SOFTWARE SOLUTIONS CORP.  ALL RIGHTS RESERVED  
+*********************************************************************************
+*  Component:   BF0990-O.htm                                                   
+*  Description:                                                                
+*                                                                              
+*********************************************************************************
+*  Chg#    Release  Description                                                
+*                                                                              
+*  014590  6.0      New for release 6.0                                        
+************************************************************************************************
+* Mandat Date      Auth. Description
+* J02547 21OCT2013 CRI	 Bottin unifié - ajouter nouveaux champs	
+* J03329 14jul2014 MTH	 Nouveaux champs pour Notification
+* J04290 15May2015 JFO	 Nouveaux champs pour CLIEDIS		
+* J05102 28Jun2017 GAB   Modifs pour IE11 Natif
+* J05986 28MAR2019 ROK   AJOUT D'UN NOUVEAU TYPE D'ADRESSE
+*                        COURRIEL POUR L'ENVOIE AUTOMATISÉ DE LA 
+*                        PROPOSITION ÉLECTRONIQUE
+************************************************************************************************
+ -->
+<html>
+    <head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>BF0990-O</title>
+        <link rel="stylesheet" type="text/css" href="../french/Ingenium.css" charset="UTF-8" />
+    </head>
+    <body class="bodyws">
+        <form action="pageserver" method="post" id="inputForm" target="_parent" onsubmit="return(onSubmit());">
+            <input type="hidden" id="index" name="index" stype="Hidden" />
+            <input type="hidden" id="action" name="action" stype="Hidden" />
+            <table class="tabledisplaykey">
+                <tr>
+                    <td class="celldisplaykeylabel">
+                        <label for="MIR-BR-ID">Agence:</label>
+                    </td>
+                    <td class="celldisplaykey">
+                        <span id="MIR-BR-ID" stype="Text" displayonly="yes">MIR-BR-ID</span>
+                    </td>
+                    <td class="celldisplaykeylabel" />
+                    <td class="celldisplaykey"></td>
+                </tr>
+            </table>
+            <br />
+ <!-- J02547 BLOC RÉ-ÉCRIT            
+            <table class="tabledisplay">
+                <tr>
+                    <td class="celldisplaylabel">
+                        <label for="MIR-CLI-ID">Numéro de client:</label>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-CLI-ID" stype="Text" displayonly="yes">MIR-CLI-ID</span>
+                    </td>
+                    <td class="celldisplaylabel">
+                        <label for="MIR-CLI-ADDR-TYP-CD">Genre d'adresse:</label>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-CLI-ADDR-TYP-CD" stype="Text" displayonly="yes">MIR-CLI-ADDR-TYP-CD</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celldisplaylabel">
+                        <label for="MIR-DV-CLI-NM">Nom du client:</label>
+                    </td>
+                    <td class="celldisplay" colspan="3">
+                        <span id="MIR-DV-CLI-NM" stype="Text" displayonly="yes">MIR-DV-CLI-NM</span>
+                    </td>
+                </tr>
+            </table>
+-->
+<!-- J02547 DÉBUT -->
+             <center>
+             	 <table class="tableanchors">
+                    <tr>
+                        <td class="cellanchors">
+                            <a href="#Branch Phones Numbers">Téléphones de l'agence</a>
+                        </td>
+                        <td class="cellanchors">
+                            <a href="#General Information">Information générale</a>
+                        </td>
+                        <td class="cellanchors">
+                            <a href="#Extranet ID">Codes extranet</a>
+                        </td>
+                        <td class="cellanchors">
+                            <a href="#Branch Principal Contact">Responsable principal de l'agence</a>
+                        </td>                        
+                        <td class="cellanchors">
+                            <a href="#Operations Contact/Coordinator">Responsable des opérations/Coordonnateur</a></td>
+                        <td class="cellanchors">
+                            <a href="#Contracting Contact">Responsable mise sous contrat</a>
+                        </td>
+                    </tr>
+                </table>
+           	</center>
+            <center>
+             	<table class="tableanchors">
+                    <tr>
+                        <td class="cellanchors">
+                            <a href="#Compensation Contact">Responsable rémunération</a>
+                        </td>
+                        <td class="cellanchors">
+                            <a href="#New Business Contact">Responsable des nouvelles affaires</a>
+                        </td>
+                        <td class="cellanchors">
+                            <a href="#Inforce Contact">Responsable de l'en vigueur</a>
+                        </td>
+                        <td class="cellanchors">
+                            <a href="#Communication-Marketing Contact">Responsable des communications-marketing</a>
+                        </td>
+                        <td class="cellanchors">
+                            <a href="#Miscellaneous (correspondent 2)">Divers (répondant 2)</a>
+                        </td>
+<!-- J03329   DEBUT -->
+                        <td class="cellanchors">
+                            <a href="#Notification">Notification</a>
+                        </td>
+<!-- J03329   FIN -->       
+<!-- J04290   DEBUT -->
+                        <td class="cellanchors">
+                            <a href="#CLIEDIS">CLIEDIS</a>
+                        </td>
+<!-- J04290   FIN -->
+                    </tr>                    
+               </table>
+           </center>
+           <br/>
+ 			<table class="tabledisplay">
+                <tr>
+                    <td class="celldisplayheading" colspan="4">
+                        <a id="Branch Phones Numbers" name="Branch Phones Numbers">Téléphones de l'agence</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celldisplaylabel">
+                       <label for="MIR-BRCH-BUS-PHONE">Bureau:</label>
+                    </td>
+                    <td class="celldisplay">
+                       <span id="MIR-BRCH-BUS-PHONE" stype="Text" displayonly="yes">MIR-BRCH-BUS-PHONE</span>
+                    </td>
+                    <td class="celldisplaylabel">
+                       <label for="MIR-BRCH-OTHER-PHONE">Autre:</label>
+                    </td>
+                    <td class="celldisplay">
+                       <span id="MIR-BRCH-OTHER-PHONE" stype="Text" displayonly="yes">MIR-BRCH-OTHER-PHONE</span>
+                    </td>
+                </tr>                    
+            </table>
+           	<br/>
+ 			<table class="tabledisplay">
+                <tr>
+                    <td class="celldisplayheading" colspan="4">
+                        <a id="General Information" name="General Information">Information générale</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celldisplaylabel">
+                        <label for="MIR-CLI-ID">Numéro de client/Numéro d'agent:</label>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-CLI-ID" stype="Text" displayonly="yes">MIR-CLI-ID</span>
+                    </td>
+<!-- Enlever le champ 'Genre d'adresse' à la demande de Caroline Chicoine 2013-11-27                   
+                    <td class="celldisplaylabel">
+                        <label for="MIR-CLI-ADDR-TYP-CD">Genre d'adresse:</label>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-CLI-ADDR-TYP-CD" stype="Text" displayonly="yes">MIR-CLI-ADDR-TYP-CD</span>
+                    </td>                     
+--> 
+                   <td class="celldisplaylabel">
+                   </td>
+                   <td class="celldisplay">
+                   </td>                   
+                </tr>
+                <tr>
+                    <td class="celldisplaylabel">
+                        <label for="MIR-DV-CLI-NM">Nom du client:</label>
+                    </td>
+                    <td class="celldisplay" colspan="4">
+                        <span id="MIR-DV-CLI-NM" stype="Text" displayonly="yes">MIR-DV-CLI-NM</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celldisplaylabel">
+                        <label for="MIR-HIER-TYP-CD">Type hiérarchique:</label>
+                    </td>
+                    <td class="celldisplay" colspan="4">
+                        <span id="MIR-HIER-TYP-CD" stype="Text" displayonly="yes">MIR-HIER-TYP-CD</span>
+                    </td>
+                </tr>               
+                <tr>
+                    <td class="celldisplaylabel">
+                        <label for="MIR-WEB-SITE">Site Web:</label>
+                    </td>
+                    <td class="celldisplay" colspan="4">
+                        <span id="MIR-WEB-SITE" stype="Text" displayonly="yes">MIR-WEB-SITE</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celldisplaylabel">
+                        <label for="MIR-BRCH-TRMN-DT">Date de la terminaison:</label>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-BRCH-TRMN-DT" stype="Date" displayonly="yes">MIR-BRCH-TRMN-DT</span>
+                    </td>
+                    <td class="celldisplaylabel">
+                        <label for="MIR-BRCH-TRMN-REASN-CD">Raison de la terminaison:</label>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-BRCH-TRMN-REASN-CD" stype="Text" displayonly="yes">MIR-BRCH-TRMN-REASN-CD</span>
+                    </td>
+                </tr>                
+                <tr>
+                    <td class="celldisplaylabel">
+                        <label for="MIR-MAIN-BR-ID">Agence principale:</label>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-MAIN-BR-ID" stype="Text" displayonly="yes">MIR-MAIN-BR-ID</span>
+                    </td>
+                    <td class="celldisplaylabel">
+                        <label for="MIR-COMUN-TYP-CD">Type de communication:</label>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-COMUN-TYP-CD" stype="Text" displayonly="yes">MIR-COMUN-TYP-CD</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celldisplaylabel">
+                        <label for="MIR-RW-LSUITE-AGT">Écriture Life Suite conseiller:</label>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-RW-LSUITE-AGT" stype="Text" displayonly="yes">MIR-RW-LSUITE-AGT</span>
+                    </td>
+                    <td class="celldisplaylabel">
+                        <label for="MIR-TOT-BON-PCT">Taux total du boni versé à l'agence :</label>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-TOT-BON-PCT" stype="Percent" elength="5" decimals="2" displayonly="yes">MIR-TOT-BON-PCT</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celldisplaylabel">
+                        <label for="MIR-BRCH-NOTE">Note:</label>
+                    </td>
+                    <td class="celldisplay" colspan="4">
+<!-- J05102				<textarea rows="5" cols="80" stype="TextArea" readonly="readonly" style="color:gray" name="MIR-BRCH-NOTE"></textarea>  --> 
+						<textarea rows="5" cols="80" stype="TextArea" readonly="readonly" style="color:gray" id="MIR-BRCH-NOTE" name="MIR-BRCH-NOTE"></textarea> 
+
+                    </td>
+                </tr>
+            </table>
+           	<br/>
+ 			<table class="tabledisplay">
+                <tr>
+                    <td class="celldisplayheading" colspan="4">
+                        <a id="Extranet ID" name="Extranet ID">Codes extranet</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celldisplaylabel">
+                        <label for="MIR-NET-ACCS-ID-1">Code accès 1:</label>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-NET-ACCS-ID-1" stype="Text" displayonly="yes">MIR-NET-ACCS-ID-1</span>
+                    </td>
+                    <td class="celldisplaylabel">
+                        <label for="MIR-NET-ACCS-TYP-1">Type accès 1:</label>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-NET-ACCS-TYP-1" stype="Text" displayonly="yes">MIR-NET-ACCS-TYP-1</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celldisplaylabel">
+                        <label for="MIR-NET-ACCS-ID-2">Code accès 2:</label>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-NET-ACCS-ID-2" stype="Text" displayonly="yes">MIR-NET-ACCS-ID-2</span></td>
+                    <td class="celldisplaylabel">
+                        <label for="MIR-NET-ACCS-TYP-2">Type accès 2:</label>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-NET-ACCS-TYP-2" stype="Text" displayonly="yes">MIR-NET-ACCS-TYP-2</span></td>
+                </tr>
+                <tr>
+                    <td class="celldisplaylabel">
+                        <label for="MIR-NET-ACCS-ID-3">Code accès 3:</label>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-NET-ACCS-ID-3" stype="Text" displayonly="yes">MIR-NET-ACCS-ID-3</span></td>
+                    <td class="celldisplaylabel">
+                        <label for="MIR-NET-ACCS-TYP-3">Type accès 3:</label>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-NET-ACCS-TYP-3" stype="Text" displayonly="yes">MIR-NET-ACCS-TYP-3</span></td>
+                </tr>
+                <tr>
+                    <td class="celldisplaylabel">
+                        <label for="MIR-NET-ACCS-ID-4">Code accès 4:</label>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-NET-ACCS-ID-4" stype="Text" displayonly="yes">MIR-NET-ACCS-ID-4</span></td>
+                    <td class="celldisplaylabel">
+                        <label for="MIR-NET-ACCS-TYP-4">Type accès 4:</label>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-NET-ACCS-TYP-4" stype="Text" displayonly="yes">MIR-NET-ACCS-TYP-4</span></td>
+                </tr>
+                <tr>
+                    <td class="celldisplaylabel">
+                        <label for="MIR-NET-ACCS-ID-5">Code accès 5:</label>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-NET-ACCS-ID-5" stype="Text" displayonly="yes">MIR-NET-ACCS-ID-5</span></td>
+                    <td class="celldisplaylabel">
+                        <label for="MIR-NET-ACCS-TYP-5">Type accès 5:</label>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-NET-ACCS-TYP-5" stype="Text" displayonly="yes">MIR-NET-ACCS-TYP-5</span></td>
+                </tr>
+                <tr>
+                    <td class="celldisplaylabel">
+                        <label for="MIR-NET-ACCS-ID-6">Code accès 6:</label>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-NET-ACCS-ID-6" stype="Text" displayonly="yes">MIR-NET-ACCS-ID-6</span></td>
+                    <td class="celldisplaylabel">
+                        <label for="MIR-NET-ACCS-TYP-6">Type accès 6:</label>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-NET-ACCS-TYP-6" stype="Text" displayonly="yes">MIR-NET-ACCS-TYP-6</span></td>
+                </tr>
+                <tr>
+                    <td class="celldisplaylabel">
+                        <label for="MIR-NET-ACCS-ID-7">Code accès 7:</label>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-NET-ACCS-ID-7" stype="Text" displayonly="yes">MIR-NET-ACCS-ID-7</span></td>
+                    <td class="celldisplaylabel">
+                        <label for="MIR-NET-ACCS-TYP-7">Type accès 7:</label>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-NET-ACCS-TYP-7" stype="Text" displayonly="yes">MIR-NET-ACCS-TYP-7</span></td>
+                </tr>
+<!-- J05247   DEBUT -->
+                <tr>
+                    <td class="celldisplaylabel">
+                        <label for="MIR-NET-SECUR-DOM-1">Domaine Sécurisé #1:</label>
+                    </td>
+                    <td class="celldisplay" >
+                        <span id="MIR-NET-SECUR-DOM-1" stype="Text" displayonly="yes">MIR-NET-SECUR-DOM-1</span></td>
+                    <td class="celldisplaylabel"/>
+                    <td class="celldisplay"/>
+                </tr>
+                <tr>
+                    <td class="celldisplaylabel">
+                        <label for="MIR-NET-SECUR-DOM-2">Domaine Sécurisé #2:</label>
+                    </td>
+                    <td class="celldisplay" >
+                        <span id="MIR-NET-SECUR-DOM-2" stype="Text" displayonly="yes">MIR-NET-SECUR-DOM-2</span></td>
+                    <td class="celldisplaylabel"/>
+                    <td class="celldisplay"/>
+                </tr>
+                <tr>
+                    <td class="celldisplaylabel">
+                        <label for="MIR-NET-SECUR-DOM-3">Domaine Sécurisé #3:</label>
+                    </td>
+                    <td class="celldisplay" >
+                        <span id="MIR-NET-SECUR-DOM-3" stype="Text" displayonly="yes">MIR-NET-SECUR-DOM-3</span></td>
+                    <td class="celldisplaylabel"/>
+                    <td class="celldisplay"/>
+                </tr>
+<!-- J05247   FIN   -->
+            </table> 
+           	<br/>
+ 			<table class="tabledisplay">
+                <tr>
+                    <td class="celldisplayheading" colspan="4">
+                        <a id="Branch Principal Contact" name="Branch Principal Contact">Responsable principal de l'agence</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celldisplaylabel">
+                        <label for="MIR-MAIN-CNTCT-GIV-NM">Prénom:</label>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-MAIN-CNTCT-GIV-NM" stype="Text" displayonly="yes">MIR-MAIN-CNTCT-GIV-NM</span>
+                    </td>
+                    <td class="celldisplaylabel">
+                        <label for="MIR-MAIN-CNTCT-SUR-NM">Nom:</label>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-MAIN-CNTCT-SUR-NM" stype="Text" displayonly="yes">MIR-MAIN-CNTCT-SUR-NM</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celldisplaylabel">
+                        <label for="MIR-MAIN-CNTCT-SEX-CD">Sexe:</label>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-MAIN-CNTCT-SEX-CD" stype="Text" displayonly="yes">MIR-MAIN-CNTCT-SEX-CD</span>
+                    </td>
+                    <td class="celldisplaylabel">
+                        <label for="MIR-MAIN-CNTCT-LANG-CD">Langue:</label>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-MAIN-CNTCT-LANG-CD" stype="Text" displayonly="yes">MIR-MAIN-CNTCT-LANG-CD</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celldisplaylabel">
+                        <label for="MIR-MAIN-CNTCT-EMAIL">Courriel:</label>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-MAIN-CNTCT-EMAIL" stype="Text" displayonly="yes">MIR-MAIN-CNTCT-EMAIL</span>
+                    </td>
+                    <td class="celldisplaylabel">
+                        <label for="MIR-MAIN-CNTCT-PHONE">Téléphone:</label>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-MAIN-CNTCT-PHONE" stype="Text" displayonly="yes">MIR-MAIN-CNTCT-PHONE</span>
+                    </td>
+                </tr>
+            </table>
+           	<br/>
+ 			<table class="tabledisplay">
+                <tr>
+                    <td class="celldisplayheading" colspan="4">
+                        <a id="Operations Contact" name="Operations Contact">Responsable des opérations</a>/Coordonnateur</td>
+                </tr>
+                <tr>
+                    <td class="celldisplaylabel">
+                        <label for="MIR-OPER-CNTCT-GIV-NM">Prénom:</label>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-OPER-CNTCT-GIV-NM" stype="Text" displayonly="yes">MIR-OPER-CNTCT-GIV-NM</span>
+                    </td>
+                    <td class="celldisplaylabel">
+                        <label for="MIR-OPER-CNTCT-SUR-NM">Nom:</label>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-OPER-CNTCT-SUR-NM" stype="Text" displayonly="yes">MIR-OPER-CNTCT-SUR-NM</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celldisplaylabel">
+                        <label for="MIR-OPER-CNTCT-SEX-CD">Sexe:</label>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-OPER-CNTCT-SEX-CD" stype="Text" displayonly="yes">MIR-OPER-CNTCT-SEX-CD</span>
+                    </td>
+                    <td class="celldisplaylabel">
+                        <label for="MIR-OPER-CNTCT-LANG-CD">Langue:</label>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-OPER-CNTCT-LANG-CD" stype="Text" displayonly="yes">MIR-OPER-CNTCT-LANG-CD</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celldisplaylabel">
+                        <label for="MIR-OPER-CNTCT-EMAIL">Courriel:</label>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-OPER-CNTCT-EMAIL" stype="Text" displayonly="yes">MIR-OPER-CNTCT-EMAIL</span>
+                    </td>
+                    <td class="celldisplaylabel">
+                        <label for="MIR-OPER-CNTCT-PHONE">Téléphone:</label>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-OPER-CNTCT-PHONE" stype="Text" displayonly="yes">MIR-OPER-CNTCT-PHONE</span>
+                    </td>
+                </tr>
+            </table>
+           	<br/>
+ 			<table class="tabledisplay">
+                <tr>
+                    <td class="celldisplayheading" colspan="4">
+                        <a id="Contracting Contact" name="Contracting Contact">Responsable mise sous contrat</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celldisplaylabel">
+                        <label for="MIR-CNTRCT-CNTCT-GIV-NM">Prénom:</label>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-CNTRCT-CNTCT-GIV-NM" stype="Text" displayonly="yes">MIR-CNTRCT-CNTCT-GIV-NM</span>
+                    </td>
+                    <td class="celldisplaylabel">
+                        <label for="MIR-CNTRCT-CNTCT-SUR-NM">Nom:</label>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-CNTRCT-CNTCT-SUR-NM" stype="Text" displayonly="yes">MIR-CNTRCT-CNTCT-SUR-NM</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celldisplaylabel">
+                        <label for="MIR-CNTRCT-CNTCT-SEX-CD">Sexe:</label>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-CNTRCT-CNTCT-SEX-CD" stype="Text" displayonly="yes">MIR-CNTRCT-CNTCT-SEX-CD</span>
+                    </td>
+                    <td class="celldisplaylabel">
+                        <label for="MIR-CNTRCT-CNTCT-LANG-CD">Langue:</label>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-CNTRCT-CNTCT-LANG-CD" stype="Text" displayonly="yes">MIR-CNTRCT-CNTCT-LANG-CD</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celldisplaylabel">
+                        <label for="MIR-CNTRCT-CNTCT-EMAIL">Courriel:</label>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-CNTRCT-CNTCT-EMAIL" stype="Text" displayonly="yes">MIR-CNTRCT-CNTCT-EMAIL</span>
+                    </td>
+                    <td class="celldisplaylabel">
+                        <label for="MIR-CNTRCT-CNTCT-PHONE">Téléphone:</label>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-CNTRCT-CNTCT-PHONE" stype="Text" displayonly="yes">MIR-CNTRCT-CNTCT-PHONE</span>
+                    </td>
+                </tr>
+            </table>
+            <p align="right">
+                <a href="#top" class="backtotop">
+                    <img src="../images/top.gif" border="0" alt="Haut de page" width="14" height="14"/>Haut de page </a>
+            </p>            
+ 			<table class="tabledisplay">
+                <tr>
+                    <td class="celldisplayheading" colspan="4">
+                        <a id="Compensation Contact" name="Compensation Contact">Responsable rémunération</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celldisplaylabel">
+                        <label for="MIR-CMPNST-CNTCT-GIV-NM">Prénom:</label>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-CMPNST-CNTCT-GIV-NM" stype="Text" displayonly="yes">MIR-CMPNST-CNTCT-GIV-NM</span>
+                    </td>
+                    <td class="celldisplaylabel">
+                        <label for="MIR-CMPNST-CNTCT-SUR-NM">Nom:</label>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-CMPNST-CNTCT-SUR-NM" stype="Text" displayonly="yes">MIR-CMPNST-CNTCT-SUR-NM</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celldisplaylabel">
+                        <label for="MIR-CMPNST-CNTCT-SEX-CD">Sexe:</label>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-CMPNST-CNTCT-SEX-CD" stype="Text" displayonly="yes">MIR-CMPNST-CNTCT-SEX-CD</span>
+                    </td>
+                    <td class="celldisplaylabel">
+                        <label for="MIR-CMPNST-CNTCT-LANG-CD">Langue:</label>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-CMPNST-CNTCT-LANG-CD" stype="Text" displayonly="yes">MIR-CMPNST-CNTCT-LANG-CD</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celldisplaylabel">
+                        <label for="MIR-CMPNST-CNTCT-EMAIL">Courriel:</label>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-CMPNST-CNTCT-EMAIL" stype="Text" displayonly="yes">MIR-CMPNST-CNTCT-EMAIL</span>
+                    </td>
+                    <td class="celldisplaylabel">
+                        <label for="MIR-CMPNST-CNTCT-PHONE">Téléphone:</label>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-CMPNST-CNTCT-PHONE" stype="Text" displayonly="yes">MIR-CMPNST-CNTCT-PHONE</span>
+                    </td>
+                </tr>
+            </table>
+           	<br/>
+ 			<table class="tabledisplay">
+                <tr>
+                    <td class="celldisplayheading" colspan="4">
+                        <a id="New Business Contact" name="New Business Contact">Responsable des nouvelles affaires</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celldisplaylabel">
+                        <label for="MIR-NB-CNTCT-GIV-NM">Prénom:</label>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-NB-CNTCT-GIV-NM" stype="Text" displayonly="yes">MIR-NB-CNTCT-GIV-NM</span>
+                    </td>
+                    <td class="celldisplaylabel">
+                        <label for="MIR-NB-CNTCT-SUR-NM">Nom:</label>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-NB-CNTCT-SUR-NM" stype="Text" displayonly="yes">MIR-NB-CNTCT-SUR-NM</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celldisplaylabel">
+                        <label for="MIR-NB-CNTCT-SEX-CD">Sexe:</label>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-NB-CNTCT-SEX-CD" stype="Text" displayonly="yes">MIR-NB-CNTCT-SEX-CD</span>
+                    </td>
+                    <td class="celldisplaylabel">
+                        <label for="MIR-NB-CNTCT-LANG-CD">Langue:</label>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-NB-CNTCT-LANG-CD" stype="Text" displayonly="yes">MIR-NB-CNTCT-LANG-CD</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celldisplaylabel">
+                        <label for="MIR-NB-CNTCT-EMAIL">Courriel:</label>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-NB-CNTCT-EMAIL" stype="Text" displayonly="yes">MIR-NB-CNTCT-EMAIL</span>
+                    </td>
+                    <td class="celldisplaylabel">
+                        <label for="MIR-NB-CNTCT-PHONE">Téléphone:</label>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-NB-CNTCT-PHONE" stype="Text" displayonly="yes">MIR-NB-CNTCT-PHONE</span>
+                    </td>
+                </tr>
+            </table>
+           	<br/>
+ 			<table class="tabledisplay">
+                <tr>
+                    <td class="celldisplayheading" colspan="4">
+                        <a id="Inforce Contact" name="Inforce Contact">Responsable de l'en vigueur</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celldisplaylabel">
+                        <label for="MIR-INFORCE-CNTCT-GIV-NM">Prénom:</label>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-INFORCE-CNTCT-GIV-NM" stype="Text" displayonly="yes">MIR-INFORCE-CNTCT-GIV-NM</span>
+                    </td>
+                    <td class="celldisplaylabel">
+                        <label for="MIR-INFORCE-CNTCT-SUR-NM">Nom:</label>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-INFORCE-CNTCT-SUR-NM" stype="Text" displayonly="yes">MIR-INFORCE-CNTCT-SUR-NM</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celldisplaylabel">
+                        <label for="MIR-INFORCE-CNTCT-SEX-CD">Sexe:</label>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-INFORCE-CNTCT-SEX-CD" stype="Text" displayonly="yes">MIR-INFORCE-CNTCT-SEX-CD</span>
+                    </td>
+                    <td class="celldisplaylabel">
+                        <label for="MIR-INFORCE-CNTCT-LANG-CD">Langue:</label>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-INFORCE-CNTCT-LANG-CD" stype="Text" displayonly="yes">MIR-INFORCE-CNTCT-LANG-CD</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celldisplaylabel">
+                        <label for="MIR-INFORCE-CNTCT-EMAIL">Courriel:</label>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-INFORCE-CNTCT-EMAIL" stype="Text" displayonly="yes">MIR-INFORCE-CNTCT-EMAIL</span>
+                    </td>
+                    <td class="celldisplaylabel">
+                        <label for="MIR-INFORCE-CNTCT-PHONE">Téléphone:</label>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-INFORCE-CNTCT-PHONE" stype="Text" displayonly="yes">MIR-INFORCE-CNTCT-PHONE</span>
+                    </td>
+                </tr>
+            </table>
+           	<br/>
+ 			<table class="tabledisplay">
+                <tr>
+                    <td class="celldisplayheading" colspan="4">
+                        <a id="Communication-Marketing Contact" name="Communication-Marketing Contact">Responsable des communications-marketing</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celldisplaylabel">
+                        <label for="MIR-COMUN-MKT-CNTCT-GIV-NM">Prénom:</label>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-COMUN-MKT-CNTCT-GIV-NM" stype="Text" displayonly="yes">MIR-COMUN-MKT-CNTCT-GIV-NM</span>
+                    </td>
+                    <td class="celldisplaylabel">
+                        <label for="MIR-COMUN-MKT-CNTCT-SUR-NM">Nom:</label>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-COMUN-MKT-CNTCT-SUR-NM" stype="Text" displayonly="yes">MIR-COMUN-MKT-CNTCT-SUR-NM</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celldisplaylabel">
+                        <label for="MIR-COMUN-MKT-CNTCT-SEX-CD">Sexe:</label>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-COMUN-MKT-CNTCT-SEX-CD" stype="Text" displayonly="yes">MIR-COMUN-MKT-CNTCT-SEX-CD</span>
+                    </td>
+                    <td class="celldisplaylabel">
+                        <label for="MIR-COMUN-MKT-CNTCT-LANG-CD">Langue:</label>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-COMUN-MKT-CNTCT-LANG-CD" stype="Text" displayonly="yes">MIR-COMUN-MKT-CNTCT-LANG-CD</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celldisplaylabel">
+                        <label for="MIR-COMUN-MKT-CNTCT-EMAIL">Courriel:</label>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-COMUN-MKT-CNTCT-EMAIL" stype="Text" displayonly="yes">MIR-COMUN-MKT-CNTCT-EMAIL</span>
+                    </td>
+                    <td class="celldisplaylabel">
+                        <label for="MIR-COMUN-MKT-CNTCT-PHONE">Téléphone:</label>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-COMUN-MKT-CNTCT-PHONE" stype="Text" displayonly="yes">MIR-COMUN-MKT-CNTCT-PHONE</span>
+                    </td>
+                </tr>
+            </table>
+           	<br/>
+ 			<table class="tabledisplay">
+                <tr>
+                    <td class="celldisplayheading" colspan="4">
+                        <a id="Miscellaneous (correspondent 2)" name="Miscellaneous (correspondent 2)">Divers (répondant 2)</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celldisplaylabel">
+                        <label for="MIR-MISC-2-CNTCT-GIV-NM">Prénom:</label>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-MISC-2-CNTCT-GIV-NM" stype="Text" displayonly="yes">MIR-MISC-2-CNTCT-GIV-NM</span>
+                    </td>
+                    <td class="celldisplaylabel">
+                        <label for="MIR-MISC-2-CNTCT-SUR-NM">Nom:</label>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-MISC-2-CNTCT-SUR-NM" stype="Text" displayonly="yes">MIR-MISC-2-CNTCT-SUR-NM</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celldisplaylabel">
+                        <label for="MIR-MISC-2-CNTCT-SEX-CD">Sexe:</label>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-MISC-2-CNTCT-SEX-CD" stype="Text" displayonly="yes">MIR-MISC-2-CNTCT-SEX-CD</span>
+                    </td>
+                    <td class="celldisplaylabel">
+                        <label for="MIR-MICS-CNTCT-LANG-CD">Langue:</label>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-MISC-2-CNTCT-LANG-CD" stype="Text" displayonly="yes">MIR-MISC-2-CNTCT-LANG-CD</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celldisplaylabel">
+                        <label for="MIR-MISC-2-CNTCT-EMAIL">Courriel:</label>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-MISC-2-CNTCT-EMAIL" stype="Text" displayonly="yes">MIR-MISC-2-CNTCT-EMAIL</span>
+                    </td>
+                    <td class="celldisplaylabel">
+                        <label for="MIR-MISC-2-CNTCT-PHONE">Téléphone:</label>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-MISC-2-CNTCT-PHONE" stype="Text" displayonly="yes">MIR-MISC-2-CNTCT-PHONE</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celldisplaylabel">
+                        <label for="MIR-MISC-2-CNTCT-NOTE">Note:</label>
+                    </td>
+                    <td class="celldisplay" colspan="4">
+                        <span id="MIR-MISC-2-CNTCT-NOTE" stype="Text" displayonly="yes">MIR-MISC-2-CNTCT-NOTE</span>
+<!--						<textarea rows="5" cols="80" readonly="readonly" style="color:gray" name="MIR-MISC-2-CNTCT-NOTE"></textarea>
+--> 
+                    </td>
+                </tr>
+            </table>
+<!-- J03329   DEBUT -->
+           	<br/>
+			<table id="Notification" class="tabledisplay">
+                <tr>
+                    <td class="celldisplayheading" colspan="4">
+                        <a id="Notification" name="Notification">Notification</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celldisplaylabel">
+                        <label for="MIR-BRCH-NOTI-IND">Agence notifiée:</label>
+                    </td>
+                    <td class="celldisplay">
+                         <input type="checkbox" id="MIR-BRCH-NOTI-IND" name="MIR-BRCH-NOTI-IND" stype="Indicator" value="Y" disabled="yes"/>
+                    </td>
+                    <td class="celldisplay" colspan="2">
+                        <span id="MIR-DV-BRCH-NOTI-EMAIL" style="font-size: 10.0pt; font-family: courier new; color: red" displayonly="yes">MIR-DV-BRCH-NOTI-EMAIL</span>
+                    </td>
+                </tr>
+<!-- J04290 Begin -->
+                <tr>
+                    <td class="celldisplaylabel">
+                        <label for="MIR-NOTI-TRNSMT-MAIN-BR-IND">Notification envoyée à son agence principale (sera regroupé):</label>
+                    </td>
+                    <td class="celldisplay">
+                        <input type="checkbox" id="MIR-NOTI-TRNSMT-MAIN-BR-IND" name="MIR-NOTI-TRNSMT-MAIN-BR-IND" stype="Indicator" value="Y" disabled="yes"/>
+                    </td>
+                    <td class="celldisplaylabel"/>
+                    <td class="celldisplay"/>
+                </tr>
+                <tr>
+                    <td class="celldisplaylabel">
+                        <label for="MIR-NOTI-TRNSMT-OTHR-BR-ID">Notification envoyée à une AUTRE agence (sera regroupé):</label>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-NOTI-TRNSMT-OTHR-BR-ID" stype="Text" displayonly="yes">MIR-NOTI-TRNSMT-OTHR-BR-ID</span>
+                    </td>
+                    <td class="celldisplaylabel"/>
+                    <td class="celldisplay"/>
+                </tr>
+                <tr>
+                    <td class="celldisplaylabel">
+                        <label for="MIR-BRCH-NOTI-EMAIL">Notification envoyée à un AUTRE courriel:</label>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-BRCH-NOTI-EMAIL" stype="Text" displayonly="yes">MIR-BRCH-NOTI-EMAIL</span>
+                    </td>
+                    <td class="celldisplaylabel">
+                        <label for="MIR-BRCH-NOTI-LANG-CD">Langue:</label>
+                    </td>
+                    <td class="celldisplay">
+                        <span id="MIR-BRCH-NOTI-LANG-CD" stype="Text" displayonly="yes">MIR-BRCH-NOTI-LANG-CD</span>
+                    </td>
+                </tr>
+<!-- J04290 end -->
+            </table>
+<!-- J03329   FIN -->
+            <p align="right">
+                <a href="#top" class="backtotop">
+                    <img src="../images/top.gif" border="0" alt="Haut de page" width="14" height="14"/>Haut de page </a>
+            </p>           	
+<!-- J04290 BEGIN -->  
+           	<br/>
+			<table class="tabledisplay">
+                <tr>
+                    <td class="celldisplayheading" colspan="4" >
+                        <a id="CLIEDIS" name="CLIEDIS">Fichier CLIEDIS - Police en attente (PENDING)</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celldisplaylabel" colspan="3">
+                        <label for="MIR-SUSP-FILE-TRNSMT-TYP-CD">Type de fichier à envoyer:</label>
+                    </td>
+                    <td class="celldisplay" colspan="1">
+                        <span id="MIR-SUSP-FILE-TRNSMT-TYP-CD" stype="Text" displayonly="yes">MIR-SUSP-FILE-TRNSMT-TYP-CD</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celldisplaylabel" colspan="3">
+                        <label for="MIR-SUSP-TRNSMT-MAIN-BR-IND">Fichier envoyé à son agence principale:</label>
+                    </td>
+                    <td class="celldisplay" colspan="1">
+                        <input type="checkbox" id="MIR-SUSP-TRNSMT-MAIN-BR-IND" name="MIR-SUSP-TRNSMT-MAIN-BR-IND" stype="Indicator" value="Y" disabled="yes"/>
+                    </td>
+				</tr>
+				<tr>
+                    <td class="celldisplaylabel" colspan="3">
+                        <label for="MIR-SUSP-TRNSMT-OTHR-BR-ID">Fichier envoyé à une AUTRE agence:</label>
+                    </td>
+                    <td class="celldisplay" colspan="1">
+                        <span id="MIR-SUSP-TRNSMT-OTHR-BR-ID" stype="Text" displayonly="yes">MIR-SUSP-TRNSMT-OTHR-BR-ID</span>
+                    </td>
+                </tr>
+            </table>
+           	<br/>
+			<table class="tabledisplay">
+                <tr>
+                    <td class="celldisplayheading" colspan="4">
+                        <a id="CLIEDIS" name="CLIEDIS">Fichier CLIEDIS - Proposition électronique (EAPP)</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celldisplaylabel" colspan="3">
+                        <label for="MIR-EAPP-FILE-TRNSMT-TYP-CD">Type de fichier à envoyer:</label>
+                    </td>
+                    <td class="celldisplay" colspan="1">
+                        <span id="MIR-EAPP-FILE-TRNSMT-TYP-CD" stype="Text" displayonly="yes">MIR-EAPP-FILE-TRNSMT-TYP-CD</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celldisplaylabel" colspan="3">
+                        <label for="MIR-EAPP-TRNSMT-MAIN-BR-IND">Fichier envoyé à son agence principale:</label>
+                    </td>
+                    <td class="celldisplay" colspan="1">
+                        <input type="checkbox" id="MIR-EAPP-TRNSMT-MAIN-BR-IND" name="MIR-EAPP-TRNSMT-MAIN-BR-IND" stype="Indicator" value="Y" disabled="yes"/>
+                    </td>
+				</tr>
+				<tr>
+                    <td class="celldisplaylabel" colspan="3">
+                        <label for="MIR-EAPP-TRNSMT-OTHR-BR-ID">Fichier envoyé à une AUTRE agence:</label>
+                    </td>
+                    <td class="celldisplay" colspan="1">
+                        <span id="MIR-EAPP-TRNSMT-OTHR-BR-ID" stype="Text" displayonly="yes">MIR-EAPP-TRNSMT-OTHR-BR-ID</span>
+                    </td>
+                </tr>
+<!-- J05986   DEBUT -->
+                <tr>
+                    <td class="celldisplaylabel" colspan="3">
+                        <label for="MIR-EAPP-CNTCT-EMAIL">Courriel (eApp-Courriel):</label>
+                    </td>
+                    <td class="celldisplay" colspan="1">
+                        <span id="MIR-EAPP-CNTCT-EMAIL" stype="Text" displayonly="yes">MIR-EAPP-CNTCT-EMAIL</span>
+                    </td>
+                </tr>
+<!-- J05986   FIN -->
+            </table>
+           	<br/>
+			<table class="tabledisplay">
+                <tr>
+                    <td class="celldisplayheading" colspan="4">
+                        <a id="CLIEDIS" name="CLIEDIS">Fichier CLIEDIS - Police en vigueur (IN-FORCE)</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celldisplaylabel" colspan="3">
+                        <label for="MIR-INFC-FILE-TRNSMT-TYP-CD">Type de fichier à envoyer:</label>
+                    </td>
+                    <td class="celldisplay" colspan="1">
+                        <span id="MIR-INFC-FILE-TRNSMT-TYP-CD" stype="Text" displayonly="yes">MIR-INFC-FILE-TRNSMT-TYP-CD</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celldisplaylabel" colspan="3" >
+                        <label for="MIR-INFC-TRNSMT-MAIN-BR-IND">Fichier envoyé à son agence principale:</label>
+                    </td>
+                    <td class="celldisplay" colspan="1" >
+                        <input type="checkbox" id="MIR-INFC-TRNSMT-MAIN-BR-IND" name="MIR-INFC-TRNSMT-MAIN-BR-IND" stype="Indicator" value="Y" disabled="yes"/>
+                    </td>
+				</tr>
+				<tr>
+                    <td class="celldisplaylabel" colspan="3" >
+                        <label for="MIR-INFC-TRNSMT-OTHR-BR-ID">Fichier envoyé à une AUTRE agence:</label>
+                    </td>
+                    <td class="celldisplay" colspan="1" >
+                        <span id="MIR-INFC-TRNSMT-OTHR-BR-ID" stype="Text" displayonly="yes">MIR-INFC-TRNSMT-OTHR-BR-ID</span>
+                    </td>
+                </tr>
+            </table>
+           	<br/>
+			<table class="tabledisplay">
+                <tr>
+                    <td class="celldisplayheading" colspan="4">
+                        <a id="CLIEDIS" name="CLIEDIS">Fichier CLIEDIS – Commissions</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celldisplaylabel" colspan="3">
+                        <label for="MIR-COMM-FILE-TRNSMT-TYP-CD">Type de fichier à envoyer:</label>
+                    </td>
+                    <td class="celldisplay" colspan="1">
+                        <span id="MIR-COMM-FILE-TRNSMT-TYP-CD" stype="Text" displayonly="yes">MIR-COMM-FILE-TRNSMT-TYP-CD</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celldisplaylabel" colspan="3">
+                        <label for="MIR-COMM-TRNSMT-MAIN-BR-IND">Fichier envoyé à son agence principale:</label>
+                    </td>
+                    <td class="celldisplay" colspan="1">
+                        <input type="checkbox" id="MIR-COMM-TRNSMT-MAIN-BR-IND" name="MIR-COMM-TRNSMT-MAIN-BR-IND" stype="Indicator" value="Y" disabled="yes"/>
+                    </td>
+				</tr>
+				<tr>
+                    <td class="celldisplaylabel" colspan="3">
+                        <label for="MIR-COMM-TRNSMT-OTHR-BR-ID">Fichier envoyé à une AUTRE agence:</label>
+                    </td>
+                    <td class="celldisplay" colspan="1">
+                        <span id="MIR-COMM-TRNSMT-OTHR-BR-ID" stype="Text" displayonly="yes">MIR-COMM-TRNSMT-OTHR-BR-ID</span>
+                    </td>
+                </tr>
+            </table>
+           	<br/>
+			<table class="tabledisplay">
+                <tr>
+                    <td class="celldisplayheading" colspan="4">
+                        <a id="CLIEDIS" name="CLIEDIS">Fichier CLIEDIS - Détails des régimes (PRODUCT)</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celldisplaylabel" colspan="3">
+                        <label for="MIR-PROD-FILE-TRNSMT-TYP-CD">Type de fichier à envoyer:</label>
+                    </td>
+                    <td class="celldisplay" colspan="1">
+                        <span id="MIR-PROD-FILE-TRNSMT-TYP-CD" stype="Text" displayonly="yes">MIR-PROD-FILE-TRNSMT-TYP-CD</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celldisplaylabel" colspan="3">
+                        <label for="MIR-PROD-TRNSMT-MAIN-BR-IND">Fichier envoyé à son agence principale:</label>
+                    </td>
+                    <td class="celldisplay" colspan="1">
+                        <input type="checkbox" id="MIR-PROD-TRNSMT-MAIN-BR-IND" name="MIR-PROD-TRNSMT-MAIN-BR-IND" stype="Indicator" value="Y" disabled="yes"/>
+                    </td>
+				</tr>
+				<tr>
+                    <td class="celldisplaylabel" colspan="3">
+                        <label for="MIR-PROD-TRNSMT-OTHR-BR-ID">Fichier envoyé à une AUTRE agence:</label>
+                    </td>
+                    <td class="celldisplay" colspan="1">
+                        <span id="MIR-PROD-TRNSMT-OTHR-BR-ID" stype="Text" displayonly="yes">MIR-PROD-TRNSMT-OTHR-BR-ID</span>
+                    </td>
+                </tr>
+            </table>
+
+            <p align="right">
+                <a href="#top" class="backtotop">
+                    <img src="../images/top.gif" border="0" alt="Haut de page" width="14" height="14"/>Haut de page</a>
+            </p>           	
+<!-- J04290 ENDED  -->
+             <center>
+             	 <table class="tableanchors">
+                    <tr>
+                        <td class="cellanchors">
+                            <a href="#Branch Phones Numbers">Téléphones de l'agence</a>
+                        </td>
+                        <td class="cellanchors">
+                            <a href="#General Information">Information générale</a>
+                        </td>
+                        <td class="cellanchors">
+                            <a href="#Extranet ID">Codes extranet</a>
+                        </td>
+                        <td class="cellanchors">
+                            <a href="#Branch Principal Contact">Responsable principal de l'agence</a>
+                        </td>                        
+                        <td class="cellanchors">
+                            <a href="#Operations/Coordinator Contact">Responsable des opérations/Coordonnateur</a>
+                        </td>
+                        <td class="cellanchors">
+                            <a href="#Contracting Contact">Responsable mise sous contrat</a>
+                        </td>   
+                    </tr>
+                </table>
+           	</center>
+           	<center>
+             	 <table class="tableanchors">
+                    <tr>
+                        <td class="cellanchors">
+                            <a href="#Compensation Contact">Responsable rémunération</a>
+                        </td>
+                        <td class="cellanchors">
+                            <a href="#New Business Contact">Responsable des nouvelles affaires</a>
+                        </td>
+                        <td class="cellanchors">
+                            <a href="#Inforce Contact">Responsable de l'en vigueur</a>
+                        </td>
+                        <td class="cellanchors">
+                            <a href="#Communication-Marketing Contact">Responsable des communications-marketing</a>
+                        </td>
+                        <td class="cellanchors">
+                            <a href="#Miscellaneous (correspondent 2)">Divers (répondant 2)</a>
+                        </td>
+<!-- J03329   DEBUT -->
+                        <td class="cellanchors">
+                            <a href="#Notification">Notification</a>
+                        </td>
+<!-- J03329   FIN -->        
+<!-- J04290   DEBUT -->
+                        <td class="cellanchors">
+                            <a href="#Notification">CLIEDIS</a>
+                        </td>
+<!-- J04290   FIN -->
+                    </tr>                    
+                </table>
+           	</center>
+<!-- J02547 FIN -->
+        </form>
+    </body>
+    <script src="../js/ActionHandlers.js"></script>
+    <script src="../js/MessageFunctions.js"></script>
+    <script src="../js/MessagesFrench.js"></script>
+    <script src="../js/ClientLevelEdits.js"></script>
+    <script src="../js/GlobalUserMethods.js"></script>
+</html>

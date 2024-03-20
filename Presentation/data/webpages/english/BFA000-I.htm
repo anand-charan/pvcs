@@ -1,0 +1,66 @@
+<!--
+* Converted to Pathfinder 3.0 on Jan 20, 2004 2:40:31 PM EST
+*
+*********************************************************************************
+*  (C) COPYRIGHT 2001 INSURANCE SOFTWARE SOLUTIONS CORP.  ALL RIGHTS RESERVED  
+*********************************************************************************
+*  Component:   BFA000-I.htm                                                   
+*  Description:                                                                
+*                                                                              
+*********************************************************************************
+*  Chg#    Release  Description                                                
+*                                                                              
+*  J06022  6.6      Project MC18                                        
+*********************************************************************************
+ -->
+<html>
+    <head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>BFA000-I</title>
+        <link rel="stylesheet" type="text/css" href="../french/Ingenium.css" charset="UTF-8" />
+    </head>
+    <body class="bodyws">
+        <form action="pageserver" method="post" id="inputForm" target="_parent" onsubmit="return(onSubmit());">
+            <table class="tabledatakey">
+                <tr>
+                    <td class="celldatakeylabel">
+                        <label for="MIR-LS-POL-ID">Numéro de contrat Life Suite:</label>
+                    </td>
+                    <td class="celldatakey">
+                        <input type="text" value=" " id="MIR-LS-POL-ID" name="MIR-LS-POL-ID" stype="Text" maxlength="20" onfocus="enterField(this)" />
+                    </td>
+<!--                    <td class="celldatakeylabel">
+                        <label for="MIR-POL-ID-SFX">Suffixe:</label>
+                    </td>
+                    <td class="celldatakey">
+                        <input type="text" value=" " id="MIR-POL-ID-SFX" name="MIR-POL-ID-SFX" stype="Text" maxlength="1" onfocus="enterField(this)" />
+                    </td> -->
+                </tr>
+            </table>
+            <br/> 
+                       
+             <table class="tabledisplay">
+                <tr>
+                    <td class="celldisplayheading" colspan="4"><a id="ProcessingInformation" name="ProcessingInformation">Information sur le traitement</a> </td>
+                </tr>
+
+                <tr>
+                    <td class="celldisplaylabel">
+                        <label for="MIR-MSG-TXT">Message de retour du traitement:</label>
+                    </td>
+                    <td class="celldisplay" colspan="3">
+                        <span id="MIR-MSG-TXT" stype="Text" displayonly="yes">MIR-MSG-TXT</span>
+                    </td>
+                </tr>
+            </table>
+
+            <input type="hidden" id="action" name="action" stype="Hidden" />
+            <input type="hidden" id="index" name="index" stype="Hidden" />
+        </form>
+    </body>
+    <script src="../js/ActionHandlers.js"></script>
+    <script src="../js/MessageFunctions.js"></script>
+    <script src="../js/MessagesFrench.js"></script>
+    <script src="../js/ClientLevelEdits.js"></script>
+    <script src="../js/GlobalUserMethods.js"></script>
+</html>

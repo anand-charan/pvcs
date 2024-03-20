@@ -1,0 +1,306 @@
+﻿<!--
+*
+*********************************************************************************
+*  (C) COPYRIGHT 2001 INSURANCE SOFTWARE SOLUTIONS CORP.  ALL RIGHTS RESERVED
+*********************************************************************************
+*  Component:   BF9304-O.htm
+*  Description:
+*
+*********************************************************************************
+*  Chg#    Release  Description
+*
+* SE-301 - Gestion de note Reclamation
+*********************************************************************************
+*  J03978 15JUN2015 JPA - Ajouter l'heure limite de traitement et le code VIP
+*  J06022 10Nov2019	JFO - Ajouter une colonne lien à la liste pour le projet MC18.
+*********************************************************************************
+ -->
+<html>
+    <head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>BF9304-O</title>
+        <link rel="stylesheet" type="text/css" href="../french/Ingenium.css" charset="UTF-8" />
+    <style type="text/css">
+	.auto-style1 {
+		BACKGROUND-COLOR: #cbeaf8;
+		COLOR: #000066;
+		FONT-FAMILY: verdana;
+		FONT-SIZE: 10pt;
+		text-align: center;
+	}
+	</style>
+    </head>
+    <body class="bodyws" onload="onLoadCustom()">
+        <form action="pageserver" method="post" id="inputForm" target="_parent" onsubmit="return(onSubmit());">
+            <input type="hidden" id="index" name="index" stype="Hidden" />
+            <input type="hidden" id="action" name="action" stype="Hidden" />
+            <table class="tabledatakey">
+                <tr>
+                    <td class="celldatakeylabel">
+                        <label for="MIR-POL-ID-BASE">Numéro de contrat:</label>
+                    </td>
+                    <td class="celldatakey">
+                        <input type="text" value=" " id="MIR-POL-ID-BASE" name="MIR-POL-ID-BASE" stype="Text" maxlength="9" onfocus="enterField(this)" size="20" />
+                    </td>
+                    <td class="celldatakeylabel">
+                        <label for="MIR-POL-ID-SFX">Suffixe:</label>
+                    </td>
+                    <td class="celldatakey">
+                        <input type="text" value=" " id="MIR-POL-ID-SFX" name="MIR-POL-ID-SFX" stype="Text" maxlength="1" onfocus="enterField(this)"  size="20" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celldatakeylabel">
+                        <label for="MIR-ACTV-TYP-CD">Type de pièce:</label>
+                    </td>
+                    <td class="celldatakey">
+                        <select id="MIR-ACTV-TYP-CD" name="MIR-ACTV-TYP-CD" size="1" stype="Selection" onfocus="enterField(this)" />
+                    </td>
+                    <td class="celldatakeylabel">
+                        <label for="MIR-SERV-CD">Service:</label>
+                    </td>
+                    <td class="celldatakey">
+                        <select id="MIR-SERV-CD" name="MIR-SERV-CD" size="1" stype="Selection" onfocus="enterField(this)" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celldatakeylabel">
+                        <label for="MIR-NXT-STEP-CD">Prochaine activité:</label>
+                    </td>
+                    <td class="celldatakey">
+                        <select id="MIR-NXT-STEP-CD" name="MIR-NXT-STEP-CD" size="1" stype="Selection" onfocus="enterField(this)" />
+                    </td>
+                    <td class="celldatakeylabel">
+                        <label for="MIR-NXT-USER-ID">Employé:</label>
+                    </td>
+                    <td class="celldatakey">
+                        <select id="MIR-NXT-USER-ID" name="MIR-NXT-USER-ID" size="1" stype="Selection" onfocus="enterField(this)" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="celldatakeylabel">
+                        <label for="MIR-POL-BUS-CLAS-CD">Ligne d'affaires:</label>
+                    </td>
+                    <td class="celldatakey">
+                        <select id="MIR-POL-BUS-CLAS-CD" name="MIR-POL-BUS-CLAS-CD" size="1" stype="Selection" onfocus="enterField(this)" />
+                    </td>
+                    <td class="celldatakeylabel"></td>
+                    <td class="celldatakey"></td>
+                </tr>
+            </table>
+            <br />
+            <table id="FdtListInfoTable" class="tabledisplay" genrows="0">
+                <tr>
+                    <td class="celldisplayheading">
+                              <label for="SELECT-T[1]" />
+                    </td>
+                    <td class="celldisplayheading">
+                              <label for="MIR-ACTV-EFF-DT-T[1]">Date de l'activité</label>
+                    </td>
+                    <td class="celldisplayheading">
+                              <label for="MIR-PROC-LIMIT-DT-T[1]">Date limite du traitement</label>
+                    </td>
+                    <td class="celldisplayheading">
+                              <label for="MIR-POL-CNTCT-VIP-IND-T[1]">Contrat VIP</label>
+                    </td>
+                    <td class="celldisplayheading">
+                              <label for="MIR-POL-ID-T[1]">Numéro de contrat</label>
+                    </td>
+                    <td class="celldisplayheading">
+                              <label for="MIR-ACTV-TYP-CD-T[1]">Type de pièce</label>
+                    </td>
+                    <td class="celldisplayheading">
+                              <label for="MIR-ACTV-TYP-CD-T[1]">Second type de pièce</label>
+                    </td>
+                    <td class="celldisplayheading">
+                              <label for="MIR-SERV-CD-T[1]">Service</label>
+                    </td>
+                    <td class="celldisplayheading">
+                              <label for="MIR-PROC-USER-ID-T[1]">Employé</label>
+                    </td>
+                    <td class="celldisplayheading">
+                              <label for="MIR-POL-BUS-CLAS-CD-T[1]">Ligne d'affaires</label>
+                    </td>
+                    <td class="celldisplayheading">
+                              <label for="MIR-NXT-USER-ID-T[1]">Prochain employé</label>
+                    </td>
+                    <td class="celldisplayheading">
+                              <label for="MIR-NXT-STEP-CD-T[1]">Prochaine étape</label>
+                    </td>
+                    <td class="celldisplayheading">
+                              <label for="MIR-CONTEST-IND-T[1]">Contestable?</label>
+                    </td>
+                    <td class="celldisplayheading">
+                              <label for="MIR-PROC-LIMIT-TIME-T[1]">Heure du traitement</label>
+                    </td>
+<!-- J06022 - Project MC18 -->
+                    <td class="celldisplayheading" colspan="3" align="center" >
+                        <label for="">Historique Décision Life Suite</label>
+                    </td>
+                </tr>
+<!-- End of J06022 -->
+                <tr>
+                    <td class="celldisplay">
+                              <input stype="Indicator" type="checkbox" id="SELECT-T[]" name="SELECT-T[]" value=" " index="1" onclick="onListCheckBox()" />
+                    </td>
+                    <td class="celldisplay">
+                        <a id="MIR-ACTV-EFF-DT-T[]" name="MIR-ACTV-EFF-DT-T[]" href="a" action="SelectItem" index="1" stype="Date" onclick="onAction();return(false)" onfocus="enterField(this)">Date de l'activité</a>
+                    </td>
+                    <td class="celldisplay">
+                              <span id="MIR-PROC-LIMIT-DT-T[]" stype="Date" displayonly="yes"></span>
+                    </td>
+                    <td class="auto-style1">
+                              <input stype="Indicator" type="checkbox" id="MIR-POL-CNTCT-VIP-IND-T[]" name="MIR-POL-CNTCT-VIP-IND-T[]" value="Y" readonly="yes" disabled="yes" align="center"/>
+                    </td>
+                    <td class="celldisplay">
+                              <span id="MIR-POL-ID-T[]" stype="Text" displayonly="yes"></span>
+                    </td>
+                    <td class="celldisplay">
+                              <span id="MIR-ACTV-TYP-CD-T[]" stype="Text" displayonly="yes"></span>
+                    </td>
+                    <td class="celldisplay">
+                              <span id="MIR-SECOND-ACTV-TYP-CD-T[]" stype="Text" displayonly="yes"></span>
+                    </td>
+                    <td class="celldisplay">
+                              <span id="MIR-SERV-CD-T[]" stype="Text" displayonly="yes"></span>
+                    </td>
+                    <td class="celldisplay">
+                              <span id="MIR-PROC-USER-ID-T[]" stype="Text" displayonly="yes"></span>
+                    </td>
+                    <td class="celldisplay">
+                              <span id="MIR-POL-BUS-CLAS-CD-T[]" stype="Text" displayonly="yes"></span>
+                    </td>
+                    <td class="celldisplay">
+                              <span id="MIR-NXT-USER-ID-T[]" stype="Text" displayonly="yes"></span>
+                    </td>
+                    <td class="celldisplay">
+                              <span id="MIR-NXT-STEP-CD-T[]" stype="Text" displayonly="yes"></span>
+                    </td>
+                    <td class="celldisplay">
+                              <span id="MIR-CONTEST-IND-T[]" stype="Text" displayonly="yes"></span>
+                    </td>
+                    <td class="celldisplay">
+                              <span id="MIR-PROC-LIMIT-TIME-T[]" stype="Time" displayonly="yes"></span>
+                    </td>
+<!-- J06922 - PROJET MC18 CONMECTION À L'ÉCRAN HISTOQIUE DE DÉCISION LIFE SUITE -->
+                    <td class="celllabeldataentry"   align="center">
+                  <input type="button" id="HistLifeSuiteDecision-T[]" name="HistLifeSuiteDecision-T[]" value="Historique décision Life Suite" index = "1" onclick="CallApplicationEntry(this.getAttribute('index'),'BFA004List')" />
+
+                    </td>
+                </tr>
+            </table>
+ <!-- J06022 -->
+            <input type="hidden" id="MIR-LSSH-EXIST-IND-T[1]" name="MIR-LSSH-EXIST-IND-T[1]" stype="Hidden" />
+            <input type="hidden" id="MIR-LSSH-EXIST-IND-T[2]" name="MIR-LSSH-EXIST-IND-T[2]" stype="Hidden" />
+            <input type="hidden" id="MIR-LSSH-EXIST-IND-T[3]" name="MIR-LSSH-EXIST-IND-T[3]" stype="Hidden" />
+            <input type="hidden" id="MIR-LSSH-EXIST-IND-T[4]" name="MIR-LSSH-EXIST-IND-T[4]" stype="Hidden" />
+            <input type="hidden" id="MIR-LSSH-EXIST-IND-T[5]" name="MIR-LSSH-EXIST-IND-T[5]" stype="Hidden" />
+            <input type="hidden" id="MIR-LSSH-EXIST-IND-T[6]" name="MIR-LSSH-EXIST-IND-T[6]" stype="Hidden" />
+            <input type="hidden" id="MIR-LSSH-EXIST-IND-T[7]" name="MIR-LSSH-EXIST-IND-T[7]" stype="Hidden" />
+            <input type="hidden" id="MIR-LSSH-EXIST-IND-T[8]" name="MIR-LSSH-EXIST-IND-T[8]" stype="Hidden" />
+            <input type="hidden" id="MIR-LSSH-EXIST-IND-T[9]" name="MIR-LSSH-EXIST-IND-T[9]" stype="Hidden" />
+            <input type="hidden" id="MIR-LSSH-EXIST-IND-T[10]" name="MIR-LSSH-EXIST-IND-T[10]" stype="Hidden" />
+            <input type="hidden" id="MIR-LSSH-EXIST-IND-T[11]" name="MIR-LSSH-EXIST-IND-T[11]" stype="Hidden" />
+            <input type="hidden" id="MIR-LSSH-EXIST-IND-T[12]" name="MIR-LSSH-EXIST-IND-T[12]" stype="Hidden" />
+            <input type="hidden" id="MIR-LSSH-EXIST-IND-T[13]" name="MIR-LSSH-EXIST-IND-T[13]" stype="Hidden" />
+            <input type="hidden" id="MIR-LSSH-EXIST-IND-T[14]" name="MIR-LSSH-EXIST-IND-T[14]" stype="Hidden" />
+            <input type="hidden" id="MIR-LSSH-EXIST-IND-T[15]" name="MIR-LSSH-EXIST-IND-T[15]" stype="Hidden" />
+            <input type="hidden" id="MIR-LSSH-EXIST-IND-T[16]" name="MIR-LSSH-EXIST-IND-T[16]" stype="Hidden" />
+            <input type="hidden" id="MIR-LSSH-EXIST-IND-T[17]" name="MIR-LSSH-EXIST-IND-T[17]" stype="Hidden" />
+            <input type="hidden" id="MIR-LSSH-EXIST-IND-T[18]" name="MIR-LSSH-EXIST-IND-T[18]" stype="Hidden" />
+            <input type="hidden" id="MIR-LSSH-EXIST-IND-T[19]" name="MIR-LSSH-EXIST-IND-T[19]" stype="Hidden" />
+            <input type="hidden" id="MIR-LSSH-EXIST-IND-T[20]" name="MIR-LSSH-EXIST-IND-T[20]" stype="Hidden" />
+            <input type="hidden" id="MIR-LSSH-EXIST-IND-T[21]" name="MIR-LSSH-EXIST-IND-T[21]" stype="Hidden" />
+            <input type="hidden" id="MIR-LSSH-EXIST-IND-T[22]" name="MIR-LSSH-EXIST-IND-T[22]" stype="Hidden" />
+            <input type="hidden" id="MIR-LSSH-EXIST-IND-T[23]" name="MIR-LSSH-EXIST-IND-T[23]" stype="Hidden" />
+            <input type="hidden" id="MIR-LSSH-EXIST-IND-T[24]" name="MIR-LSSH-EXIST-IND-T[24]" stype="Hidden" />
+            <input type="hidden" id="MIR-LSSH-EXIST-IND-T[25]" name="MIR-LSSH-EXIST-IND-T[25]" stype="Hidden" />
+            <input type="hidden" id="MIR-LSSH-EXIST-IND-T[26]" name="MIR-LSSH-EXIST-IND-T[26]" stype="Hidden" />
+            <input type="hidden" id="MIR-LSSH-EXIST-IND-T[27]" name="MIR-LSSH-EXIST-IND-T[27]" stype="Hidden" />
+            <input type="hidden" id="MIR-LSSH-EXIST-IND-T[28]" name="MIR-LSSH-EXIST-IND-T[28]" stype="Hidden" />
+            <input type="hidden" id="MIR-LSSH-EXIST-IND-T[29]" name="MIR-LSSH-EXIST-IND-T[29]" stype="Hidden" />
+            <input type="hidden" id="MIR-LSSH-EXIST-IND-T[30]" name="MIR-LSSH-EXIST-IND-T[30]" stype="Hidden" />
+            <input type="hidden" id="MIR-LSSH-EXIST-IND-T[31]" name="MIR-LSSH-EXIST-IND-T[31]" stype="Hidden" />
+            <input type="hidden" id="MIR-LSSH-EXIST-IND-T[32]" name="MIR-LSSH-EXIST-IND-T[32]" stype="Hidden" />
+            <input type="hidden" id="MIR-LSSH-EXIST-IND-T[33]" name="MIR-LSSH-EXIST-IND-T[33]" stype="Hidden" />
+            <input type="hidden" id="MIR-LSSH-EXIST-IND-T[34]" name="MIR-LSSH-EXIST-IND-T[34]" stype="Hidden" />
+            <input type="hidden" id="MIR-LSSH-EXIST-IND-T[35]" name="MIR-LSSH-EXIST-IND-T[35]" stype="Hidden" />
+            <input type="hidden" id="MIR-LSSH-EXIST-IND-T[36]" name="MIR-LSSH-EXIST-IND-T[36]" stype="Hidden" />
+            <input type="hidden" id="MIR-LSSH-EXIST-IND-T[37]" name="MIR-LSSH-EXIST-IND-T[37]" stype="Hidden" />
+            <input type="hidden" id="MIR-LSSH-EXIST-IND-T[38]" name="MIR-LSSH-EXIST-IND-T[38]" stype="Hidden" />
+            <input type="hidden" id="MIR-LSSH-EXIST-IND-T[39]" name="MIR-LSSH-EXIST-IND-T[39]" stype="Hidden" />
+            <input type="hidden" id="MIR-LSSH-EXIST-IND-T[40]" name="MIR-LSSH-EXIST-IND-T[40]" stype="Hidden" />
+            <input type="hidden" id="MIR-LSSH-EXIST-IND-T[41]" name="MIR-LSSH-EXIST-IND-T[41]" stype="Hidden" />
+            <input type="hidden" id="MIR-LSSH-EXIST-IND-T[42]" name="MIR-LSSH-EXIST-IND-T[42]" stype="Hidden" />
+            <input type="hidden" id="MIR-LSSH-EXIST-IND-T[43]" name="MIR-LSSH-EXIST-IND-T[43]" stype="Hidden" />
+            <input type="hidden" id="MIR-LSSH-EXIST-IND-T[44]" name="MIR-LSSH-EXIST-IND-T[44]" stype="Hidden" />
+            <input type="hidden" id="MIR-LSSH-EXIST-IND-T[45]" name="MIR-LSSH-EXIST-IND-T[45]" stype="Hidden" />
+            <input type="hidden" id="MIR-LSSH-EXIST-IND-T[46]" name="MIR-LSSH-EXIST-IND-T[46]" stype="Hidden" />
+            <input type="hidden" id="MIR-LSSH-EXIST-IND-T[47]" name="MIR-LSSH-EXIST-IND-T[47]" stype="Hidden" />
+            <input type="hidden" id="MIR-LSSH-EXIST-IND-T[48]" name="MIR-LSSH-EXIST-IND-T[48]" stype="Hidden" />
+            <input type="hidden" id="MIR-LSSH-EXIST-IND-T[49]" name="MIR-LSSH-EXIST-IND-T[49]" stype="Hidden" />
+            <input type="hidden" id="MIR-LSSH-EXIST-IND-T[50]" name="MIR-LSSH-EXIST-IND-T[50]" stype="Hidden" />
+            <input type="hidden" id="MIR-LSSH-EXIST-IND-T[51]" name="MIR-LSSH-EXIST-IND-T[51]" stype="Hidden" />
+            <input type="hidden" id="MIR-LSSH-EXIST-IND-T[52]" name="MIR-LSSH-EXIST-IND-T[52]" stype="Hidden" />
+            <input type="hidden" id="MIR-LSSH-EXIST-IND-T[53]" name="MIR-LSSH-EXIST-IND-T[53]" stype="Hidden" />
+            <input type="hidden" id="MIR-LSSH-EXIST-IND-T[54]" name="MIR-LSSH-EXIST-IND-T[54]" stype="Hidden" />
+            <input type="hidden" id="MIR-LSSH-EXIST-IND-T[55]" name="MIR-LSSH-EXIST-IND-T[55]" stype="Hidden" />
+            <input type="hidden" id="MIR-LSSH-EXIST-IND-T[56]" name="MIR-LSSH-EXIST-IND-T[56]" stype="Hidden" />
+            <input type="hidden" id="MIR-LSSH-EXIST-IND-T[57]" name="MIR-LSSH-EXIST-IND-T[57]" stype="Hidden" />
+            <input type="hidden" id="MIR-LSSH-EXIST-IND-T[58]" name="MIR-LSSH-EXIST-IND-T[58]" stype="Hidden" />
+            <input type="hidden" id="MIR-LSSH-EXIST-IND-T[59]" name="MIR-LSSH-EXIST-IND-T[59]" stype="Hidden" />
+            <input type="hidden" id="MIR-LSSH-EXIST-IND-T[60]" name="MIR-LSSH-EXIST-IND-T[60]" stype="Hidden" />
+            <input type="hidden" id="MIR-LSSH-EXIST-IND-T[61]" name="MIR-LSSH-EXIST-IND-T[61]" stype="Hidden" />
+            <input type="hidden" id="MIR-LSSH-EXIST-IND-T[62]" name="MIR-LSSH-EXIST-IND-T[62]" stype="Hidden" />
+            <input type="hidden" id="MIR-LSSH-EXIST-IND-T[63]" name="MIR-LSSH-EXIST-IND-T[63]" stype="Hidden" />
+            <input type="hidden" id="MIR-LSSH-EXIST-IND-T[64]" name="MIR-LSSH-EXIST-IND-T[64]" stype="Hidden" />
+            <input type="hidden" id="MIR-LSSH-EXIST-IND-T[65]" name="MIR-LSSH-EXIST-IND-T[65]" stype="Hidden" />
+            <input type="hidden" id="MIR-LSSH-EXIST-IND-T[66]" name="MIR-LSSH-EXIST-IND-T[66]" stype="Hidden" />
+            <input type="hidden" id="MIR-LSSH-EXIST-IND-T[67]" name="MIR-LSSH-EXIST-IND-T[67]" stype="Hidden" />
+            <input type="hidden" id="MIR-LSSH-EXIST-IND-T[68]" name="MIR-LSSH-EXIST-IND-T[68]" stype="Hidden" />
+            <input type="hidden" id="MIR-LSSH-EXIST-IND-T[69]" name="MIR-LSSH-EXIST-IND-T[69]" stype="Hidden" />
+            <input type="hidden" id="MIR-LSSH-EXIST-IND-T[70]" name="MIR-LSSH-EXIST-IND-T[70]" stype="Hidden" />
+            <input type="hidden" id="MIR-LSSH-EXIST-IND-T[71]" name="MIR-LSSH-EXIST-IND-T[71]" stype="Hidden" />
+            <input type="hidden" id="MIR-LSSH-EXIST-IND-T[72]" name="MIR-LSSH-EXIST-IND-T[72]" stype="Hidden" />
+            <input type="hidden" id="MIR-LSSH-EXIST-IND-T[73]" name="MIR-LSSH-EXIST-IND-T[73]" stype="Hidden" />
+            <input type="hidden" id="MIR-LSSH-EXIST-IND-T[74]" name="MIR-LSSH-EXIST-IND-T[74]" stype="Hidden" />
+            <input type="hidden" id="MIR-LSSH-EXIST-IND-T[75]" name="MIR-LSSH-EXIST-IND-T[75]" stype="Hidden" />
+            <input type="hidden" id="MIR-LSSH-EXIST-IND-T[76]" name="MIR-LSSH-EXIST-IND-T[76]" stype="Hidden" />
+            <input type="hidden" id="MIR-LSSH-EXIST-IND-T[77]" name="MIR-LSSH-EXIST-IND-T[77]" stype="Hidden" />
+            <input type="hidden" id="MIR-LSSH-EXIST-IND-T[78]" name="MIR-LSSH-EXIST-IND-T[78]" stype="Hidden" />
+            <input type="hidden" id="MIR-LSSH-EXIST-IND-T[79]" name="MIR-LSSH-EXIST-IND-T[79]" stype="Hidden" />
+            <input type="hidden" id="MIR-LSSH-EXIST-IND-T[80]" name="MIR-LSSH-EXIST-IND-T[80]" stype="Hidden" />
+            <input type="hidden" id="MIR-LSSH-EXIST-IND-T[81]" name="MIR-LSSH-EXIST-IND-T[81]" stype="Hidden" />
+            <input type="hidden" id="MIR-LSSH-EXIST-IND-T[82]" name="MIR-LSSH-EXIST-IND-T[82]" stype="Hidden" />
+            <input type="hidden" id="MIR-LSSH-EXIST-IND-T[83]" name="MIR-LSSH-EXIST-IND-T[83]" stype="Hidden" />
+            <input type="hidden" id="MIR-LSSH-EXIST-IND-T[84]" name="MIR-LSSH-EXIST-IND-T[84]" stype="Hidden" />
+            <input type="hidden" id="MIR-LSSH-EXIST-IND-T[85]" name="MIR-LSSH-EXIST-IND-T[85]" stype="Hidden" />
+            <input type="hidden" id="MIR-LSSH-EXIST-IND-T[86]" name="MIR-LSSH-EXIST-IND-T[86]" stype="Hidden" />
+            <input type="hidden" id="MIR-LSSH-EXIST-IND-T[87]" name="MIR-LSSH-EXIST-IND-T[87]" stype="Hidden" />
+            <input type="hidden" id="MIR-LSSH-EXIST-IND-T[88]" name="MIR-LSSH-EXIST-IND-T[88]" stype="Hidden" />
+            <input type="hidden" id="MIR-LSSH-EXIST-IND-T[89]" name="MIR-LSSH-EXIST-IND-T[89]" stype="Hidden" />
+            <input type="hidden" id="MIR-LSSH-EXIST-IND-T[90]" name="MIR-LSSH-EXIST-IND-T[90]" stype="Hidden" />
+            <input type="hidden" id="MIR-LSSH-EXIST-IND-T[91]" name="MIR-LSSH-EXIST-IND-T[91]" stype="Hidden" />
+            <input type="hidden" id="MIR-LSSH-EXIST-IND-T[92]" name="MIR-LSSH-EXIST-IND-T[92]" stype="Hidden" />
+            <input type="hidden" id="MIR-LSSH-EXIST-IND-T[93]" name="MIR-LSSH-EXIST-IND-T[93]" stype="Hidden" />
+            <input type="hidden" id="MIR-LSSH-EXIST-IND-T[94]" name="MIR-LSSH-EXIST-IND-T[94]" stype="Hidden" />
+            <input type="hidden" id="MIR-LSSH-EXIST-IND-T[95]" name="MIR-LSSH-EXIST-IND-T[95]" stype="Hidden" />
+            <input type="hidden" id="MIR-LSSH-EXIST-IND-T[96]" name="MIR-LSSH-EXIST-IND-T[96]" stype="Hidden" />
+            <input type="hidden" id="MIR-LSSH-EXIST-IND-T[97]" name="MIR-LSSH-EXIST-IND-T[97]" stype="Hidden" />
+            <input type="hidden" id="MIR-LSSH-EXIST-IND-T[98]" name="MIR-LSSH-EXIST-IND-T[98]" stype="Hidden" />
+            <input type="hidden" id="MIR-LSSH-EXIST-IND-T[99]" name="MIR-LSSH-EXIST-IND-T[99]" stype="Hidden" />
+            <input type="hidden" id="MIR-LSSH-EXIST-IND-T[100]" name="MIR-LSSH-EXIST-IND-T[100]" stype="Hidden" />
+
+
+<!-- J06022 end -->
+       </form>
+    </body>
+    <script src="../js/ActionHandlers.js"></script>
+    <script src="../js/MessageFunctions.js"></script>
+    <script src="../js/MessagesFrench.js"></script>
+    <script src="../js/ClientLevelEdits.js"></script>
+    <script src="../js/GlobalUserMethods.js"></script>
+<!-- J06022 -->
+    <script src="../js/BF9304-O.js"></script>
+
+</html>
